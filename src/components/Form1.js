@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid,Container,LinearProgress, Radio, RadioGroup, Typography, Box, Button, Checkbox, FormControlLabel, TextField, IconButton } from '@mui/material';
+import { Grid,Container, Radio, RadioGroup, Typography, Box, Button, Checkbox, FormControlLabel, TextField, IconButton } from '@mui/material';
 import { ArrowBack, ArrowForward } from '@mui/icons-material';
 import StyledLinearProgress from './StyledLinearProgress';
 

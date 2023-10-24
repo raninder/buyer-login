@@ -1,0 +1,23 @@
+.location-box button {
+    border-radius: 22px;
+    border: 1px solid var(--primary-purple, #7731E4)
+}
+
+.location-box button:hover {
+    background-color:#7731E4;
+    span {
+        color: white ;
+    } 
+}
+
+.location-box button:active {
+    background-color:#7731E4; 
+}
+
+.location-box button:active span {
+    background-color:#fff; 
+}
+
+.location-box button span {
+    color: #7731E4;
+}
