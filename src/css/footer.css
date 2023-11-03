@@ -1,0 +1,75 @@
+/* footer.css */
+.footer {
+    background-color: #191826;
+    color: #fff;
+    padding: 10px; /* Ajusta el espaciado según tus necesidades */
+    font-family: "DM Sans", Helvetica, sans-serif;
+    margin-top:30px;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+  }
+  
+  .footer-logo {
+    max-width: 200px; /* Ajusta el tamaño del logo según tus necesidades */
+  }
+  
+  .footer-divisions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 300px; /* Espacio entre las divisiones */
+  }
+  
+  .division {
+    flex: 1;
+    max-width: 300px; /* Ajusta el ancho máximo de cada división según tus necesidades */
+  }
+  
+  .division h4 {
+    font-size: 18px;
+    font-weight: 700;
+  }
+  
+  .division ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .division ul span {
+    display: block;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 10px; /* Espacio entre elementos de la lista */
+  }
+  
+  /* Estilos para las imágenes en el pie de página */
+  .footer-images {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre imágenes */
+  }
+  
+  .footer-images img {
+    max-width: 100%;
+  }
+  
+  .footer-images img:last-child {
+    margin-right: 0;
+  }
+  
+
+  .social-icons {
+    display: flex;
+    flex-direction: column; /* Muestra los íconos y los nombres uno debajo del otro */
+    gap: 10px; /* Espacio entre iconos y nombres */
+  }
+  .social-icons a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+  }

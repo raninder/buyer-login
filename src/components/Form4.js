@@ -4,6 +4,7 @@ import {Container,InputAdornment,Typography,Box,Button,TextField,IconButton,
 import { ArrowBack, ArrowForward } from '@mui/icons-material';
 import StyledLinearProgress from './StyledLinearProgress';
 import '../css/form2.css';
+import { useNavigate } from 'react-router-dom';
 
 function Form4({ currentPage, setCurrentPage, nextPage }) {
   const [income, setIncome] = useState('');
@@ -40,6 +41,11 @@ function Form4({ currentPage, setCurrentPage, nextPage }) {
     textTransform: 'none',
   };
 
+  const navigate = useNavigate();
+
+    const goToPage = (page) => {
+    navigate(page);
+  };
 
   const isFormValid = () => {
     return income.trim() !== '' && debt.trim() !== '' && payableAmount.trim() !== '';
@@ -48,15 +54,15 @@ function Form4({ currentPage, setCurrentPage, nextPage }) {
   return (
     <Container>
       <div style={{ margin: '10px auto', padding: '20px' }}>
-        <StyledLinearProgress variant="determinate" value={2} />
+        <StyledLinearProgress variant="determinate" value={4} />
         <Box display="flex" alignItems="center" justifyContent="center" mb={2}>
-          <IconButton onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}>
+          <IconButton onClick={() => goToPage('/form3')}>
             <ArrowBack />
           </IconButton>
           <Typography variant="subtitle1" style={{ marginLeft: '10px', marginRight: '10px' }}>
             Financial Situation: Income
           </Typography>
-          <IconButton onClick={nextPage} disabled={!isFormValid()}>
+          <IconButton onClick={() => goToPage('/form5')} disabled={!isFormValid()}>
             <ArrowForward />
           </IconButton>
         </Box>

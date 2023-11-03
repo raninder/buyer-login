@@ -5,6 +5,8 @@ import { ArrowBack, ArrowForward } from '@mui/icons-material';
 import StyledLinearProgress from './StyledLinearProgress';
 import '../css/form2.css';
 // import Form7Page from '../pages/Form7Page';
+import { useNavigate } from 'react-router-dom';
+
 
 function Form7({ currentPage, setCurrentPage, nextPage }) {
   const [incomeCurrent, setIncome] = useState('');
@@ -16,6 +18,12 @@ function Form7({ currentPage, setCurrentPage, nextPage }) {
       setStateFunction(value);
     }
   };
+
+  const navigate = useNavigate();
+
+    const goToPage = (page) => {
+    navigate(page);
+    };
 
   const textFieldStyle = {
     marginBottom: 3,
@@ -47,9 +55,9 @@ function Form7({ currentPage, setCurrentPage, nextPage }) {
   return (
     <Container>
       <div style={{ margin: '10px auto', padding: '20px' }}>
-        <StyledLinearProgress variant="determinate" value={2} />
+        <StyledLinearProgress variant="determinate" value={7} />
         <Box display="flex" alignItems="center" justifyContent="center" mb={2}>
-          <IconButton onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}>
+          <IconButton onClick={() => goToPage('/form6')}>
             <ArrowBack />
           </IconButton>
           <Typography variant="subtitle1" style={{ marginLeft: '10px', marginRight: '10px' }}>

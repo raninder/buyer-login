@@ -14,4 +14,9 @@ const StyledLinearProgress = styled(LinearProgress)(({ theme }) => ({
   },
 }));
 
-export default StyledLinearProgress;
+export default function CustomLinearProgress({ value }) {
+  
+  const percentage = ((value - 1) / 7) * 100;
+
+  return <StyledLinearProgress variant="determinate" value={percentage} />;
+}

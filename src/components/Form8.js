@@ -4,10 +4,17 @@ import {Container,InputAdornment,Typography,Box,Button,TextField,IconButton,
 import { ArrowBack, ArrowForward } from '@mui/icons-material';
 import StyledLinearProgress from './StyledLinearProgress';
 import '../css/form2.css';
+import { useNavigate } from 'react-router-dom';
 
-function Form8({ currentPage, setCurrentPage, nextPage }) {
+function Form8({  nextPage }) {
   const [bankDetails, setIncome] = useState('');
   const [selectedOption, setSelectedOption] = useState('');
+
+  const navigate = useNavigate();
+
+    const goToPage = (page) => {
+    navigate(page);
+    };
 
   
   const handleInputChange = (event, setStateFunction) => {
@@ -54,9 +61,9 @@ function Form8({ currentPage, setCurrentPage, nextPage }) {
   return (
     <Container>
       <div style={{ margin: '10px auto', padding: '20px' }}>
-        <StyledLinearProgress variant="determinate" value={2} />
+        <StyledLinearProgress variant="determinate" value={8} />
         <Box display="flex" alignItems="center" justifyContent="center" mb={2}>
-          <IconButton onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}>
+          <IconButton onClick={() => goToPage('/form7')}>
             <ArrowBack />
           </IconButton>
           <Typography variant="subtitle1" style={{ marginLeft: '10px', marginRight: '10px' }}>
