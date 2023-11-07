@@ -54,7 +54,7 @@ function Form4({ currentPage, setCurrentPage, nextPage }) {
   return (
     <Container>
       <div style={{ margin: '10px auto', padding: '20px' }}>
-        <StyledLinearProgress variant="determinate" value={4} />
+        <StyledLinearProgress variant="determinate" value={2} />
         <Box display="flex" alignItems="center" justifyContent="center" mb={2}>
           <IconButton onClick={() => goToPage('/form3')}>
             <ArrowBack />
@@ -145,7 +145,7 @@ function Form4({ currentPage, setCurrentPage, nextPage }) {
                     $
                   </InputAdornment>
                 ),
-              }}
+             }}
               id="payableAmount"
             />
           </Box>

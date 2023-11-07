@@ -17,8 +17,6 @@ import AgentsPage from './pages/AgentsPage';
 
 function App() {
     return (
-
-      
       <Router>
       <Routes>
         <Route path="/form1" element={<Form1Page />} />

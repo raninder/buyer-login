@@ -1,7 +1,6 @@
+
 .blog-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  margin-bottom: 20px; /* Ajusta el valor según la cantidad de espacio que desees */
 }
 
 .grid-section,
@@ -101,11 +100,11 @@
 
 .article[data-id="4"],
 .article[data-id="5"] {
-  grid-column: 1; /* Columna 2 para id=4 y id=5 */
+  grid-column: 1; 
 }
 
 .article[data-id="6"] {
-  grid-column: 2; /* Columna 4 para id=6 */
+  grid-column: 2; 
 }
 
 .article[data-id="7"],
@@ -137,7 +136,7 @@
   cursor: pointer;
 }
 
-/* Blog.css */
+
 .lets-talk-button {
   border-radius: 8px;
   background: #6345F9;
@@ -151,4 +150,6 @@
   display: block; 
   border: 2px solid #6345F9;
   cursor: pointer;
+  margin-top: 20px;
 }
+

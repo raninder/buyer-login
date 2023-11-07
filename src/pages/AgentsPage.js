@@ -170,8 +170,8 @@ export const AgentsPage = () => {
         
         </div>
       </div>
-      <div className="footer-agent">
-      <Footer /></div>
+   
+      <Footer />
     </div>
   );
 };

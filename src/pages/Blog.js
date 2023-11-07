@@ -3,6 +3,8 @@ import HeaderBlog from '../components/HeaderBlog';
 import NavBarBlog from '../components/NavbarBlog';
 import data from '../data/data';
 import '../css/Blog.css';
+import Navbar from '../pages/Navbar';
+import Footer from '../pages/Footer';
 
 function Blog() {
   const imageConfig = {
@@ -10,7 +12,7 @@ function Blog() {
     2: { class: 'special-class-2', column: 2 },
     3: { class: 'special-class-3', column: 2 },
   
-    // Agrega configuraciones para id=4, id=5, id=6, id=7, id=8, id=9, id=10 aquí
+    
   };
 
   const imageConfig1 = {
@@ -18,7 +20,7 @@ function Blog() {
     2: { class: 'special-class-5', column: 1 },
     3: { class: 'special-class-6', column: 2 },
   
-    // Agrega configuraciones para id=4, id=5, id=6, id=7, id=8, id=9, id=10 aquí
+   
   };
 
   const featuredPostIds = [1, 2, 3];
@@ -80,9 +82,12 @@ function Blog() {
 
   return (
     <div>
+      <Navbar/>
+      
       <HeaderBlog />
       <NavBarBlog />
       <div className="blog-content">
+       
         <div className="featured-posts">
           {featuredPosts.map((post) => (
             <div key={post.id} className={`article ${post.class}`} data-id={post.id}>
@@ -98,6 +103,7 @@ function Blog() {
           
         </div>
         <button className="see-all-button">See All</button>
+     <div>
         {Object.entries(categorizedArticles).map(([category, articles]) => (
   <div key={category} className={`category-section ${articles.length >= 3 ? 'vertical-line' : 'centered-category'}`}>
     <h2>{category}</h2>
@@ -117,8 +123,14 @@ function Blog() {
   </div>
 ))}
       </div>
+      </div>
       <button className="lets-talk-button">Let' talk</button>
+    <Footer/>
     </div>
+
+    
+  
+    
   );
 }
 

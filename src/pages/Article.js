@@ -101,7 +101,7 @@ const ArticleContent = () => {
                 </div>
                         </div>
                     </div> 
-                    <Footer />
+                    <Footer/>
                 </div>
     )
 }

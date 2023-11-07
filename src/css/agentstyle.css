@@ -1,59 +1,40 @@
-.agents {
-  background-color: #ffffff;
-  display: flex;
-  flex-direction: column; 
-  justify-content: flex-start; 
-  width: 100%;
-  align-items: center; 
-}
-
   
-  .agents .div {
-    background-color: #ffffff;
-    height: 4000px;
-    overflow: hidden;
-    position: relative;
-    width: 1920px;
-  }
-  
-  .agents .overlap {
+   .agents .overlap {
     height: 1422px;
     left: 0;
     position: absolute;
     top: 2890px;
     width: 1976px;
-  }
-  
-  .agents .group {
+  } 
+
+  /* .agents .group {
     height: 492px;
     left: 0;
     position: absolute;
-    top: 930px;
+    top: 5px;
     width: 1976px;
-  }
+  } */
   
-  .agents .footer {
+  /* .agents .footer {
     background-color: transparent;
     width: 1988px;
   }
-  
-  .agents .overlap-group {
+   */
+  /* .agents .overlap-group {
     height: 492px;
     position: relative;
     width: 1920px;
-  }
+  } */
   
-  .agents .rectangle {
+  /* .agents .rectangle {
     height: 491px;
     left: 0;
     position: absolute;
     top: 0;
     width: 1920px;
-  }
+  } */
   
-
-  
-  .agents .frame {
+  /* .agents .frame {
     align-items: flex-start;
     display: flex;
     gap: 199.2px;
@@ -97,7 +78,7 @@
     top: 297px;
     width: 685px;
   }
-  
+   */
   /* .agents .toronto-ottawa {
     color: #ffffff;
     font-family: "Work Sans-Regular", Helvetica;
@@ -111,7 +92,7 @@
     width: 259px;
   } */
   
-  .agents .frame-2 {
+  /* .agents .frame-2 {
     height: 208px;
     left: 1432px;
     position: absolute;
@@ -183,7 +164,7 @@
     top: 302px;
     width: 179px;
   }
-  
+   */
   .agents .frame-3 {
     background-color: #ffffff;
     height: 963px;
@@ -673,31 +654,31 @@
     top: 0;
     width: 417px;
   }
-  
+/*   
   .agents .overlap-wrapper {
     height: 144px;
     left: 0;
     position: fixed;
     top: 0;
     width: 1922px;
-  }
+  } */
   
-  .agents .overlap-2 {
+  /* .agents .overlap-2 {
     background-color: #ffffff;
     height: 70px;
     position: relative;
     width: 1920px;
-  }
-  
+  } */
+/*   
   .agents .navbar {
     height: 22px;
     left: 412px;
     position: absolute;
     top: 62px;
     width: 627px;
-  }
+  } */
   
-  .agents .text-wrapper-10 {
+  /* .agents .text-wrapper-10 {
     color: #000000;
     font-family: "DM Sans-Medium", Helvetica;
     font-size: 20px;
@@ -794,9 +775,9 @@
     position: absolute;
     top: 0;
     width: 384px;
-  }
+  } */
   
-  .agents .overlap-group-3 {
+  /* .agents .overlap-group-3 {
     background-color: var(--primaryblack);
     border-radius: 8px;
     height: 70px;
@@ -804,9 +785,9 @@
     position: absolute;
     top: 0;
     width: 200px;
-  }
+  } */
   
-  .agents .text-wrapper-16 {
+  /* .agents .text-wrapper-16 {
     color: var(--primarywhite);
     font-family: "DM Sans-Regular", Helvetica;
     font-size: 20px;
@@ -829,16 +810,16 @@
     position: absolute;
     top: 3px;
     width: 155px;
-  }
-  
+  } */
+/*   
   .agents .group-6 {
     height: 61px;
     left: 58px;
     position: fixed;
     top: 42px;
     width: 315px;
-  }
+  } */
   
-  .agents .footer-agent {
+  /* .agents .footer-agent {
     top: -100px;
-  }
+  } */
