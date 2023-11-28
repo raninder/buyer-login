@@ -3,11 +3,11 @@ import { Grid, Container, Radio, RadioGroup, Typography, Box, Button, Checkbox, 
 import { ArrowBack, ArrowForward } from '@mui/icons-material';
 import StyledLinearProgress from './StyledLinearProgress';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios'; 
 
 function Form1({ currentPage, setCurrentPage, nextPage }) {
     const navigate = useNavigate();
 
-   
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
@@ -15,12 +15,12 @@ function Form1({ currentPage, setCurrentPage, nextPage }) {
     const [residentStatus, setResidentStatus] = useState('Canadian Resident or Citizen');
     const [emailConsent, setEmailConsent] = useState(true);
     const [formErrors, setFormErrors] = useState({});
+    const [serverMessage, setServerMessage] = useState('');
 
     const goToPage = (page) => {
         navigate(page);
     };
 
-   
     const validateRequiredFields = () => {
         const errors = {};
 
@@ -36,7 +36,7 @@ function Form1({ currentPage, setCurrentPage, nextPage }) {
             errors.phoneNumber = 'Phone Number is required';
         } else if (!/^\d+$/.test(phoneNumber)) {
             errors.phoneNumber = 'Phone Number must contain only numbers';
-        }        
+        }
 
         if (!email.trim()) {
             errors.email = 'Email is required';
@@ -45,14 +45,29 @@ function Form1({ currentPage, setCurrentPage, nextPage }) {
         }
 
         setFormErrors(errors);
-        return Object.keys(errors).length === 0; 
+        return Object.keys(errors).length === 0;
     };
 
-    const handleSubmit = () => {
+    const handleSubmit = async () => {
         const isValid = validateRequiredFields();
 
         if (isValid) {
-            goToPage('/form2');
+            try {
+                const response = await axios.post('http://localhost:8080/api/pre/primaryApplicant', {
+                    firstName,
+                    lastName,
+                    email,
+                    phoneNumber,
+                    coBuyer: false, 
+                    agreeToPromotionalEmails: emailConsent,
+                });
+
+                setServerMessage(response.data.message);
+                goToPage('/form2');
+            } catch (error) {
+                console.error('Error:', error.response ? error.response.data : error.message);
+                setServerMessage(error.response ? error.response.data.message : 'An error occurred');
+            }
         }
     };
 
@@ -69,6 +84,11 @@ function Form1({ currentPage, setCurrentPage, nextPage }) {
                         <ArrowForward />
                     </IconButton>
                 </Box>
+                {serverMessage && (
+                    <Typography color="error" style={{ marginBottom: '10px' }}>
+                        {serverMessage}
+                    </Typography>
+                )}
                 <Typography variant="h5" style={{ marginBottom: '10px', textAlign: 'center' }}>Please enter your details</Typography>
                 <Typography variant="subtitle1" style={{ marginBottom: '10px' }}>Buyer</Typography>
                 <Grid container spacing={3}>

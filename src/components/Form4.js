@@ -1,16 +1,18 @@
 import React, { useState } from 'react';
-import {Container,InputAdornment,Typography,Box,Button,TextField,IconButton,
-} from '@mui/material';
+import { Container, InputAdornment, Typography, Box, Button, TextField, IconButton } from '@mui/material';
 import { ArrowBack, ArrowForward } from '@mui/icons-material';
 import StyledLinearProgress from './StyledLinearProgress';
 import '../css/form2.css';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios'; // Ensure Axios is installed
 
-function Form4({ currentPage, setCurrentPage, nextPage }) {
+function Form4() {
   const [income, setIncome] = useState('');
   const [debt, setDebt] = useState('');
   const [payableAmount, setPayableAmount] = useState('');
   const [perMonthSelected, setPerMonthSelected] = useState(true);
+  const [serverMessage, setServerMessage] = useState('');
+  const navigate = useNavigate();
 
   const handleInputChange = (event, setStateFunction) => {
     const value = event.target.value;
@@ -41,31 +43,46 @@ function Form4({ currentPage, setCurrentPage, nextPage }) {
     textTransform: 'none',
   };
 
-  const navigate = useNavigate();
-
-    const goToPage = (page) => {
-    navigate(page);
-  };
-
-  const isFormValid = () => {
-    return income.trim() !== '' && debt.trim() !== '' && payableAmount.trim() !== '';
+  const handleNextClick = async () => {
+    if (income.trim() !== '' && debt.trim() !== '' && payableAmount.trim() !== '') {
+      try {
+        const response = await axios.post('http://localhost:8080/api/pre/income', {
+          grossIncome: income,
+          debt,
+          monthlyPayableAmount: payableAmount,
+          unit: perMonthSelected ? 'Per Month' : 'Per Year',
+        });
+        setServerMessage(response.data.message);
+        navigate('/form5');
+      } catch (error) {
+        console.error('Error:', error.response ? error.response.data : error.message);
+        setServerMessage(error.response ? error.response.data.message : 'An error occurred');
+      }
+    } else {
+      alert('Please fill in all fields before proceeding.');
+    }
   };
 
   return (
     <Container>
       <div style={{ margin: '10px auto', padding: '20px' }}>
-        <StyledLinearProgress variant="determinate" value={2} />
+        <StyledLinearProgress variant="determinate" value={4} />
         <Box display="flex" alignItems="center" justifyContent="center" mb={2}>
-          <IconButton onClick={() => goToPage('/form3')}>
+          <IconButton onClick={() => navigate('/form3')}>
             <ArrowBack />
           </IconButton>
           <Typography variant="subtitle1" style={{ marginLeft: '10px', marginRight: '10px' }}>
             Financial Situation: Income
           </Typography>
-          <IconButton onClick={() => goToPage('/form5')} disabled={!isFormValid()}>
+          <IconButton onClick={handleNextClick} disabled={!income.trim() || !debt.trim() || !payableAmount.trim()}>
             <ArrowForward />
           </IconButton>
         </Box>
+        {serverMessage && (
+          <Typography color="error" style={{ marginBottom: '10px' }}>
+            {serverMessage}
+          </Typography>
+        )}
         <Typography variant="h5" style={{ marginBottom: '10px', textAlign: 'center' }}>
           Please enter your financial details
         </Typography>
@@ -79,31 +96,25 @@ function Form4({ currentPage, setCurrentPage, nextPage }) {
               onChange={(event) => handleInputChange(event, setIncome)}
               sx={textFieldStyle}
               InputProps={{
-                startAdornment: (
-                  <InputAdornment position="start">
-                    $
-                  </InputAdornment>
-                ),
+                startAdornment: <InputAdornment position="start">$</InputAdornment>,
                 endAdornment: (
                   <Box display="flex" alignItems="center">
                     <Button
-                      variant="outlined"
                       style={{
                         ...buttonStyle,
                         marginRight: '12px',
                       }}
                       onClick={() => setPerMonthSelected(true)}
+                      variant={perMonthSelected ? 'contained' : 'outlined'}
                     >
                       Per Month
                     </Button>
                     <Button
-                      variant="outlined"
-                      style={{
-                        ...buttonStyle,
+                      style={{...buttonStyle,
                         backgroundColor: !perMonthSelected ? '#7731E4' : '',
-                        color: !perMonthSelected ? 'white' : '#7731E4',
-                      }}
+                        color: !perMonthSelected ? 'white' : '#7731E4',}}
                       onClick={() => setPerMonthSelected(false)}
+                      variant={!perMonthSelected ? 'contained' : 'outlined'}
                     >
                       Per Year
                     </Button>
@@ -122,11 +133,7 @@ function Form4({ currentPage, setCurrentPage, nextPage }) {
               onChange={(event) => handleInputChange(event, setDebt)}
               sx={textFieldStyle}
               InputProps={{
-                startAdornment: (
-                  <InputAdornment position="start">
-                    $
-                  </InputAdornment>
-                ),
+                startAdornment: <InputAdornment position="start">$</InputAdornment>,
               }}
               id="debt"
             />
@@ -140,31 +147,28 @@ function Form4({ currentPage, setCurrentPage, nextPage }) {
               onChange={(event) => handleInputChange(event, setPayableAmount)}
               sx={textFieldStyle}
               InputProps={{
-                startAdornment: (
-                  <InputAdornment position="start">
-                    $
-                  </InputAdornment>
-                ),
-             }}
+                startAdornment: <InputAdornment position="start">$</InputAdornment>,
+              }}
               id="payableAmount"
             />
           </Box>
         </Box>
 
         <Box display="flex" justifyContent="center" mt={2}>
-                            <Button 
-                                variant="contained"
-                                style={{ 
-                                    width: "305px", 
-                                    height:"56px", 
-                                    borderRadius: "39px",
-                                    backgroundColor: "#7731E4"
-                                }} 
-                                onClick={nextPage}
-                            >
-                                Next
-                            </Button>
-                        </Box>    
+          <Button
+            variant="contained"
+            style={{
+              width: '305px',
+              height: '56px',
+              borderRadius: '39px',
+              backgroundColor: '#7731E4',
+            }}
+            onClick={handleNextClick}
+            disabled={!income.trim() || !debt.trim() || !payableAmount.trim()}
+          >
+            Next
+          </Button>
+        </Box>
       </div>
     </Container>
   );

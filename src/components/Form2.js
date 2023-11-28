@@ -12,9 +12,11 @@ import { ArrowBack, ArrowForward } from '@mui/icons-material';
 import StyledLinearProgress from './StyledLinearProgress';
 import '../css/form2.css';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios'; // Ensure Axios is installed
 
 function Form2() {
   const [location, setLocation] = useState('');
+  const [serverMessage, setServerMessage] = useState('');
   const navigate = useNavigate();
 
   const handleLocationClick = (value) => {
@@ -25,11 +27,18 @@ function Form2() {
     navigate(page);
   };
 
-  const canProceed = location.trim() !== ''; 
+  const canProceed = location.trim() !== '';
 
-  const handleNextClick = () => {
+  const handleNextClick = async () => {
     if (canProceed) {
-        goToPage('/form3');
+      try {
+        const response = await axios.post('http://localhost:8080/api/pre/futureHome', { location });
+        setServerMessage(response.data.message);
+        goToPage('/form3'); // Navigate to the next form page on success
+      } catch (error) {
+        console.error('Error:', error.response ? error.response.data : error.message);
+        setServerMessage(error.response ? error.response.data.message : 'An error occurred');
+      }
     } else {
       alert('Please select a location before proceeding.');
     }
@@ -46,8 +55,7 @@ function Form2() {
           <Typography variant="subtitle1" style={{ marginLeft: '10px', marginRight: '10px' }}>
             Future Home
           </Typography>
-          <IconButton onClick={handleNextClick}
-            disabled={!canProceed}>
+          <IconButton onClick={handleNextClick} disabled={!canProceed}>
             <ArrowForward />
           </IconButton>
         </Box>
@@ -62,6 +70,7 @@ function Form2() {
           <TextField
             variant="outlined"
             value={location}
+            onChange={(e) => setLocation(e.target.value)} // Update location on typing
             sx={{ marginBottom: 3, width: '563px', height: '48px', borderRadius: '6px' }}
             InputProps={{
               startAdornment: <InputAdornment position="start"></InputAdornment>,
@@ -97,7 +106,7 @@ function Form2() {
               backgroundColor: '#7731E4',
             }}
             onClick={handleNextClick}
-            disabled={!canProceed} 
+            disabled={!canProceed}
           >
             Next
           </Button>

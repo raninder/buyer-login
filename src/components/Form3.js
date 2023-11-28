@@ -4,14 +4,15 @@ import { ArrowBack, ArrowForward } from '@mui/icons-material';
 import StyledLinearProgress from './StyledLinearProgress';
 import '../css/form2.css';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios'; // Ensure Axios is installed
 
 function Form3() {
-  const [location, setLocation] = useState('');
-  const [isLocationSelected, setIsLocationSelected] = useState(false);
+  const [buyingTimeframe, setBuyingTimeframe] = useState('');
+  const [serverMessage, setServerMessage] = useState('');
+  const navigate = useNavigate();
 
-  const handleLocationClick = (value) => {
-    setLocation(value);
-    setIsLocationSelected(true);
+  const handleTimeframeClick = (value) => {
+    setBuyingTimeframe(value);
   };
 
   const buttonStyle = {
@@ -30,66 +31,72 @@ function Form3() {
     textTransform: 'none',
   };
 
-
-  const navigate = useNavigate();
-
-    const goToPage = (page) => {
-    navigate(page);
+  const handleNextClick = async () => {
+    if (buyingTimeframe) {
+      try {
+        const response = await axios.post('http://localhost:8080/api/pre/homeBuying', { lookingToBuy: buyingTimeframe });
+        setServerMessage(response.data.message);
+        navigate('/form4');
+      } catch (error) {
+        console.error('Error:', error.response ? error.response.data : error.message);
+        setServerMessage(error.response ? error.response.data.message : 'An error occurred');
+      }
+    } else {
+      alert('Please select when you are looking to buy before proceeding.');
+    }
   };
-  
+
   return (
     <Container>
       <div style={{ margin: '10px auto', padding: '20px' }}>
         <StyledLinearProgress variant="determinate" value={3} />
         <Box display="flex" alignItems="center" justifyContent="center" mb={2}>
-          <IconButton onClick={() => goToPage('/form2')}>
+          <IconButton onClick={() => navigate('/form2')}>
             <ArrowBack />
           </IconButton>
           <Typography variant="subtitle1" style={{ marginLeft: '10px', marginRight: '10px' }}>
-            Future Home
+            Home Buying Timeframe
           </Typography>
-          <IconButton onClick={goToPage('/form4')}
-            disabled={!isLocationSelected}>
+          <IconButton onClick={handleNextClick} disabled={!buyingTimeframe}>
             <ArrowForward />
           </IconButton>
         </Box>
+        {serverMessage && (
+          <Typography color="error" style={{ marginBottom: '10px' }}>
+            {serverMessage}
+          </Typography>
+        )}
         <Typography variant="h5" style={{ marginBottom: '10px', textAlign: 'center' }}>
-          Where are you looking to buy?
+          When are you looking to buy?
         </Typography>
-     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           <Button style={{ ...buttonStyle, justifyContent: 'center',whiteSpace: 'nowrap', }} 
-            onClick={() => handleLocationClick('As soon as possible')}
-              variant={location === 'As soon as possible' ? 'contained' : 'outlined'}
+            onClick={() => handleTimeframeClick('As soon as possible')}
+            variant={buyingTimeframe === 'As soon as possible' ? 'contained' : 'outlined'}
           >
             <span>As soon as possible</span>
           </Button>
-        
-          <Button style={buttonStyle} onClick={() => handleLocationClick('1-2 months')}
-              variant={location === '1-2 months' ? 'contained' : 'outlined'}
+          <Button style={buttonStyle} onClick={() => handleTimeframeClick('1-2 months')}
+            variant={buyingTimeframe === '1-2 months' ? 'contained' : 'outlined'}
           >
             <span>1-2 months</span>
           </Button>
-
-          <Button style={buttonStyle} onClick={() => handleLocationClick('3-4 months')}
-          variant={location === '3-4 months' ? 'contained' : 'outlined'}
+          <Button style={buttonStyle} onClick={() => handleTimeframeClick('3-4 months')}
+            variant={buyingTimeframe === '3-4 months' ? 'contained' : 'outlined'}
           >
             <span>3-4 months</span>
           </Button>
-
-          <Button style={buttonStyle} onClick={() => handleLocationClick('4+ months')}
-          variant={location === '4+ months' ? 'contained' : 'outlined'}
+          <Button style={buttonStyle} onClick={() => handleTimeframeClick('4+ months')}
+            variant={buyingTimeframe === '4+ months' ? 'contained' : 'outlined'}
           >
             <span>4+ months</span>
           </Button>
-
-          <Button style={buttonStyle} onClick={() => handleLocationClick('Not sure')}
-          variant={location === 'Not sure' ? 'contained' : 'outlined'}
+          <Button style={buttonStyle} onClick={() => handleTimeframeClick('Not sure')}
+            variant={buyingTimeframe === 'Not sure' ? 'contained' : 'outlined'}
           >
             <span>Not sure</span>
           </Button>
         </div>
-
         <Box display="flex" alignItems="center" justifyContent="center" mt={2}>
           <Button
             variant="contained"
@@ -99,8 +106,8 @@ function Form3() {
               borderRadius: '39px',
               backgroundColor: '#7731E4',
             }}
-            onClick={goToPage('/form4')}
-            disabled={!isLocationSelected}
+            onClick={handleNextClick}
+            disabled={!buyingTimeframe}
           >
             Next
           </Button>

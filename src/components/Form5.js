@@ -9,24 +9,27 @@ import {
 import { ArrowBack, ArrowForward } from '@mui/icons-material';
 import StyledLinearProgress from './StyledLinearProgress';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios'; // Ensure Axios is installed
 
 function Form5() {
   const [selectedValue, setSelectedValue] = useState('');
+  const [serverMessage, setServerMessage] = useState('');
   const navigate = useNavigate();
 
   const handleSelect = (value) => {
     setSelectedValue(value);
   };
 
-  const goToPage = (page) => {
-    navigate(page);
-  };
-
-  const canProceed = selectedValue.trim() !== ''; 
-
-  const handleNextClick = () => {
-    if (canProceed) {
-        goToPage('/form6');
+  const handleNextClick = async () => {
+    if (selectedValue.trim() !== '') {
+      try {
+        const response = await axios.post('http://localhost:8080/api/pre/payments', { downPayment: selectedValue });
+        setServerMessage(response.data.message);
+        navigate('/form6');
+      } catch (error) {
+        console.error('Error:', error.response ? error.response.data : error.message);
+        setServerMessage(error.response ? error.response.data.message : 'An error occurred');
+      }
     } else {
       alert('Please select a down payment option before proceeding.');
     }
@@ -37,22 +40,27 @@ function Form5() {
       <div style={{ margin: '10px auto', padding: '20px' }}>
         <StyledLinearProgress variant="determinate" value={5} />
         <Box display="flex" alignItems="center" justifyContent="center" mb={2}>
-          <IconButton onClick={() => goToPage('/form4')}>
+          <IconButton onClick={() => navigate('/form4')}>
             <ArrowBack />
           </IconButton>
           <Typography variant="subtitle1" style={{ marginLeft: '10px', marginRight: '10px' }}>
             Financial Situation: Payment
           </Typography>
-          <IconButton onClick={handleNextClick}
-            disabled={!canProceed}>
+          <IconButton onClick={handleNextClick} disabled={selectedValue.trim() === ''}>
             <ArrowForward />
           </IconButton>
         </Box>
+        {serverMessage && (
+          <Typography color="error" style={{ marginBottom: '10px' }}>
+            {serverMessage}
+          </Typography>
+        )}
         <Typography variant="h5" style={{ marginBottom: '10px', textAlign: 'center' }}>
           How much do you have for down payment?
         </Typography>
 
         <Box display="flex" flexDirection="column" alignItems="center" mt={2}>
+          {/* Down payment options as buttons */}
           <Button
             variant={selectedValue === 'Nothing' ? 'contained' : 'outlined'}
             style={{
@@ -154,7 +162,7 @@ function Form5() {
               backgroundColor: '#7731E4',
             }}
             onClick={handleNextClick}
-            disabled={!canProceed} 
+            disabled={selectedValue.trim() === ''}
           >
             Next
           </Button>
