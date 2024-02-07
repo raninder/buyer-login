@@ -1,12 +1,14 @@
 import React from 'react';
-import LayoutFooter from '../components/LayoutFooter';
-import Footer from '../components/contactus';
-
+import Navbar from "./Navbar";
+import ContactCompOne from '../components/contactuscomp/ContactCompOne/ContactCompOne';
+import FAQ from "../components/faq/FAQ";
 function ContactUsPage() {
   return (
-    <LayoutFooter title="Footer Page">
-      <Footer />
-    </LayoutFooter>
+    <div>
+      <Navbar/>
+      <ContactCompOne/>
+      <FAQ/>
+    </div>
     
   );
 }
