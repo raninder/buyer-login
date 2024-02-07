@@ -4,7 +4,6 @@ import Footer from '../components/contactus';
 
 function ContactUsPage() {
   return (
-    
     <LayoutFooter title="Footer Page">
       <Footer />
     </LayoutFooter>

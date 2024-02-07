@@ -19,7 +19,7 @@ export default function Navigator() {
   return (
     <Router>
       <Routes>
-      <Route path="/" element={<LandingPage />} />
+        <Route path="/" element={<LandingPage />} />
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/howitworks" element={<HowItWorks />} />
         <Route path="/Article" element={<ArticleContent />} />

@@ -1,7 +1,6 @@
 import React from 'react';
 import '../css/Article.css';
 import Navbar from './Navbar';
-import Footer from './Footer';
 
 const ArticleContent = () => {
     return (
@@ -101,7 +100,6 @@ const ArticleContent = () => {
                 </div>
                         </div>
                     </div> 
-                    <Footer/>
                 </div>
     )
 }

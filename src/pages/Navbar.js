@@ -5,7 +5,6 @@ import Logo from "../assets/icons/logo.png";
 
 const Navbar = () => {
     const navigate = useNavigate();
-
     const goToPage = (page) => {
     navigate(page);
     };
