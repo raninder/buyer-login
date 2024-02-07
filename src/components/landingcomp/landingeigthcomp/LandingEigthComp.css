@@ -1,0 +1,92 @@
+.landing-main8{
+    background: #E7E2EF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding: 3rem 8rem;
+}
+
+.landing-main8-header{
+    color: #000;
+    text-align: center;
+    font-family: 'Anton',sans-serif;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 54px;
+}
+
+.landing-main8-about{
+    color: #000;
+    text-align: center;
+    font-family:'DM Sans',sans-serif;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2rem;
+    margin: 1.5rem 0rem;
+}
+
+.main8-cobuyer-btn{
+    padding:0rem 2rem;
+    border-radius: 0.2rem;
+    background: var(--Primary, #7731E4);
+    cursor: pointer;
+    width: fit-content;
+}
+
+.main8-cobuyer-btn span{
+    color: var(--Gray-Light, #FFF);
+    text-align: center;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 38px;
+}
+
+.chart-wrapper{
+    width: 80%;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4rem;
+    border-radius: 0.4rem;
+}
+
+.chart-value-changer{
+    padding: 3rem 0rem 0rem 4rem;
+}
+
+.chart-value-wrapper{
+     margin-bottom: 3rem;
+}
+
+.chart-value-head{
+    color: #000;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22.5px;
+}
+
+.chart-value-cont{
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chart-value{
+    color: #000;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22.5px;
+}

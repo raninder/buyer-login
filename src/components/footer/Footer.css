@@ -1,0 +1,10 @@
+.footer{
+    background: #E7E2EF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    background-image: url('../../assets/backgrounds/footerbg.png');
+    background-repeat: no-repeat;
+    background-position: top;
+}

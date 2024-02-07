@@ -1,0 +1,32 @@
+.agent-first-main{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #7731E4;
+}
+
+.agents-first-image{
+width: 100%;
+height: 100%;
+}
+
+.agent-first-btn{
+    position: absolute;
+    padding:0rem 2rem;
+    border-radius: 0.2rem;
+    background: var(--Primary, #7731E4);
+    cursor: pointer;
+    width: fit-content;
+    top: 60%;
+    left: 50%;
+}
+
+.agent-first-btn span{
+    color: var(--Gray-Light, #FFF);
+    text-align: center;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 38px;
+}

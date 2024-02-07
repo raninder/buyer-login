@@ -1,0 +1,58 @@
+.landing-main4{
+    background: var(--Primary, #F5C34E);
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 3rem 8rem;
+}
+
+.landing-main4-text-cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.landing-main4-head{
+    color: #000;
+    font-family: 'Anton', sans-serif;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.landing-main4-about{
+    color: #1E1E1E;
+font-family: 'DM Sans', sans-serif;
+font-size: 1rem;
+font-style: normal;
+font-weight: 400;
+line-height: 1.5rem;
+width: 70%;
+margin:2rem 0rem;
+
+}
+
+.main4-couple{
+    height: 50vh;
+}
+
+.main4-cobuyer-btn{
+    padding:0rem 2rem;
+    border-radius: 0.2rem;
+    background: var(--Primary, #7731E4);
+    cursor: pointer;
+}
+
+.main4-cobuyer-btn span{
+    color: var(--Gray-Light, #FFF);
+    text-align: center;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 38px;
+}

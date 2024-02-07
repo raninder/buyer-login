@@ -1,0 +1,88 @@
+.landing-main2{
+    background: var(--Primary, #7731E4);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 3rem 5rem;
+    background-image: url('../../../assets/backgrounds/big-drop.png');
+    background-repeat: no-repeat;
+    background-position: center left;
+}
+
+.landing-main2-header{
+    color: #FFF;
+text-align: center;
+font-family: 'Anton', sans-serif;
+font-size: 2.5rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin-bottom: 1rem;
+}
+
+.landing-main2-post-cont{
+    margin: 2rem 0rem;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-evenly;
+    align-self: center;
+}
+
+.landing-main2-post{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main2-couple{
+    height: 15rem;
+}
+
+.main2-post-head{
+    color: #FFF;
+text-align: center;
+font-family: 'DM Sans', sans-serif;
+font-size: 1.3rem;
+font-style: normal;
+font-weight: 700;
+line-height: 62px; /* 172.222% */
+text-transform: uppercase;
+margin-top: 0.5rem;
+}
+
+.main2-post-about{
+    color: #FFF;
+    text-align: center;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.3rem;
+    width: 60%;
+}
+
+.landing-main2-htw-btn{
+    border-radius: 0.2rem;
+    background: #FFF;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: fit-content;
+    align-self: center;
+    padding: 0rem 3rem;
+    margin-top: 1rem;
+}
+
+.landing-main2-htw-btn span{
+    color: var(--Black, #171717);
+text-align: center;
+font-family: 'DM Sans', sans-serif;
+font-size: 1rem;
+font-style: normal;
+font-weight: 700;
+line-height: 38px; /* 135.714% */
+}

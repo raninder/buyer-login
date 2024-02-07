@@ -1,0 +1,62 @@
+.agents-second-main{
+    background: #7731E4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding: 3rem 8rem;
+}
+
+.agents-second-head{
+    color: #FFF;
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.agents-second-banners-wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 6rem;
+    margin-bottom: 2rem;
+}
+
+.agents-second-banner-cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.agents-second-banner{
+    background: #FFF;
+    padding: 1rem 5rem;
+    border-radius: 0.4rem;
+}
+
+.agents-second-banner span{
+    color: var(--Primary, #7731E4);
+    text-align: center;
+    font-family: 'DM Sans', sans-serif; 
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 72px;
+}
+
+.agents-second-banner-text{
+    color: #FFF;
+    text-align: center;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px;
+    margin-top: 1.2rem;
+}
