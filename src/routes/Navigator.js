@@ -15,6 +15,8 @@ import Blog from '../pages/Blog';
 import AgentsPage from '../pages/AgentsPage';
 import AboutUs from '../pages/AboutUs';
 import HowItWorks from '../pages/HowItWorks';
+import Signup from '../pages/Signup';
+
 export default function Navigator() {
   return (
     <Router>
@@ -26,6 +28,7 @@ export default function Navigator() {
         <Route path="/contactus" element={<ContactUsPage />} />
         <Route path="/agents" element={<AgentsPage />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/signup" element={<Signup />} />
         <Route path="/form1" element={<Form1Page />} />
         <Route path="/form2" element={<Form2Page />} />
         <Route path="/form3" element={<Form3Page />} />

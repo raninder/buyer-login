@@ -1,10 +1,12 @@
 import React from 'react';
 import "./LandingEigthComp.css";
-import CanvasJSReact from '@canvasjs/react-charts';
+// @ts-ignore
+// import CanvasJSReact from '@canvasjs/react-charts';
+import {CanvasJSChart} from 'canvasjs-react-charts'
 import 'toolcool-range-slider';
 export default function LandingEigthComp() {
-    var CanvasJS = CanvasJSReact.CanvasJS;
-    var CanvasJSChart = CanvasJSReact.CanvasJSChart;
+    // var CanvasJS = CanvasJSReact.CanvasJS;
+    // var CanvasJSChart = CanvasJSReact.CanvasJSChart;
     const options = {
         width:500,
         height:300,
