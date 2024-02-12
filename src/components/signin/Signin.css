@@ -1,0 +1,140 @@
+.signup-container{
+  display:flex;
+  position:relative;
+  top: 40%;
+  }
+ .login h1{
+  font-family: anton;
+  font-weight: 400px;
+  font-size: 36px;
+  line-height: 43.74px;
+ }
+ .login {
+  width: 45%;
+  padding:7%
+}
+
+.login > form {
+  display: flex;
+  flex-direction: column;
+  position:relative;
+  width: 495px;
+}
+
+.login > form > label {
+  font-family: DM Sans;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23.44px;
+  letter-spacing: -0.2800000011920929px;
+  text-align: left;
+  margin-bottom: 7px;
+  margin-top: 10px;
+}
+.login > form > input {
+height: 48px;
+padding: 8px 8px 8px 16px;
+border-radius: 8px;
+gap: 8px;
+background:white;
+border: 1px solid #D9CDCD
+}
+.eye-icon{
+position: absolute;
+top: 54%;
+right: 4%;
+opacity:50%;
+}
+
+.login > form > button {
+height: 48px;
+margin-top:30px;
+padding: 10px 32px 46px 32px;
+border-radius: 8px;
+background-color:#7731E4;
+color:white;
+font-family: DM Sans;
+font-size: 20px;
+font-weight: 700;
+line-height: 38px;
+letter-spacing: 0em;
+text-align: center;
+}
+
+.login > form > button:hover {
+  opacity: 88%;
+}
+
+.login p{
+  font-family: DM Sans;
+  font-weight: 700;
+  font-size:16px;
+  line-height: 21.74px;
+  text-align: center;
+}
+.login > span {
+  color:#7731E4;
+}
+
+fieldset.title {
+  border-top: 1px solid #aaa;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  display: block;
+  text-align: center;
+  color:#8B8B8B;
+}
+
+fieldset.title legend {
+font-family: Raleway;
+font-size: 14px;
+font-weight: 500;
+line-height: 16px;
+letter-spacing: 0em;
+text-align: center;
+
+}
+
+.social{
+  display:flex;
+  justify-content: space-between;
+  padding-top:10px;
+}
+.google-btn, .fb-btn{
+  border: 1px solid #D9CDCD;
+  border-radius: 8px;
+  background-color: white;
+  width:220px;
+  height:56px;
+  padding:10px;
+ }
+ .google-btn, .fb-btn:hover{
+  cursor:pointer;
+ }
+
+.social img{
+  margin-right:10px;
+  width: 32px;
+  height: 31.27px;
+  vertical-align:middle;
+}
+.social span{
+  width: 50px;
+  height:21px;
+  font-family: DM Sans;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+  
+}
+
+.right-div{
+  width:50%;
+}
+.d3img {
+height:100%;
+width:100%;
+}

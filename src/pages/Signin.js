@@ -1,16 +1,16 @@
 import React from "react";
 import "../css/agentstyle.css";
 import Navbar from './Navbar';
-import Signupcomp from "../components/signup/Signupcomp";
+import Signincomp from "../components/signin/Signincomp";
 import Footer from "../components/footer/Footer";
-const Signup = () => {
+const Signin = () => {
   return (
     <div>
    
-      <Signupcomp />
+      <Signincomp />
   
     </div>
   );
 }
 
-export default Signup
+export default Signin

@@ -21,7 +21,7 @@ const Navbar = () => {
                     <a className="nav-link" onClick={() => goToPage('/contactus')}>Contact Us</a>
                 </div>
                 <div className="right-section">
-                    <Link to = '/signup'><button className="btn btn-signin">Sign In</button></Link>
+                    <Link to = '/signin'><button className="btn btn-signin">Sign In</button></Link>
                     <button className="btn btn-getstarted">Get Started</button>
                 </div>
             </div>
