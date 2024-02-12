@@ -20,13 +20,14 @@ import {
   signInWithEmailAndPassword,
 } from '../../firebase.config';
 import { login,logout, selectUserEmail, selectUserName } from '../../features/userSlice';
-import  {GoogleAuthProvider, signInWithPopup} from 'firebase/auth';
+import  {FacebookAuthProvider, GoogleAuthProvider, signInWithPopup} from 'firebase/auth';
 import { useDispatch, useSelector } from 'react-redux';
 
 const Signupcomp = () => {
   const [email, setEmail]  = useState(null)
   const [password, setPassword] = useState(null)
   const [errorMsg, setErrorMsg] = useState("");
+  const [isLogin, setIsLogin] = useState(false); 
   const [type, setType] = useState('password');
   const [icon, setIcon] = useState(eyeOff);
   const dispatch = useDispatch();
@@ -57,12 +58,36 @@ const Signupcomp = () => {
   let provider = new GoogleAuthProvider();
   signInWithPopup(auth, provider)
       .then((result)=>{
+        setIsLogin(true);
         //action.payload
         dispatch(login({
           userName: result.user.displayName,
           userEmail: result.user.email
         }))
       } )
+      .catch( (e) => {
+        //handle the error when login fails
+        alert(`login error ${e}`);
+        setIsLogin(false); // Sets 'isLogin' to false on login failure
+      })
+ }
+
+ const handleFLogin = () =>{
+  let provider = new FacebookAuthProvider();
+  signInWithPopup(auth, provider)
+      .then((result)=>{
+        setIsLogin(true);
+        //action.payload
+        dispatch(login({
+          userName: result.user.displayName,
+          userEmail: result.user.email
+        }))
+      } )
+      .catch( (e) => {
+        //handle the error when login fails
+        alert(`login error ${e}`);
+        setIsLogin(false); // Sets 'isLogin' to false on login failure
+      })
  }
 
   return(
@@ -103,7 +128,7 @@ const Signupcomp = () => {
             </fieldset>
             <div className="social">
                <button type="button" className="google-btn" onClick = {handleGLogin}><img src={Google} alt="google"></img><span>Google </span></button>
-               <button type="button" className="fb-btn" ><img src={Facebook} alt="google"></img><span>Facebook</span> </button>
+               <button type="button" className="fb-btn" onClick = {handleFLogin}><img src={Facebook} alt="google"></img><span>Facebook</span> </button>
                 {/* <Link to = '/facebook'><button type="button"  className="fb-btn" ><FontAwesomeIcon className="fb" icon={faFacebook} size="2x" />   Facebook </button></Link> */}
             </div>
         </div>
