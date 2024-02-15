@@ -1,6 +1,10 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSquareParking,faCircle} from "@fortawesome/free-solid-svg-icons";
-import '../styles/highlights.css'
+import listed from '../../assets/icons/listed.png';
+import parking from '../../assets/icons/parking.png';
+import basement from '../../assets/icons/basement.png';
+import cooling from '../../assets/icons/cooling.png';
+import HOA from '../../assets/icons/HOA.png';
+import price from '../../assets/icons/price.png';
+import '../../css/proplist_styles/highlights.css'
 
 const Highlights = ({data}) => {
 
@@ -10,13 +14,13 @@ const Highlights = ({data}) => {
 			<div className="highlights-content">
 				<div className="column1">
 					<div className="key">
-						<FontAwesomeIcon icon={faSquareParking} /><span className="key-icon">Parking</span>
+          <img src={parking} alt="parking" height="15" width="15"/><span className="key-icon">Parking</span>
 					</div>
 					<div className="key">
-						<FontAwesomeIcon icon={faCircle} /><span className="key-icon">Basement</span>
+          <img src={basement} alt="basement" height="15" width="15"/><span className="key-icon">Basement</span>
 					</div>
 					<div className="key">
-						<FontAwesomeIcon icon={faCircle} /><span className="key-icon">Cooling</span>
+          <img src={cooling} alt="cooling" height="15" width="15"/><span className="key-icon">Cooling</span>
 					</div>
 				</div>
 
@@ -34,13 +38,13 @@ const Highlights = ({data}) => {
 
 				<div className="column3">
 					<div className="key">
-						<FontAwesomeIcon icon={faCircle} /><span className="key-icon">HOA</span>
+          <img src={HOA} alt="HOA" height="15" width="15"/><span className="key-icon">HOA</span>
 					</div>
 					<div className="key">
-						<FontAwesomeIcon icon={faCircle} /><span className="key-icon">Price/Sqft</span>
+          <img src={price} alt="price per sq ft" height="15" width="15"/><span className="key-icon">Price/Sqft</span>
 					</div>
 					<div className="key">
-						<FontAwesomeIcon icon={faCircle} /><span className="key-icon">Listed</span>
+          <img src={listed} alt="listed" height="15" width="15"/><span className="key-icon">Listed</span>
 					</div>
 				</div>
 

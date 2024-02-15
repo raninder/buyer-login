@@ -1,0 +1,126 @@
+/* Header component */
+
+.box{
+  margin-top:20px;
+  margin-left:20px;
+  display:flex;
+  position:relative;
+ 
+}
+.img-div{
+  display:flex;
+  position:relative;
+}
+.img1{
+  width:53%;
+  margin-right: 6px;
+}
+.img2{
+  width:48%;
+  margin-right: 6px;
+}
+.img3{
+  width:48%;
+  height:100%;
+}
+.viewBtn1, .viewBtn2{
+  position:absolute;
+  top:80%;
+  padding:15px;
+  width:226px;
+  height:56px;
+  background-color: rgba(119, 49, 228, 1);
+  color:white;
+  border:1px solid rgba(119, 49, 228, 1);
+  border-radius: 39px;
+ 
+}
+
+.viewBtn1, .viewBtn2, .img-button{
+  font-family: 'open sans';
+  font-size: 20px;
+  font-weight: 700;
+}
+.viewBtn1{
+  left:4%;
+}
+.viewBtn2{
+  left:23%;
+}
+.img-button{
+  position: absolute;
+  bottom: 10%;
+  right: 7%;
+  color: white;
+  padding: 10px;
+  border-radius: 39px;
+  border: none;
+  background-color: white;
+  color:black;
+  width:229px;
+  height:56px;
+}
+.like-icons{
+  display:flex;
+  position: absolute;
+  top: 5%;
+  left: 72%;
+}
+.img-border{
+  height:40px;
+  width:40px;
+  border:1px solid lightgray;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  margin:3px;
+  padding: 10px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.hicon{
+  height:20px;
+  width:20px;
+}
+
+/* phones */
+@media only screen and (max-width: 600px){
+  .box{
+    margin-left:10px;
+    margin-top:10px;
+    display:flex;
+    flex-direction: column;
+    position:relative;
+  }
+
+  img-div{
+    display:flex;
+    position:relative;
+   
+  }
+  .img1{
+    width:98%;
+    margin:10px;
+  }
+  .img2{
+    width:48%;
+    margin: 10px;
+  }
+  .img3{
+    width:48%;
+    margin: 10px;
+  } 
+  .viewBtn1, .viewBtn2{
+    position:absolute;
+    top:55%;
+  }
+  .viewBtn1{
+    left:3%;
+  }
+
+  .viewBtn2{
+    left:30%;
+  }
+}
+
+

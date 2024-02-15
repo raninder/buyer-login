@@ -1,16 +1,17 @@
 import React from "react";
 import "../css/agentstyle.css";
 import Navbar from './Navbar';
-import Signincomp from "../components/signin/Signincomp";
+import PropHome from "../components/proplist/PropHome";
 import Footer from "../components/footer/Footer";
-const Signin = () => {
+
+const PropertyList = () => {
   return (
     <div>
-    <h1>Signin</h1>
-      {/* <Signincomp /> */}
-  
+      <Navbar />
+      <PropHome />
+      <Footer />
     </div>
   );
 }
 
-export default Signin
+export default PropertyList

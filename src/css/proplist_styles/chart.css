@@ -1,0 +1,52 @@
+/* chart component */
+.piechart{
+  display: flex;
+}
+.chart{
+  width:60%;
+  padding-left:50px;
+  text-align:right;
+  font-size: 12px;
+}
+.chartvalue{
+  width:40%;
+  padding-right: 40px;
+  padding-top: 40px;
+  text-align: left;
+  font-family: DM Sans;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 33px;
+}
+
+.chartvalue>h6{
+  margin-top:5px;
+  font-family: Raleway;
+}
+.recharts-legend-item {
+  margin-bottom: 10px;
+}
+
+.top>h3, .chartvalue>h6{
+  color:grey;
+}
+
+.text-color-class{
+	color:black;
+	font-size:16px;
+  font-weight: 500;
+}
+
+/* .chart-table{
+  border-collapse: separate;
+  border-spacing: 20px;
+ 
+}
+.chart-table td{
+  padding-right:40px;
+  white-space: nowrap;
+}  */
+
+
+
+

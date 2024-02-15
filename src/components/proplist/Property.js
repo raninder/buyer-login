@@ -2,16 +2,18 @@ import { useParams } from "react-router";
 import Overview from "./Overview";
 import Header from "./Header";
 import Price from "./Price";
+import Navbar from "../../pages/Navbar";
+import Footer from "../footer/Footer";
 import Similar from "./Similar";
 import Highlights from "./Highlights";
 import Sidebar from "./Sidebar";
 import Details from "./Details";
 import Nearby from "./Nearby";
 import {useState, useEffect} from 'react'
-import '../styles/property.css'
+import '../../css/proplist_styles/property.css'
 
 import { onSnapshot, doc } from "firebase/firestore"
-import {db} from '../firebase';
+import {db} from '../../firebase';
 import { useLocation } from 'react-router-dom'
 
 
@@ -25,6 +27,7 @@ import { useLocation } from 'react-router-dom'
 
   //filter document data from properties collection based on id
   const filtered = data.filter((ele) => ele.id === id )
+  //convert filtered data into object
   const obj = {...filtered[0]}
 	
   const docRef1 = doc(db, "highlights", id)
@@ -43,6 +46,9 @@ import { useLocation } from 'react-router-dom'
     },[])
      
   return ( 
+      
+    <>
+    <Navbar />
     <div>
       {isPending && <div>Loading....</div>}
       { data && <Header data={obj}/> }
@@ -53,8 +59,8 @@ import { useLocation } from 'react-router-dom'
           <Overview data={obj}></Overview>
           <Highlights data={highData}/>
           <Details id={id}/>
-          <Similar />
-          <Nearby />
+          <Similar title={"Home Similar"}/>
+          <Nearby title={"Home Nearby"}/>
         </div>
         <div className= "right">
           <Sidebar/>
@@ -63,6 +69,8 @@ import { useLocation } from 'react-router-dom'
       
       ) } 
     </div>
+    <Footer/>
+    </>
    );
 }
  

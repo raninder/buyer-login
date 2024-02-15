@@ -1,6 +1,8 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBed, faBath, faSquare , faLocationDot} from "@fortawesome/free-solid-svg-icons";
-import '../styles/price.css'
+import bed from '../../assets/icons/bed.png';
+import bath from '../../assets/icons/bath.png';
+import area from '../../assets/icons/area.png';
+import location from '../../assets/icons/location.png';
+import '../../css/proplist_styles/price.css'
 
 
 const Price = ({data}) => {
@@ -9,12 +11,13 @@ const Price = ({data}) => {
 			<div className="price-container">
 					<p className="price">{data.price}  </p>
 					<p className="price-icons">
-					<span><FontAwesomeIcon icon={faBed} />  {data.beds}  </span>
-					<span><FontAwesomeIcon icon={faBath} />  {data.baths}  </span>
-					<span><FontAwesomeIcon icon={faSquare} />  {data.area} </span>
+					<span><img src={bed} alt="bed" /> {data.beds}  </span>
+					<span><img src={bath} alt="bath" /> {data.baths}  </span>
+					<span><img src={area} alt="area" /> {data.area} </span>
 					</p>
-					<p className="icon">
-					<span><FontAwesomeIcon icon={faLocationDot} /> {data.location}</span>
+				
+					<p >
+						<span className="icon"><img src={location} alt="area" /> {data.location}</span>
 					</p>
 			</div>
 			<div className="map">

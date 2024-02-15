@@ -1,0 +1,90 @@
+/* details component */
+.details-container{
+  font-family: DM Sans;
+  padding:20px;
+}
+.details-container h3{
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0em;
+  padding-bottom:20px;
+}
+.details p{
+  font-family: Raleway;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.10000000149011612px;
+}
+.rooms{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  position:relative;
+}
+.rooms>h5, .rooms3>h5{
+  font-size: 18px;
+  line-height: 24px;
+  /* letter-spacing: 0.10000000149011612px; */
+}
+.rooms1, .rooms2{
+  width:50%;
+  margin-bottom:20px;
+  position:relative;
+}
+.rooms3{
+  margin-bottom:20px;
+}
+
+ .align{
+    margin-left:10px;
+    font-family: Raleway;
+    font-weight: 400;
+  }
+
+  .rooms p, .rooms3 p{
+    font-family: DM Sans;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    /* letter-spacing: 0.10000000149011612px; */
+    margin:5px;
+  }
+  .bdiv1{
+    display:inline-block;
+    width:265px;
+    height:48px;
+    position:relative;
+    margin-top:-24px; 
+    left:100px;
+  }
+
+  .bdiv2{
+    display:block;
+    width:239px;
+    height:48px;
+    position:relative;
+    margin-top:-22px; 
+    left:100px;
+  }
+  .bdiv3{
+    display:inline-block;
+    width:70px;
+    height:48px;
+    position:relative;
+    margin-top:-25px; 
+    left:270px;
+  }
+.days, a{
+  font-size: 18px;
+  line-height: 24px;
+  margin-left: 10px;
+}
+.days{
+  font-weight: 400;
+}
+a{
+  font-weight: 700;
+  color: black;
+}

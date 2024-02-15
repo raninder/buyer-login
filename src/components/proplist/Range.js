@@ -1,29 +1,32 @@
-import '../styles/range.css'
-const Range = ({ title,min, max,step,value1,value2,value3,handleChange }) => {
+import '../../css/proplist_styles/range.css';
+
+const Range = ({ title,min, max,step,value1,value2,value3,value4,value5,handleChange }) => {
   
   return (
     <div className="slider-container">
 			<div className="heading">
 				<span className="title"> {title}</span>
-				{value2? <div><span className="value">{value2}</span><span className="value">{value1}</span></div>
+				{value2? <div><span className="value">${value1}</span><span className="value">{value2}%</span></div>
 				:
 				value3?
-				<span className="value">{value3} years</span>
+				<span className="value">${value3} </span>
 				:
-				<span className="value">{value1}</span>
+        value4?
+				<span className="value">{value4}%</span>
+        :
+        value5?
+        <span className="value">{value5}years</span>
+        :
+        <span className="value">${value1}</span>
 				}
 				</div>
       <input
         type="range"
-        value={value1}
         min={min}
         max={max}
         step={step}
         onChange = {handleChange}
       />
-
-			{/* <p>The value is: <span>{value}</span></p> */}
-      {/* <p>The max value is: <span>{value.max}</span></p> */}
     </div>
   );
 };

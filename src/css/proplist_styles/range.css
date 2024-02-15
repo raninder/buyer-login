@@ -1,0 +1,39 @@
+
+.range{
+	margin: 20px;
+	font-size: 22px;
+	font-family:DM Sans;
+	line-height: 20px;
+	font-weight:700;
+	}
+.slider-container{
+	display:flex;
+	flex-direction: column;
+}
+.slider-container .value{
+	border: 1px solid rgba(237, 237, 237, 1);;
+	margin:4px;
+	border-radius: 10px;
+	padding:3px;
+	font-weight:400;
+}
+.heading{
+	display:flex;
+	justify-content:space-between;
+}
+input[type="range"] {
+  accent-color:blueviolet;
+	margin:15px 0px;
+}
+.heading button{
+	border: none;
+	background:white;
+	color:grey;
+	margin-left:10px;
+	font-family: Raleway;
+	font-size: 20px;
+}
+.heading button:hover{
+	color:blueviolet;
+	font-weight: 800;
+}

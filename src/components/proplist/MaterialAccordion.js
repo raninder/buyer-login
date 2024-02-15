@@ -4,19 +4,30 @@ import Accordion from "@mui/material/Accordion";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-function MaterialAccordion() {
+import arrow from '../../assets/icons/arrow.png';
+import lock from '../../assets/icons/lock.png';
+import '../../css/proplist_styles/details.css'
+
+function MaterialAccordion({data1,data2}) {
   return (
-    <div>
+    <div className="details">
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
+          aria-controls="panel2a-content"
+          id="panel2a-header"
         >
-          <Typography><h4>Construction</h4></Typography>
+          <Typography><p>Utilities & Green  Energy</p></Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>Text goes here ...</Typography>
+          <Typography>
+            <div className="rooms3">
+                <h5> Utility</h5>
+                <p><img src={arrow} className="point" alt="arrow" /><span className="align">Sewer information:  </span>{data1.sewer_info}</p>
+                <p><img src={arrow} className="point" alt="arrow" /><span className="align">Water information: </span>{data1.water_info}</p>
+              </div>
+         
+          </Typography>
         </AccordionDetails>
       </Accordion>
 
@@ -26,10 +37,21 @@ function MaterialAccordion() {
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography><h4>Utilities & Green  Energy</h4></Typography>
+          <Typography><p>Community & Neighborhood</p></Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>Text goes here ...</Typography>
+          <Typography>
+          <div className="rooms">
+              <div className="rooms1">
+                <h5> Community</h5>
+                <p><img src={arrow} className="point" alt="arrow" /><span className="align">Features:</span><b className="bdiv2">{data2.features}</b></p>
+              </div>
+             <div className="rooms2">
+                <h5> Location</h5>
+                <p><img src={arrow} className="point" alt="arrow" /><span className="align">Region: </span>{data2.region}</p>
+              </div>
+           </div>
+          </Typography>
         </AccordionDetails>
       </Accordion>
 
@@ -39,10 +61,13 @@ function MaterialAccordion() {
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography><h4>Community & Neighborhood</h4></Typography>
+          <Typography><h4>Days on Market  <img src={lock} className="point" alt="lock" /></h4></Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>Text goes here ...</Typography>
+          <Typography>
+            <p className="days">To view the details, download the mobile application.</p>
+            <p><a href="">Download now</a></p>
+          </Typography>
         </AccordionDetails>
       </Accordion>
 
@@ -52,11 +77,11 @@ function MaterialAccordion() {
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography><h4>Days on Market</h4></Typography>
+          <Typography><h4>Property Information  <img src={lock} className="point" alt="lock" /></h4></Typography>
         </AccordionSummary>
-        <AccordionDetails>
-          <Typography>Text goes here ...</Typography>
-        </AccordionDetails>
+        {/* <AccordionDetails>
+          <Typography></Typography>
+        </AccordionDetails> */}
       </Accordion>
 
       <Accordion>
@@ -65,24 +90,11 @@ function MaterialAccordion() {
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography><h4>Property Information</h4></Typography>
+          <Typography><h4>Price & Status  <img src={lock} className="point" alt="lock" /></h4></Typography>
         </AccordionSummary>
-        <AccordionDetails>
+        {/* <AccordionDetails>
           <Typography>Text goes here ...</Typography>
-        </AccordionDetails>
-      </Accordion>
-
-      <Accordion>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel2a-content"
-          id="panel2a-header"
-        >
-          <Typography><h4>Price & Status</h4></Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>Text goes here ...</Typography>
-        </AccordionDetails>
+        </AccordionDetails> */}
       </Accordion>
     </div>
   );

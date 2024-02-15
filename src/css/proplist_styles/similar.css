@@ -1,0 +1,65 @@
+/* similar component */
+.similar{
+  font-family: DM Sans;
+  padding:20px;
+}
+.similar h3{
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0em;
+  padding-bottom:20px;
+}
+.homes{
+  display:flex;
+}
+.home-card{
+  margin:10px;
+  background: rgba(246, 246, 246, 0.8);
+  padding-bottom:10px;
+}
+.home{
+  width:98%;
+  font-size: 12px;
+  border:1px lightgrey;
+  border-radius: 8px;
+}
+.home-card>.price{
+  color: rgba(119, 49, 228, 1);
+  font-weight: 700;
+  font-size: 16px;
+}
+.price{
+  display:flex;
+  justify-content: space-between;
+}
+.weeks{
+  color: rgba(112, 112, 112, 1);
+  font-weight: 500;
+  font-size: 10px;
+}
+.similar-icons img{
+  height:16px;
+  width:16px;
+}
+.similar-icons span{
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 14px;
+}
+.home-card > .icon{
+ font-size: 9px;
+  font-weight: 400;
+  line-height: 10px;
+  color: rgba(112, 112, 112, 1);
+}
+.icon img{
+  width: 7.68px;
+  height: 7.68px;
+
+}
+.google-map{
+  margin:10px;
+  border:1px solid lightgrey;
+  border-radius: 10px;
+}

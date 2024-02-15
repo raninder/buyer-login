@@ -1,6 +1,8 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPersonWalking, faBicycle, faBus} from "@fortawesome/free-solid-svg-icons";
-import '../styles/overview.css'
+import walking from '../../assets/icons/walking.png';
+import bicycle from '../../assets/icons/bicycle.png';
+import bus from '../../assets/icons/bus.png';
+
+import '../../css/proplist_styles/overview.css'
 
 const Overview = ({data}) => {
 	return (
@@ -9,8 +11,8 @@ const Overview = ({data}) => {
 				<h3>Overview</h3>
 				
 				<div className="mls">
-					<input type="text" value="MLS#A1165993" readOnly></input>
-					<input type="text" value="Brokerage BHHS EWM Realty" readOnly></input>
+					<div className = "mls1">MLS#:<b>A1165993</b></div> 
+					<div className = "mls2">Brokerage: <b>BHHS EWM Realty</b></div> 
 				</div>
 			</div>
   
@@ -23,32 +25,32 @@ const Overview = ({data}) => {
 			<h3>Getting Around</h3>
 			<div className="score">
 				<div className="walk">
-					<div className="icon">
-						<FontAwesomeIcon icon={faPersonWalking} size="3x"/>
+					<div className="score-icon">
+          	<img src={walking} alt="Walk" className='walking'/>
 					</div>
 					<div className="walkscore">
 						<div>Walk Score</div>
-						<div>{data.walk_score}</div>
+						<div className='data'>{data.walk_score}</div>
 					</div>	
 				</div>
 			
 				<div className="walk">
-					<div className="icon">
-						<FontAwesomeIcon icon={faBicycle} size="3x"/>
+					<div className="score-icon">
+          	<img src={bicycle} alt="bike" className='bike'/>
 					</div>
 					<div className="walkscore">
 						<div>Bike Score</div>
-						<div>{data.bike_score}</div>
+						<div className='data'>{data.bike_score}</div>
 					</div>	
 				</div>
 			
 				<div className="walk">
-					<div className="icon">
-						<FontAwesomeIcon icon={faBus} size="3x"/>
+					<div className="score-icon">
+          	<img src={bus} alt="bus" className='bus'/>
 					</div>
 					<div className="walkscore">
 						<div>Bus Score</div>
-						<div>{data.bus_score}</div>
+						<div className='data'>{data.bus_score}</div>
 					</div>
 				</div>
 			</div>	
