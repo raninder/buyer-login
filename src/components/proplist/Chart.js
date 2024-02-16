@@ -2,7 +2,7 @@
 import React from 'react';
 import 'chartjs-plugin-datalabels';
 import { PieChart, Pie, Legend, Cell, ResponsiveContainer } from 'recharts';
-import '../../css/proplist_styles/chart.css'
+import './proplist_styles/chart.css';
 
 const Chart = () => {
 	const data = [
@@ -17,8 +17,8 @@ const Chart = () => {
 	return ( 
 		<div className="piechart">
 			<div className="chart">
-			<ResponsiveContainer width="100%" height={350}>
-				<PieChart width={250} height={300}>
+			<ResponsiveContainer width="100%" height={400}>
+				<PieChart >
 					
 						<Legend formatter={(value, entry, index) => <span className="text-color-class">{value}</span>}
 						wrapperStyle={{ marginBottom:'20px'}}
@@ -41,8 +41,8 @@ const Chart = () => {
 							data={data} 
 							cx={80} 
 							cy={80} 
-							innerRadius={40}
-							outerRadius={60} 
+							innerRadius={60}
+							outerRadius={80} 
 							dataKey="amount"
 					>
 					{

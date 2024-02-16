@@ -6,7 +6,7 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import arrow from '../../assets/icons/arrow.png';
 import lock from '../../assets/icons/lock.png';
-import '../../css/proplist_styles/details.css'
+import './proplist_styles/details.css'
 
 function MaterialAccordion({data1,data2}) {
   return (
@@ -17,7 +17,7 @@ function MaterialAccordion({data1,data2}) {
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography><p>Utilities & Green  Energy</p></Typography>
+          <Typography><h2>Utilities & Green  Energy</h2></Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
@@ -37,7 +37,7 @@ function MaterialAccordion({data1,data2}) {
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography><p>Community & Neighborhood</p></Typography>
+          <Typography><h2>Community & Neighborhood</h2></Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
@@ -61,11 +61,11 @@ function MaterialAccordion({data1,data2}) {
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography><h4>Days on Market  <img src={lock} className="point" alt="lock" /></h4></Typography>
+          <Typography><h2>Days on Market  <img src={lock} className="lock" alt="lock" /></h2></Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            <p className="days">To view the details, download the mobile application.</p>
+            <p className="download">To view the details, download the mobile application.</p>
             <p><a href="">Download now</a></p>
           </Typography>
         </AccordionDetails>
@@ -77,7 +77,7 @@ function MaterialAccordion({data1,data2}) {
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography><h4>Property Information  <img src={lock} className="point" alt="lock" /></h4></Typography>
+          <Typography><h2>Property Information  <img src={lock} className="lock" alt="lock" /></h2></Typography>
         </AccordionSummary>
         {/* <AccordionDetails>
           <Typography></Typography>
@@ -90,7 +90,7 @@ function MaterialAccordion({data1,data2}) {
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography><h4>Price & Status  <img src={lock} className="point" alt="lock" /></h4></Typography>
+          <Typography><h2>Price & Status  <img src={lock} className="lock" alt="lock" /></h2></Typography>
         </AccordionSummary>
         {/* <AccordionDetails>
           <Typography>Text goes here ...</Typography>

@@ -12,14 +12,21 @@
 }
 
 .overview-heading>h3{
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 700;
 }
 .mls{
   display:flex;
+}
+.mls1, .mls2{
   font-family: 'raleway';
-  font-weight:400;
-  font-size: 16px;
+  /* font-weight:400; */
+  font-size: 20px;
+  color: rgba(37, 37, 37, 1);
+
+ }
+ .mls-value{
+  font-weight: bolder;
  }
 
 .mls div{
@@ -29,7 +36,6 @@
   border-radius: 25.6px;
 }
 
- 
 .overview-content{
   margin-top:10px;
   font-size: 20px;
@@ -38,29 +44,33 @@
 hr{
   width:100%;
 }
+.subheading{
+  font-size: 24px;
+}
+
+.score-container{
+  display:flex;
+  justify-content: space-between;
+}
 
 .score{
-  display:flex;
-}
-
-.walk{
   display: flex;
   margin: 20px;
+
 }
 
-.walkscore{
+.score-data{
   display: flex;
   flex-direction: column;
   margin:10px;
   justify-content: space-between;
-  /* font-family: DM Sans; */
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 700;
   line-height: 24px;
   letter-spacing: 0.10000000149011612px;
   text-align: left;
 }
-.walkscore>.data{
+.score-data>.data{
   font-weight: 400;
 }
 .walking{
@@ -76,12 +86,24 @@ hr{
   width:64px;
 }
 
-@media only screen and (max-width: 600px){
-  .walk{
+@media only screen and (max-width: 768px){
+  .score{
     margin: 10px;
   }
-  .walkscore{ 
+  .score-data{ 
     margin-left:10px;
-
+    font-size: 16px;
+  }
+  .data{
+    font-weight: 500;
+  }
+  .overview-heading>h3{
+    font-size: 22px;
+  }
+  .overview-content{
+    font-size: 16px;
+  }
+  .mls1, .mls2{
+    font-size: 15px;
   }
 }

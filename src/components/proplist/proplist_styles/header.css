@@ -25,7 +25,7 @@
 }
 .viewBtn1, .viewBtn2{
   position:absolute;
-  top:80%;
+  top:85%;
   padding:15px;
   width:226px;
   height:56px;
@@ -49,7 +49,7 @@
 }
 .img-button{
   position: absolute;
-  bottom: 10%;
+  top: 85%;
   right: 7%;
   color: white;
   padding: 10px;
@@ -83,8 +83,8 @@
   width:20px;
 }
 
-/* phones */
-@media only screen and (max-width: 600px){
+
+@media only screen and (max-width: 768px){
   .box{
     margin-left:10px;
     margin-top:10px;
@@ -99,20 +99,25 @@
    
   }
   .img1{
-    width:98%;
+    width:100%;
     margin:10px;
   }
   .img2{
-    width:48%;
-    margin: 10px;
+    width:49%;
+    margin-right: 10px;
+    margin-left:10px;
   }
   .img3{
-    width:48%;
-    margin: 10px;
+    width:50%;
+    /* margin-right: 5px; */
   } 
   .viewBtn1, .viewBtn2{
     position:absolute;
     top:55%;
+    width:190px;
+    height:50px;
+    font-size: 15px;
+    border-radius: 25px;
   }
   .viewBtn1{
     left:3%;
@@ -120,6 +125,13 @@
 
   .viewBtn2{
     left:30%;
+  }
+  .img-button{
+    top:75%;
+    width:190px;
+    height:45px;
+    font-size: 15px;
+    border-radius: 25px;
   }
 }
 

@@ -4,7 +4,7 @@
 }
 .chart{
   width:60%;
-  padding-left:50px;
+  padding-left:70px;
   text-align:right;
   font-size: 12px;
 }
@@ -14,9 +14,9 @@
   padding-top: 40px;
   text-align: left;
   font-family: DM Sans;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 400;
-  line-height: 33px;
+  line-height: 42px;
 }
 
 .chartvalue>h6{
@@ -33,19 +33,10 @@
 
 .text-color-class{
 	color:black;
-	font-size:16px;
+	font-size:22px;
   font-weight: 500;
 }
 
-/* .chart-table{
-  border-collapse: separate;
-  border-spacing: 20px;
- 
-}
-.chart-table td{
-  padding-right:40px;
-  white-space: nowrap;
-}  */
 
 
 

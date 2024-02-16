@@ -1,39 +1,47 @@
 
 .range{
 	margin: 20px;
-	font-size: 22px;
+	font-size: 28px;
 	font-family:DM Sans;
-	line-height: 20px;
+	line-height: 28px;
 	font-weight:700;
 	}
 .slider-container{
 	display:flex;
 	flex-direction: column;
+	margin:20px;
 }
 .slider-container .value{
 	border: 1px solid rgba(237, 237, 237, 1);;
 	margin:4px;
 	border-radius: 10px;
 	padding:3px;
+	font-size: 25px;
 	font-weight:400;
 }
-.heading{
+.heading, .frequency{
 	display:flex;
 	justify-content:space-between;
+ }
+.frequency{
+	padding: 0px 15px;
 }
-input[type="range"] {
+
+input[type="range"],.frequency{
   accent-color:blueviolet;
 	margin:15px 0px;
 }
-.heading button{
+.period button{
 	border: none;
 	background:white;
 	color:grey;
 	margin-left:10px;
 	font-family: Raleway;
-	font-size: 20px;
+	/* font-weight: 600; */
+	font-size: 30px;
 }
-.heading button:hover{
+.period button:hover{
 	color:blueviolet;
-	font-weight: 800;
+	font-family: DM Sans;
+	font-weight: 700;
 }

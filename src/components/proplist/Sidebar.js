@@ -1,6 +1,6 @@
 import Chart from "./Chart";
 import RangeBars from "./RangeBars";
-import '../../css/proplist_styles/sidebar.css';
+import './proplist_styles/sidebar.css';
 
 const Sidebar = () => {
 	return ( 

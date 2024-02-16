@@ -4,7 +4,7 @@ import Accordion from "@mui/material/Accordion";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import '../../css/proplist_styles/details.css'
+import './proplist_styles/details.css'
 
 const DetailsInterior = ({data}) => {
 	return ( 
@@ -15,12 +15,11 @@ const DetailsInterior = ({data}) => {
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography><p>Interior</p></Typography>
+          <Typography><h2>Interior</h2></Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
         
-			{/* <h4> Interior</h4> */}
 			<div className="rooms">
 				<div className="rooms1">
 					<h5> Bedrooms & Bathrooms</h5>

@@ -2,7 +2,7 @@ import PropertyList from './PropertyList';
 import { onSnapshot, collection } from "firebase/firestore";
 import {useEffect, useState} from 'react'
 import {db} from '../../firebase';
-import '../../css/proplist_styles/index.css'
+import './proplist_styles/index.css'
 
 const PropHome = () => {
 	const [propData, setPropData] = useState([])

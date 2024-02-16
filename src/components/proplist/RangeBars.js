@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Range from './Range'
-import '../../css/proplist_styles/range.css';
+import './proplist_styles/range.css';
 
 function RangeBars() {
   const [marketValue,setMarketValue] = useState(10900)
@@ -79,9 +79,9 @@ function RangeBars() {
         value5={amortValue} 
 				title= {"Amortization" }
 			/>
-			<div className="heading">
+			<div className="frequency">
 				<span className="title"> Frequency</span>
-				<span><button className="freq">Monthly</button><button>Bi weekly</button></span> 
+				<span className='period'><button>Monthly</button><button>Bi weekly</button></span> 
 			</div>
 			</div>
   );

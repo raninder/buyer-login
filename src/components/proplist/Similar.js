@@ -5,7 +5,7 @@ import bed from '../../assets/icons/bed.png';
 import bath from '../../assets/icons/bath.png';
 import area from '../../assets/icons/area.png';
 import location from '../../assets/icons/location.png';
-import '../../css/proplist_styles/similar.css';
+import './proplist_styles/similar.css';
 
 const Similar = ({title}) => {
 	return ( 

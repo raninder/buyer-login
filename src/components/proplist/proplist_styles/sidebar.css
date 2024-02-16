@@ -6,30 +6,33 @@
 	}
 	.top>h3, .head{
 		font-family: Raleway;
-		font-size: 22px;
+		font-size: 30px;
 		font-weight: 700;
-		line-height: 23px;
+		line-height: 30px;
 		color: rgba(154, 154, 154, 1);
 	}
-	.head{
+	.head>h3{
 		color: black;
 		padding:10px;
-		font-size: 20px;
+		font-size: 30px;
 	}
 	.head>button{
 		color: rgba(119, 49, 228, 1);
-		font-size: 20px;
+		font-size: 25px;
+		padding:10px;
 	}
 	.top>h1{
 		font-family: Open Sans;
-		font-size: 40px;
+		font-size: 60px;
 		font-weight: 700;
-		line-height: 61px;
+		line-height: 65px;
 		letter-spacing: -1.1621675491333008px;
 		}
 		.top>button{
 			width: 100%;
-			height: 50px;
+			height: 70px;
+			margin-top:10px;
+			margin-bottom: 20px;
 			border:1px solid blueviolet;
 			border-radius: 38px;
 			background-color: rgba(119, 49, 228, 1);
@@ -41,7 +44,7 @@
 			line-height: 20px;
 			letter-spacing: -0.18000000715255737px;
 			text-align: center;
-
+			text-transform: uppercase;
 		}
 	.payment{
 		background-color: white;
@@ -78,3 +81,12 @@
 		border-radius: 0px 0px 15px 15px;
 	}
 	
+	@media (max-width: 768px) {
+		.top{
+			display: none;
+		}
+		.payment{
+			margin-top: -20px;
+		}
+
+	}

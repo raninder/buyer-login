@@ -4,7 +4,7 @@ import basement from '../../assets/icons/basement.png';
 import cooling from '../../assets/icons/cooling.png';
 import HOA from '../../assets/icons/HOA.png';
 import price from '../../assets/icons/price.png';
-import '../../css/proplist_styles/highlights.css'
+import './proplist_styles/highlights.css'
 
 const Highlights = ({data}) => {
 

@@ -2,7 +2,7 @@
 import DetailsInterior from './DetailsInterior';
 import DetailsProperty from './DetailsProperty';
 import DetailsConstruction from './DetailsConstruction';
-import '../../css/proplist_styles/details.css'
+import './proplist_styles/details.css'
 import MaterialAccordion from './MaterialAccordion';
 import {useState, useEffect} from 'react';
 import { onSnapshot, doc } from "firebase/firestore"

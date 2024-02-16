@@ -4,28 +4,28 @@
   padding:20px;
 }
 .details-container h3{
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 700;
   line-height: 20px;
   letter-spacing: 0em;
   padding-bottom:20px;
 }
-.details p{
+.details h2{
   font-family: Raleway;
-  font-size: 20px;
+  font-size: 26px;
   font-weight: 700;
-  line-height: 24px;
+  line-height: 25px;
   letter-spacing: 0.10000000149011612px;
 }
 .rooms{
   display:flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   position:relative;
 }
-.rooms>h5, .rooms3>h5{
-  font-size: 18px;
-  line-height: 24px;
+.rooms h5, .rooms3>h5{
+  font-size: 22px;
+  line-height: 30px;
   /* letter-spacing: 0.10000000149011612px; */
 }
 .rooms1, .rooms2{
@@ -45,19 +45,18 @@
 
   .rooms p, .rooms3 p{
     font-family: DM Sans;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 700;
     line-height: 24px;
-    /* letter-spacing: 0.10000000149011612px; */
     margin:5px;
   }
   .bdiv1{
-    display:inline-block;
+    display:block;
     width:265px;
     height:48px;
     position:relative;
-    margin-top:-24px; 
-    left:100px;
+    margin-top:-25px; 
+    left:110px;
   }
 
   .bdiv2{
@@ -66,25 +65,55 @@
     height:48px;
     position:relative;
     margin-top:-22px; 
-    left:100px;
+    left:110px;
   }
   .bdiv3{
-    display:inline-block;
+    display:block;
     width:70px;
     height:48px;
     position:relative;
     margin-top:-25px; 
-    left:270px;
+    left:300px;
   }
-.days, a{
-  font-size: 18px;
+.download, a{
+  font-size: 20px;
   line-height: 24px;
   margin-left: 10px;
 }
-.days{
+.download{
+  font-size: 20px;
   font-weight: 400;
 }
 a{
   font-weight: 700;
   color: black;
+}
+.lock{
+  width:26px;
+  height:30px;
+}
+
+@media only screen and (max-width: 768px){
+.details-container h3{
+  font-size: 22px;
+}
+.details h2{
+  font-size: 19px;
+}
+.rooms h5, .rooms3>h5{
+  font-size: 16px;
+
+}
+.rooms p, .rooms3 p{
+   font-size: 14px;
+}
+.bdiv1, .bdiv2{
+  width:200px;
+  margin-top:-25px; 
+  left:95px;
+}
+.lock{
+  width:22px;
+  height:26px;
+}
 }

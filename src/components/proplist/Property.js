@@ -10,7 +10,7 @@ import Sidebar from "./Sidebar";
 import Details from "./Details";
 import Nearby from "./Nearby";
 import {useState, useEffect} from 'react'
-import '../../css/proplist_styles/property.css'
+import './proplist_styles/property.css'
 
 import { onSnapshot, doc } from "firebase/firestore"
 import {db} from '../../firebase';
@@ -31,17 +31,14 @@ import { useLocation } from 'react-router-dom'
   const obj = {...filtered[0]}
 	
   const docRef1 = doc(db, "highlights", id)
-  // const docRef2 = doc(db, "properties", id)
-
+ 
   useEffect(()=>{
 
     //get single document from higlights collection in firebase
       onSnapshot(docRef1, (doc) => {
         setHighData(doc.data())
       })
-      // onSnapshot(docRef2, (doc) => {
-      //   setFinalData(doc.data())
-      // })
+     
       setIsPending(false)
     },[])
      

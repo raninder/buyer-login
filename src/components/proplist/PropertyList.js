@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import '../../css/proplist_styles/propertylist.css'
+import './proplist_styles/propertylist.css'
 
 const PropertyList = ({properties}) => {
   

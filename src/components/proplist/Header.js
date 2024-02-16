@@ -3,7 +3,7 @@ import street from '../../assets/icons/street.png';
 import share from '../../assets/icons/share.png';
 import heart from '../../assets/icons/heart.png';
 import circle from '../../assets/icons/circle.png';
-import '../../css/proplist_styles/header.css'
+import './proplist_styles/header.css'
 import {useNavigate } from 'react-router-dom'
 
 

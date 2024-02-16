@@ -1,4 +1,4 @@
-import '../../css/proplist_styles/range.css';
+import './proplist_styles/range.css';
 
 const Range = ({ title,min, max,step,value1,value2,value3,value4,value5,handleChange }) => {
   
@@ -15,7 +15,7 @@ const Range = ({ title,min, max,step,value1,value2,value3,value4,value5,handleCh
 				<span className="value">{value4}%</span>
         :
         value5?
-        <span className="value">{value5}years</span>
+        <span className="value">{value5} years</span>
         :
         <span className="value">${value1}</span>
 				}
