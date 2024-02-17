@@ -1,0 +1,31 @@
+.user-settings-second-comp-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 60vw;
+  min-height: calc(60vw / 3.5);
+  height: 1px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.user-settings-second-comp-email-tip {
+  margin-left: 29%;
+  margin-top: 0.4%;
+}
+
+.user-settings-second-comp-email-tip span {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 142.5%;
+}
+
+.user-settings-second-comp-email-tip span span {
+  color: #252525;
+}
+
+.user-settings-second-comp-profile-save-button {
+  position: absolute;
+  right: 3.5%;
+  bottom: 5%;
+}

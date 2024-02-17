@@ -12,9 +12,10 @@ import ArticleContent from '../pages/Article';
 import LandingPage from '../pages/home/LandingPage';
 import ContactUsPage from '../pages/home/ContactUsPage';
 import Blog from '../pages/Blog';
-import AgentsPage from '../pages/home/AgentsPage';
-import AboutUs from '../pages/home/AboutUs';
-import HowItWorks from '../pages/home/HowItWorks';
+import AgentsPage from '../pages/AgentsPage';
+import AboutUs from '../pages/AboutUs';
+import HowItWorks from '../pages/HowItWorks';
+import UserSettingsPage from '../pages/UserSettingsPage';
 export default function Navigator() {
   return (
     <Router>
@@ -26,6 +27,7 @@ export default function Navigator() {
         <Route path="/contactus" element={<ContactUsPage />} />
         <Route path="/agents" element={<AgentsPage />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/usersettings" element={< UserSettingsPage/>} />
         <Route path="/form1" element={<Form1Page />} />
         <Route path="/form2" element={<Form2Page />} />
         <Route path="/form3" element={<Form3Page />} />

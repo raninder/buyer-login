@@ -1,0 +1,23 @@
+.user-settings-sixth-comp-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 60vw;
+  min-height: calc(60vw / 3.6);
+  height: 1px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.user-settings-sixth-comp-document-item-desciption {
+  margin: 1em 2.7em 0 2.7rem;
+  font-size: 1.2em;
+  width: calc(100% - 5.4em);
+  line-height: 130%;
+}
+
+.user-settings-sixth-comp-document-item-button {
+  position: absolute;
+  bottom: 1.5em;
+  left: 2.7em;
+}

@@ -1,0 +1,10 @@
+.user-settings-third-comp-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 60vw;
+  min-height: calc(60vw / 4);
+  height: 1px;
+  margin: auto;
+  overflow: hidden;
+}

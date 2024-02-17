@@ -1,0 +1,94 @@
+.user-settings-first-comp-container {
+  position: relative;
+  width: 60vw;
+  height: calc(60vw / 1.83);
+  margin: auto;
+  margin-bottom: 2em;
+  margin-top: 1em;
+  border: 1.253px solid #dedede;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.user-settings-first-comp-upper-rectangle {
+  width: 100%;
+  height: 30%;
+  background-color: #e7e2ef;
+  top: 0;
+}
+
+.user-settings-first-comp-profile-name {
+  display: flex;
+  justify-content: center;
+  margin-top: 9%;
+  margin-left: 0.7%;
+  width: 27%;
+}
+
+.user-settings-first-comp-profile-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  margin-top: 3.5%;
+  margin-left: 3.5%;
+  margin-right: 3.5%;
+}
+
+.user-settings-first-comp-profile-form-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 27%;
+}
+
+.user-settings-first-comp-profile-form-title-line {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.user-settings-first-comp-email-tip {
+  margin-left: 29%;
+  margin-top: 0.4%;
+}
+
+.user-settings-first-comp-email-tip span {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 142.5%;
+}
+
+.user-settings-first-comp-email-tip span span {
+  color: #252525;
+}
+
+.user-settings-first-comp-image-overlay {
+  position: absolute;
+  border-radius: 50%;
+  left: 3.6%;
+  top: 9.5%;
+  width: 19.5%;
+  height: 35.5%;
+  background-image: url("https://source.unsplash.com/random");
+  background-size: cover;
+}
+
+.user-settings-first-comp-profile-edit {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid #491798;
+  right: 4%;
+  top: 25%;
+  width: 2.8vw;
+  height: 2.8vw;
+  background-color: #fff;
+}
+
+.user-settings-first-comp-profile-edit img {
+  width: 70%;
+}

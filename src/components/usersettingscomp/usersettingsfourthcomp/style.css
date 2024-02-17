@@ -1,0 +1,59 @@
+.user-settings-fourth-comp-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 60vw;
+  min-height: calc(60vw / 3);
+  height: 1px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.user-settings-fourth-comp-description {
+  margin: 1em 0 0 2.7em;
+  font-size: 1rem;
+}
+
+.user-settings-fourth-comp-friend-card-group {
+  display: flex;
+  gap: 1.2em;
+  margin-left: 2.7em;
+  margin-top: 1.3em;
+}
+
+.user-settings-fourth-comp-friend-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 24%;
+  padding: 0.6em 1.2em 0.8em 1.2em;
+  background: rgba(119, 49, 228, 0.17);
+  border-radius: 0.625em;
+}
+
+.user-settings-fourth-comp-friend-card-send {
+  font-size: 0.9em;
+  font-weight: 500;
+  line-height: 130%;
+  margin-bottom: 0.2em;
+}
+
+.user-settings-fourth-comp-friend-card-email {
+  font-size: 0.85em;
+  font-weight: 400;
+  line-height: 130%;
+}
+
+.user-settings-fourth-comp-friend-card img {
+  position: absolute;
+  right: 1em;
+  top: 0.7em;
+  width: 0.8em;
+}
+
+.user-settings-fourth-comp-button-group {
+  display: flex;
+  margin-top: 2.8em;
+  margin-left: 2.7em;
+  gap: 2em;
+}
