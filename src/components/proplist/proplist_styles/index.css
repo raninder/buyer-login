@@ -18,11 +18,21 @@ body {
   body{
   width:100%;
 }
-.overview-container,.highlights-container, .details-container, .similar{
+.overview-container,.highlights-container, .details-container, .similar, .nearby{
   margin-top: 5px;
   padding:10px;
 }
+/* body{
+  margin:10px;
+} */
 }
+/* @media only screen and (max-width: 480px){
+  
+.overview-container,.highlights-container, .details-container, .similar, .nearby{
+  margin-top: 5px;
+  padding:10px;
+}
+} */
 
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@400;700;900&display=swap");

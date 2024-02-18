@@ -30,7 +30,7 @@ iframe{
   text-align: left;
   color: rgba(119, 49, 228, 1);
 }
-.icon{
+.loc{
   color: rgba(112, 112, 112, 1);
   font-size: 25px;
   font-weight:400;
@@ -42,7 +42,7 @@ iframe{
   font-weight: 700;
   line-height: 31.84px;
 }
-.price-container span img{
+.price-icons img{
   height:32px;
   width:32px;
 }
@@ -50,7 +50,9 @@ iframe{
 .price-container button{
   display:none;
   }
-
+.ago{
+  display:none;
+}
 
 /* @media only screen and (max-width: 600px){
   .price-container{
@@ -91,15 +93,66 @@ iframe{
     iframe{
       height: 220px;
      }
-     .icon{
+     .loc{
       font-size: 20px;
      }
      .price-icons>span{
       margin-right: 10px;
       font-size: 22px;
      }
-     .price-container span img{
+     .price-icons img{
       height:26px;
       width:26px;
-    }
+      }
 	}
+
+  
+  @media (max-width: 480px) {
+    .desc-container{
+        padding:10px;
+    }
+    .price-container button{
+      margin-top:5px;
+      width: 248px;
+			height: 48px;
+    }
+    .price-container>.price{
+      font-size: 26px;
+      line-height: 30px;
+     }
+  .price-container{
+    width:68%;
+    padding:10px;
+  }
+  .map{
+    width:32%;
+   
+  }
+  iframe{
+    height: 100px;
+    margin-top:20px;
+   }
+   .price-icons>span{
+     font-size: 18px;
+   }
+   .price-icons img{
+    height:26px;
+    width:26px;
+  }
+  .loc{
+    font-size: 15px;
+   }
+   .loc img{
+    height:14px;
+    width:14px;
+    }
+    .ago{
+      display:block;
+      font-family: Raleway;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 17px;
+      color: rgba(112, 112, 112, 1);
+      text-align: right;
+     }
+}

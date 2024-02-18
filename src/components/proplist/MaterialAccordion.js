@@ -23,8 +23,8 @@ function MaterialAccordion({data1,data2}) {
           <Typography>
             <div className="rooms3">
                 <h5> Utility</h5>
-                <p><img src={arrow} className="point" alt="arrow" /><span className="align">Sewer information:  </span>{data1.sewer_info}</p>
-                <p><img src={arrow} className="point" alt="arrow" /><span className="align">Water information: </span>{data1.water_info}</p>
+                <p className='key-value'><span><img src={arrow} className="point" alt="arrow" /><span className="align">Sewer information:  </span></span>{data1.sewer_info}</p>
+                <p className='key-value'><span><img src={arrow} className="point" alt="arrow" /><span className="align">Water information: </span></span>{data1.water_info}</p>
               </div>
          
           </Typography>
@@ -44,11 +44,11 @@ function MaterialAccordion({data1,data2}) {
           <div className="rooms">
               <div className="rooms1">
                 <h5> Community</h5>
-                <p><img src={arrow} className="point" alt="arrow" /><span className="align">Features:</span><b className="bdiv2">{data2.features}</b></p>
+                <p className='key-value'><span><img src={arrow} className="point" alt="arrow" /><span className="align">Features:</span></span><b className="bdiv2">{data2.features}</b></p>
               </div>
              <div className="rooms2">
                 <h5> Location</h5>
-                <p><img src={arrow} className="point" alt="arrow" /><span className="align">Region: </span>{data2.region}</p>
+                <p className='key-value'><span ><img src={arrow} className="point" alt="arrow" /><span className="align">Region: </span></span>{data2.region}</p>
               </div>
            </div>
           </Typography>

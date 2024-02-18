@@ -12,7 +12,7 @@ const Similar = ({title}) => {
 		<div className="similar">
 			<h3>{title}</h3>
 			<div className="homes">
-				<div className="home-card">
+				<div className="home-card similar1">
 					<img className="home" src={similar1} alt='' />
 					<p className="price"><span className='cost'>$526,000</span><span className="weeks">1 Week ago</span>  </p>
 					<p className="similar-icons">
@@ -24,7 +24,7 @@ const Similar = ({title}) => {
 					<span><img src={location} alt="" /> 6323  St. Jamestown, Toronto, CA</span>
 					</p>
 				</div>
-				<div className="home-card">
+				<div className="home-card similar2">
 					<img className="home" src={similar2} alt='' />
 					<p className="price"><span className='cost'>$615,000</span><span className="weeks">1 Week ago</span>  </p>
 					<p className="similar-icons">
@@ -36,7 +36,7 @@ const Similar = ({title}) => {
 					<span><img src={location} alt="" /> 6323  St. Jamestown, Toronto, CA</span>
 					</p>
 				</div>
-				<div className="home-card">
+				<div className="home-card similar3">
 					<img className="home" src={similar3} alt='' />
 					<p className="price"><span className='cost'>$589,000</span><span className="weeks">2 Weeks ago</span>  </p>
 					<p className="similar-icons">

@@ -12,6 +12,7 @@ const Highlights = ({data}) => {
 		<div className="highlights-container">
 			<h3> Home Highlights</h3>
 			<div className="highlights-content">
+				<div className="col1-col2">
 				<div className="column1">
 					<div className="key">
           <img src={parking} alt="parking" height="15" width="15"/><span className="key-icon">Parking</span>
@@ -23,7 +24,7 @@ const Highlights = ({data}) => {
           <img src={cooling} alt="cooling" height="15" width="15"/><span className="key-icon">Cooling</span>
 					</div>
 				</div>
-
+				
 				<div className="column2">
 					<div className="key">
 						<span className="key-icon">{data.parking}</span>
@@ -35,7 +36,8 @@ const Highlights = ({data}) => {
 						<span className="key-icon">{data.cooling}</span>
 					</div>
 				</div>
-
+				</div>
+				<div className="col3-col4">
 				<div className="column3">
 					<div className="key">
           <img src={HOA} alt="HOA" height="15" width="15"/><span className="key-icon">HOA</span>
@@ -59,6 +61,7 @@ const Highlights = ({data}) => {
 						<span className="key-icon">{data.listed}</span>
 					</div>
 				</div>
+				</div>	
 			</div>	
 		</div>
 	);

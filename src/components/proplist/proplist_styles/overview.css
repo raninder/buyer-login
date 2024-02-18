@@ -56,7 +56,6 @@ hr{
 .score{
   display: flex;
   margin: 20px;
-
 }
 
 .score-data{
@@ -106,4 +105,46 @@ hr{
   .mls1, .mls2{
     font-size: 15px;
   }
+}
+@media only screen and (max-width: 480px){
+.overview-heading>h3{
+  font-size: 20px;
+}
+.mls1, .mls2{
+   font-size:10px;
+}
+.mls-value{
+  font-weight: bolder;
+ }
+ .overview-content{
+  /* margin-top:10px; */
+  font-size: 14px;
+  line-height: 18px;
+}
+.subheading{
+  font-size: 18px;
+  line-height: 10px;
+}
+.score-data{ 
+  /* margin-left:10px; */
+  font-size: 12px;
+}
+.walking{
+  height:32px;
+  width:26px;
+}
+.bike{
+  height:36px;
+  width:28px;
+}
+.bus{
+  height:32px;
+  width:32px;
+}
+.score{
+   margin: 4px;
+}
+.score-icon{
+  margin-top: 10px;
+}
 }

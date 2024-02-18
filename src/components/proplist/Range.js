@@ -22,6 +22,7 @@ const Range = ({ title,min, max,step,value1,value2,value3,value4,value5,handleCh
 				</div>
       <input
         type="range"
+        className='rangebar'
         min={min}
         max={max}
         step={step}

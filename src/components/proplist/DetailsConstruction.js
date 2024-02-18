@@ -23,16 +23,16 @@ const DetailsConstruction = ({data}) => {
 			<div className="rooms">
 				<div className="rooms1">
 					<h5> Type & Style</h5>
-					<p><img src={arrow} className="point" alt="arrow" /><span className="align">Home Type: </span> {data.home_type}</p>
-					<p><img src={arrow} className="point" alt="arrow" /><span className="align">Property subtype: </span>  {data.property_subtype}</p>
+					<p className='key-value'><span ><img src={arrow} className="point" alt="arrow" /><span className="align">Home Type: </span> </span>{data.home_type}</p>
+					<p className='key-value'><span ><img src={arrow} className="point" alt="arrow" /><span className="align">Property subtype: </span></span>  {data.property_subtype}</p>
 					<br />
 					<h5> Condition</h5>
-					<p><img src={arrow} className="point" alt="arrow" /><span className="align">Year Built: </span>{data.year}</p>
+					<p className='key-value'><span ><img src={arrow} className="point" alt="arrow" /><span className="align">Year Built: </span></span>{data.year}</p>
 				</div>
 				<div className="rooms2">
 					<h5> Material Information</h5>
-					<p><img src={arrow} className="point" alt="arrow" /><span className="align">Construction Material: </span> {data.material}</p>
-					<p><img src={arrow} className="point" alt="arrow" /><span className="align">Foundation: </span>{data.foundation}</p>
+					<p className='key-value'><span ><img src={arrow} className="point" alt="arrow" /><span className="align">Construction Material: </span></span> {data.material}</p>
+					<p className='key-value'><span ><img src={arrow} className="point" alt="arrow" /><span className="align">Foundation: </span></span>{data.foundation}</p>
 				</div>
 			</div>
 

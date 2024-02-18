@@ -6,21 +6,20 @@ import './proplist_styles/chart.css';
 
 const Chart = () => {
 	const data = [
-		{ name: 'Mortgage', amount: 630, color:'blueviolet' },
-		{ name: 'Co-owner', amount: 303, color:'green' },
-		{ name: 'Municipal Taxes', amount: 200, color:'black' },
-		{ name: 'School Taxes', amount: 303,color:'brown' }
+		{ name: 'Mortgage', amount: 630, color:'#F5C34E' },
+		{ name: 'Co-owner', amount: 303, color:'#7731E4' },
+		{ name: 'Municipal Taxes', amount: 200, color:'#497C92' },
+		{ name: 'School Taxes', amount: 303,color:'#111' }
 	];
 
-// const COLORS = ['blueviolet', 'green', 'black', 'brown'];
-
 	return ( 
+		<>
 		<div className="piechart">
 			<div className="chart">
-			<ResponsiveContainer width="100%" height={400}>
+				<ResponsiveContainer width="100%" height={300}>
 				<PieChart >
 					
-						<Legend formatter={(value, entry, index) => <span className="text-color-class">{value}</span>}
+						{/* <Legend formatter={(value, entry, index) => <span className="text-color-class">{value}</span>}
 						wrapperStyle={{ marginBottom:'20px'}}
 							layout="vertical" 
 							verticalAlign="bottom"
@@ -30,21 +29,21 @@ const Chart = () => {
 										id: item.name,
 										color:item.color,
 										// type: "circle",
-										value: `${item.name}          ${item.amount}`
+										value: `${item.name} ${item.amount}`
 							})
 						)
 					}
 					
-					/>
+					/> */}
 				
 					<Pie
 							data={data} 
-							cx={80} 
-							cy={80} 
-							innerRadius={60}
-							outerRadius={80} 
+							cx={'56%'}
+							cy={'31%'}
+							innerRadius={'35%'}
+							outerRadius={'55%'} 
 							dataKey="amount"
-					>
+						>
 					{
 						data.map((entry, index) => <Cell fill={entry.color}/>)
 					}	
@@ -54,12 +53,22 @@ const Chart = () => {
 					</PieChart>
 				</ResponsiveContainer>
 				</div>
+								
 			<div className="chartvalue">
 				<h1> $1533</h1>
 				<h6>/monthly</h6>
 			</div>
-
-		</div>
+			</div>
+			<table className="legend">
+				{data.map((item, index) =>
+				<tr >
+						<td className='col1'> <span style={{ 'background-color': item.color  }} className='filled-circle' ></span></td>
+						<td className='col2'>{item.name}  </td> <td className='col3'>    ${item.amount} </td>
+				
+					</tr>
+				)}
+  		 </table>
+	</>
 	);
 }
 

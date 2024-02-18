@@ -1,15 +1,17 @@
 /* chart component */
 .piechart{
   display: flex;
-}
+  height:200px;
+ }
+
 .chart{
-  width:60%;
+  width:65%;
   padding-left:70px;
   text-align:right;
-  font-size: 12px;
+  padding-top:10px;
 }
 .chartvalue{
-  width:40%;
+  width:35%;
   padding-right: 40px;
   padding-top: 40px;
   text-align: left;
@@ -23,21 +25,76 @@
   margin-top:5px;
   font-family: Raleway;
 }
-.recharts-legend-item {
+/* .recharts-legend-item {
   margin-bottom: 10px;
-}
+} */
 
 .top>h3, .chartvalue>h6{
   color:grey;
 }
 
-.text-color-class{
+/* .text-color-class{
 	color:black;
 	font-size:22px;
   font-weight: 500;
+} */
+.legend{
+  margin:8px 30px;
+}
+.filled-circle{
+  padding: 3px 11px;
+  border-radius: 100%;
+ }
+.col1{
+  padding-right:10px;
+  padding-bottom: 5px;
+}
+.col2,.col3{
+  font-size: 24px;
+  font-family: DM Sans;
+  font-weight: 700;
+ 
 }
 
+@media only screen and (max-width: 768px){
+  .legend{
+    margin:0px 60px  20px;
+  }
+  .filled-circle{
+    padding: 2px 11px;
+    border-radius: 100%;
+   }
+   .col1{
+    padding-right:0;
+    padding-bottom: 5px;
+  }
+ 
+  .col2,.col3{
+    font-size: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .filled-circle{
+    padding: 0px 9px;
+    }
+  .col2,.col3{
+    font-size: 17px;
+  }
+  .chart{
+  padding-top:0px;
+  padding-bottom: 0px;
+  }
+  .chartvalue{
+   font-size: 20px;
+ }
+.chartvalue>h6{
+  margin-top:0;
+ }
+ .piechart{
+   height:170px;
+ }
 
+}
 
 
 

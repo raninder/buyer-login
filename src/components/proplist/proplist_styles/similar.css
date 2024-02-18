@@ -62,7 +62,7 @@
 
 }
 .google-map{
-  margin:20px;
+  margin:10px;
   border:1px solid lightgrey;
   border-radius: 10px;
 }
@@ -84,4 +84,24 @@
   line-height: 9px;
    
  }
+}
+
+@media only screen and (max-width: 480px){
+  .similar3{
+    display:none;
+  }
+  .similar h3{
+    font-size: 20px;
+  }
+  .home{
+     width:200px;
+  }
+  
+  .similar-icons img{
+    height:12px;
+    width:12px;
+  }
+  .similar-icons span{
+    margin-right: 5px;
+  }
 }

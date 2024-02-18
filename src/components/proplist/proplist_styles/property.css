@@ -23,18 +23,18 @@
 
 }
 
-/* phones */
-/* @media only screen and (max-width: 600px){
+/* phones */ 
+ @media only screen and (max-width: 480px){
   .main{
     display: flex;
     flex-direction: column;
   }
   .left,.right{
-    margin:10px;
+    /* margin:20px; */
     width: 100%;
   }
 
-} */
+}
 /* @media only screen and (min-width: 600px){
   .left{
     margin:10px;

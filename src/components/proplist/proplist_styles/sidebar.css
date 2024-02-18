@@ -90,3 +90,12 @@
 		}
 
 	}
+
+	@media (max-width: 480px) {
+		.head>h3{
+			font-size: 20px;
+		}
+		.head>button{
+			font-size: 16px;
+		}
+	}

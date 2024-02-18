@@ -28,12 +28,13 @@ const Header = ({data}) => {
             <div className="img-div">
 						  <img className="img2" src={data.img2} alt='' />
 						    <img className="img3" src={data.img3} alt=''/>
-                <button className="img-button" onClick = {handleClick}> See all 36 images </button> 
+                <p className='img-btn-contaniner'><button className="img-button" onClick = {handleClick}> See all 36 images </button> 
               <div className="like-icons">
                 <div className="img-border"><img src={heart} className="hicon" alt="like" /></div>
                 <div className="img-border"><img src={share} className="hicon" alt="share" /></div>
                 <div className="img-border"><img src={circle} className="hicon" alt="subscribe" /></div>
               </div>
+              </p> 
             </div>
           </div>
       </div>

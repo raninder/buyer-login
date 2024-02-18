@@ -33,6 +33,7 @@
   color:white;
   border:1px solid rgba(119, 49, 228, 1);
   border-radius: 39px;
+  line-height: 20px;
  
 }
 
@@ -113,9 +114,9 @@
   } 
   .viewBtn1, .viewBtn2{
     position:absolute;
-    top:55%;
+    top:60%;
     width:190px;
-    height:50px;
+    height:48px;
     font-size: 15px;
     border-radius: 25px;
   }
@@ -133,6 +134,55 @@
     font-size: 15px;
     border-radius: 25px;
   }
+  .like-icons{
+    position:absolute;
+    top: -550px;
+    left: 80%;
+  }
 }
 
+@media only screen and (max-width: 480px){
+  .box{
+    margin-bottom:40px;
+  }
+
+  img-div{
+    display:none;
+    }
+  .img2,  .img3{
+     display:none;
+  }
+  .viewBtn1, .viewBtn2{
+    position:absolute;
+    top:355px;
+    width:210px;
+    height:40px;
+    font-size: 14px;
+    border-radius: 27px;
+    line-height: 15px;
+    padding:10px;
+  }
+  .viewBtn1{
+    left:5px;
+  }
+
+  .viewBtn2{
+    left:58%;
+  }
+  .img-btn-container{
+    position:relative;
+   }
+  .img-button{
+    position:absolute;
+    left:62%;
+    top:-70px;
+    width:180px;
+    height:40px;
+   }
+  .like-icons{
+    position:absolute;
+    top: -350px;
+    left: 71%;
+  }
+}
 

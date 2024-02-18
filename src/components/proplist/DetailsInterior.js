@@ -23,93 +23,93 @@ const DetailsInterior = ({data}) => {
 			<div className="rooms">
 				<div className="rooms1">
 					<h5> Bedrooms & Bathrooms</h5>
-					<p><img src={arrow} className="point" alt="arrow" /><span className="align">Bedrooms: </span><b> {data.bed}</b></p>
-					<p><img src={arrow} className="point" alt="arrow" /><span className="align">Bathrooms: </span><b>  {data.bath}</b></p>
-					<p><img src={arrow} className="point" alt="arrow" /><span className="align">Partial Bathrooms: </span><b>{data.partial_bath}</b></p>
+					<p className='key-value'><span ><img src={arrow} className="point" alt="arrow" /><span className="align">Bedrooms: </span></span><b> {data.bed}</b></p>
+					<p className='key-value'><span ><img src={arrow} className="point" alt="arrow" /><span className="align">Bathrooms: </span></span><b>  {data.bath}</b></p>
+					<p className='key-value'><span ><img src={arrow} className="point" alt="arrow" /><span className="align">Partial Bathrooms: </span></span><b>{data.partial_bath}</b></p>
 				</div>
 				<div className="rooms2">
 					<h5> Living Room</h5>
-					<p><img src={arrow} className="point" alt="arrow" /><span className="align">Level: </span><b>{data.l_level}</b></p>
-					<p><img src={arrow} className="point" alt="arrow" /><span className="align">Area: </span><b> {data.l_area}</b></p>
-					<p><img src={arrow} className="point" alt="arrow" /><span className="align">Dimesnsions: </span><b>{data.l_dim}</b></p>
+					<p className='key-value'><span ><img src={arrow} className="point" alt="arrow" /><span className="align">Level: </span></span><b>{data.l_level}</b></p>
+					<p className='key-value'><span ><img src={arrow} className="point" alt="arrow" /><span className="align">Area: </span></span><b> {data.l_area}</b></p>
+					<p className='key-value'><span ><img src={arrow} className="point" alt="arrow" /><span className="align">Dimensions: </span></span><b>{data.l_dim}</b></p>
 				</div>
 			</div>
 
 			<div className="rooms">
 				<div className="rooms1">
 					<h5> Recreation room</h5>
-					<p><img src={arrow} className="point" alt="arrow" /><span className="align">Level: </span><b>{data.r_level}</b></p>
-					<p><img src={arrow} className="point" alt="arrow" /><span className="align">Area: </span><b> {data.r_area}</b></p>
-					<p><img src={arrow} className="point" alt="arrow" /><span className="align">Dimesnsions: </span><b>{data.r_dim}</b></p>
+					<p className='key-value'><span ><img src={arrow} className="point" alt="arrow" /><span className="align">Level: </span></span><b>{data.r_level}</b></p>
+					<p className='key-value'><span ><img src={arrow} className="point" alt="arrow" /><span className="align">Area: </span></span><b> {data.r_area}</b></p>
+					<p className='key-value'><span ><img src={arrow} className="point" alt="arrow" /><span className="align">Dimensions: </span></span><b>{data.r_dim}</b></p>
 				</div>
 				<div className="rooms2">
 					<h5> Dining Room</h5>
-					<p><img src={arrow} className="point" alt="arrow" /><span className="align">Level: </span><b>{data.d_level}</b></p>
-					<p><img src={arrow} className="point" alt="arrow" /><span className="align">Area: </span><b> {data.d_area}</b></p>
-					<p><img src={arrow} className="point" alt="arrow" /><span className="align">Dimesnsions: </span><b>{data.d_dim}</b></p>
+					<p className='key-value'><span ><img src={arrow} className="point" alt="arrow" /><span className="align">Level: </span></span><b>{data.d_level}</b></p>
+					<p className='key-value'><span ><img src={arrow} className="point" alt="arrow" /><span className="align">Area: </span></span><b> {data.d_area}</b></p>
+					<p className='key-value'><span ><img src={arrow} className="point" alt="arrow" /><span className="align">Dimensions: </span></span><b>{data.d_dim}</b></p>
 				</div>
 			</div>
 		
 			<div className="rooms">
 				<div className="rooms1">
 					<h5> Kitchen</h5>
-					<p><img src={arrow} className="point" alt="arrow" /><span className="align">Level: </span><b>{data.k_level}</b></p>
-					<p><img src={arrow} className="point" alt="arrow" /><span className="align">Area: </span><b> {data.k_area}</b></p>
-					<p><img src={arrow} className="point" alt="arrow" /><span className="align">Dimesnsions: </span><b>{data.k_dim}</b></p>
+					<p className='key-value'><span ><img src={arrow} className="point" alt="arrow" /><span className="align">Level: </span></span><b>{data.k_level}</b></p>
+					<p className='key-value'><span ><img src={arrow} className="point" alt="arrow" /><span className="align">Area: </span></span><b> {data.k_area}</b></p>
+					<p className='key-value'><span ><img src={arrow} className="point" alt="arrow" /><span className="align">Dimensions: </span></span><b>{data.k_dim}</b></p>
 				</div>
 				<div className="rooms2">
 					<h5> Primary Bedroom</h5>
-					<p><img src={arrow} className="point" alt="arrow" /><span className="align">Level: </span><b>{data.pb_level}</b></p>
-					<p><img src={arrow} className="point" alt="arrow" /><span className="align">Area: </span><b> {data.pb_area}</b></p>
-					<p><img src={arrow} className="point" alt="arrow" /><span className="align">Dimesnsions: </span><b>{data.pb_dim}</b></p>
+					<p className='key-value'><span ><img src={arrow} className="point" alt="arrow" /><span className="align">Level: </span></span><b>{data.pb_level}</b></p>
+					<p className='key-value'><span ><img src={arrow} className="point" alt="arrow" /><span className="align">Area: </span></span><b> {data.pb_area}</b></p>
+					<p className='key-value'><span ><img src={arrow} className="point" alt="arrow" /><span className="align">Dimensions: </span></span><b>{data.pb_dim}</b></p>
 				</div>
 			</div>
 
 			<div className="rooms">
 				<div className="rooms1">
 					<h5> Bedroom</h5>
-					<p><img src={arrow} className="point" alt="arrow" /><span className="align">Level: </span><b>{data.b1_level}</b></p>
-					<p><img src={arrow} className="point" alt="arrow" /><span className="align">Area: </span><b> {data.b1_area}</b></p>
-					<p><img src={arrow} className="point" alt="arrow" /><span className="align">Dimesnsions: </span><b>{data.b1_dim}</b></p>
+					<p className='key-value'><span ><img src={arrow} className="point" alt="arrow" /><span className="align">Level: </span></span><b>{data.b1_level}</b></p>
+					<p className='key-value'><span ><img src={arrow} className="point" alt="arrow" /><span className="align">Area: </span></span><b> {data.b1_area}</b></p>
+					<p className='key-value'><span ><img src={arrow} className="point" alt="arrow" /><span className="align">Dimensions: </span></span><b>{data.b1_dim}</b></p>
 				</div>
 				<div className="rooms2">
 					<h5> Bedroom</h5>
-					<p><img src={arrow} className="point" alt="arrow" /><span className="align">Level: </span><b>{data.b2_level}</b></p>
-					<p><img src={arrow} className="point" alt="arrow" /><span className="align">Area: </span><b> {data.b2_area}</b></p>
-					<p><img src={arrow} className="point" alt="arrow" /><span className="align">Dimesnsions: </span><b>{data.b2_dim}</b></p>
+					<p className='key-value'><span ><img src={arrow} className="point" alt="arrow" /><span className="align">Level: </span></span><b>{data.b2_level}</b></p>
+					<p className='key-value'><span ><img src={arrow} className="point" alt="arrow" /><span className="align">Area: </span></span><b> {data.b2_area}</b></p>
+					<p className='key-value'><span ><img src={arrow} className="point" alt="arrow" /><span className="align">Dimensions: </span></span><b>{data.b2_dim}</b></p>
 				</div>
 			</div>
 
 			<div className="rooms">
 				<div className="rooms1">
 					<h5> Basement</h5>
-					<p><img src={arrow} className="point" alt="arrow" /><span className="align">Basement: </span><b>{data.basement}</b></p>
+					<p className='key-value'><span ><img src={arrow} className="point" alt="arrow" /><span className="align">Basement: </span></span><b>{data.basement}</b></p>
 				</div>
 				<div className="rooms2">
 					<h5> Flooring</h5>
-					<p><img src={arrow} className="point" alt="arrow" /><span className="align">Flooring: </span><b>{data.flooring}</b></p>
+					<p className='key-value'><span ><img src={arrow} className="point" alt="arrow" /><span className="align">Flooring: </span></span><b>{data.flooring}</b></p>
 				</div>
 			</div>
 
 			<div className="rooms">
 				<div className="rooms1">
 					<h5> Heating</h5>
-					<p><img src={arrow} className="point" alt="arrow" /><span className="align">Features: </span><b>{data.heating}</b></p>
+					<p className='key-value'><span ><img src={arrow} className="point" alt="arrow" /><span className="align">Features: </span></span><b>{data.heating}</b></p>
 				</div>
 				<div className="rooms2">
 					<h5> Cooling</h5>
-					<p><img src={arrow} className="point" alt="arrow" /><span className="align">Features: </span><b>{data.cooling}</b></p>
+					<p className='key-value'><span ><img src={arrow} className="point" alt="arrow" /><span className="align">Features: </span></span><b>{data.cooling}</b></p>
 				</div>
 			</div>
 
 			<div className="rooms">
 				<div className="rooms1">
 					<h5> Appliances</h5>
-					<p><img src={arrow} className="point" alt="arrow" /><span className="align">Including:  </span><b className="bdiv1">{data.appliances}</b></p>
+					<p className='key-value'><span ><img src={arrow} className="point" alt="arrow" /><span className="align">Including:  </span></span><b className="bdiv1">{data.appliances}</b></p>
 				</div>
 				<div className="rooms2">
 					<h5> Interior Features</h5>
-					<p><img src={arrow} className="point" alt="arrow" /><span className="align">Windows: </span><b>{data.windows}</b></p>
+					<p  className='key-value'><span ><img src={arrow} className="point" alt="arrow" /><span className="align">Windows: </span></span><b>{data.windows}</b></p>
 				</div>
 			</div>
 			</Typography>
