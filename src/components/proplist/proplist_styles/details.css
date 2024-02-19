@@ -97,6 +97,9 @@ a{
   width:26px;
   height:30px;
 }
+.point1{
+  display:none;
+}
 
 @media only screen and (max-width: 768px){
 .details-container h3{
@@ -184,5 +187,13 @@ a{
   .lock{
     width:14px;
     height:18px;
+  }
+  .point{
+    display:none;
+  }
+  .point1{
+    display:inline-block;
+    height:15px;
+    width:15px;
   }
 }

@@ -3,32 +3,39 @@
   position:relative;
   top: 40%;
   }
+  .login .logo{
+    width:310px;
+    height:75px;
+
+  }
  .login h1{
   font-family: anton;
   font-weight: 400px;
   font-size: 36px;
   line-height: 43.74px;
+  margin-top:20px;
  }
  .login {
-  width: 45%;
-  padding:7%
+  width: 50%;
+  padding:7%;
 }
 
 .login > form {
   display: flex;
   flex-direction: column;
   position:relative;
-  width: 495px;
+  top:20px;
+  width: 600px;
 }
 
 .login > form > label {
   font-family: DM Sans;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
   line-height: 23.44px;
   letter-spacing: -0.2800000011920929px;
   text-align: left;
-  margin-bottom: 7px;
+  margin-bottom: 8px;
   margin-top: 10px;
 }
 .login > form > input {
@@ -51,6 +58,7 @@ height: 48px;
 margin-top:30px;
 padding: 10px 32px 46px 32px;
 border-radius: 8px;
+border:1px solid #7731E4;
 background-color:#7731E4;
 color:white;
 font-family: DM Sans;
@@ -66,17 +74,19 @@ text-align: center;
 }
 
 .login p{
+  margin-top: 30px;
   font-family: DM Sans;
   font-weight: 700;
   font-size:16px;
   line-height: 21.74px;
   text-align: center;
 }
-.login > span {
+.signup {
   color:#7731E4;
 }
 
 fieldset.title {
+  margin:20px;
   border-top: 1px solid #aaa;
   border-bottom: none;
   border-left: none;

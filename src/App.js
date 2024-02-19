@@ -5,8 +5,7 @@ import Chart from './components/proplist/Chart';
 function App() {
     return (
       <Navigator />
-      // <Chart/>
-    );
+      );
 
 }
 

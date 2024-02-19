@@ -1,22 +1,22 @@
-// import { useState } from 'react';
-// import './Signin.css'
-// import LoginTrue from './LoginTrue';
-// import LoginForm from './LoginForm'
+import { useState } from 'react';
+import './Signin.css'
+import LoginTrue from './LoginTrue';
+import LoginForm from './LoginForm'
 // import {
 //   auth,
 //   createUserWithEmailAndPassword,
 //   updateProfile,
 //   signInWithEmailAndPassword,
-// } from '../../temp_firebase.config';
+// } from '../../firebase.config';
 // import { login,logout, selectUserEmail, selectUserName } from '../../features/userSlice';
 // import  {FacebookAuthProvider, GoogleAuthProvider, signInWithPopup} from 'firebase/auth';
 // import { useDispatch, useSelector } from 'react-redux';
 
-// const Signupcomp = () => {
-//   const [isLogin, setIsLogin] = useState(false);
-//   const dispatch = useDispatch();
-//   const userName = useSelector(selectUserName)
-//   const userEmail = useSelector(selectUserEmail)
+const Signupcomp = () => {
+  const [isLogin, setIsLogin] = useState(false);
+  // const dispatch = useDispatch();
+  // const userName = useSelector(selectUserName)
+  // const userEmail = useSelector(selectUserEmail)
 
 //  const handleGLogin = () =>{
 //   let provider = new GoogleAuthProvider();
@@ -64,12 +64,13 @@
 //       .catch((err)=>alert(err.message))
 //     }
 
-//   return(
-//     <div>
-//       {isLogin ? <LoginTrue name = {userName} email = {userEmail} logout={handleLogout}/> : <LoginForm googleLogin={handleGLogin} facebookLogin={handleFLogin}/>}
-//     </div>
-//     )
+  return(
+    <div>
+      {/* {isLogin ? <LoginTrue name = {userName} email = {userEmail} logout={handleLogout}/> : <LoginForm googleLogin={handleGLogin} facebookLogin={handleFLogin}/>} */}
+       <LoginForm />
+    </div>
+    )
 
-// }
+}
 
-// export default Signupcomp
+export default Signupcomp

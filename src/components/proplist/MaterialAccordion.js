@@ -5,6 +5,7 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import arrow from '../../assets/icons/arrow.png';
+import singleArrow from '../../assets/icons/singleArrow.png';
 import lock from '../../assets/icons/lock.png';
 import './proplist_styles/details.css'
 
@@ -44,11 +45,11 @@ function MaterialAccordion({data1,data2}) {
           <div className="rooms">
               <div className="rooms1">
                 <h5> Community</h5>
-                <p className='key-value'><span><img src={arrow} className="point" alt="arrow" /><span className="align">Features:</span></span><b className="bdiv2">{data2.features}</b></p>
+                <p className='key-value'><span><img src={singleArrow} className="point1" alt="arrow" /><img src={arrow} className="point" alt="arrow" /><span className="align">Features:</span></span><b className="bdiv2">{data2.features}</b></p>
               </div>
              <div className="rooms2">
                 <h5> Location</h5>
-                <p className='key-value'><span ><img src={arrow} className="point" alt="arrow" /><span className="align">Region: </span></span>{data2.region}</p>
+                <p className='key-value'><span ><img src={singleArrow} className="point1" alt="arrow" /><img src={arrow} className="point" alt="arrow" /><span className="align">Region: </span></span>{data2.region}</p>
               </div>
            </div>
           </Typography>

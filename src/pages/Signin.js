@@ -6,8 +6,7 @@ import Footer from "../components/footer/Footer";
 const Signin = () => {
   return (
     <div>
-    <h1>Signin</h1>
-      {/* <Signincomp /> */}
+        <Signincomp />
   
     </div>
   );
