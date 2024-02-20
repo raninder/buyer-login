@@ -9,12 +9,12 @@ import Form6Page from '../pages/forms/Form6Page';
 import Form7Page from '../pages/forms/Form7Page';
 import Form8Page from '../pages/forms/Form8Page';
 import ArticleContent from '../pages/Article';
-import LandingPage from '../pages/LandingPage';
-import ContactUsPage from '../pages/ContactUsPage';
+import LandingPage from '../pages/home/LandingPage';
+import ContactUsPage from '../pages/home/ContactUsPage';
 import Blog from '../pages/Blog';
-import AgentsPage from '../pages/AgentsPage';
-import AboutUs from '../pages/AboutUs';
-import HowItWorks from '../pages/HowItWorks';
+import AgentsPage from '../pages/home/AgentsPage';
+import AboutUs from '../pages/home/AboutUs';
+import HowItWorks from '../pages/home/HowItWorks';
 export default function Navigator() {
   return (
     <Router>
