@@ -27,7 +27,6 @@
 .rooms h5, .rooms3>h5{
   font-size: 22px;
   line-height: 30px;
-  /* letter-spacing: 0.10000000149011612px; */
 }
 .rooms1, .rooms2{
   width:50%;
@@ -56,8 +55,8 @@
   }
   .bdiv1{
     display:block;
-    width:265px;
-    height:48px;
+    width:50%;
+    height:10%;
     position:relative;
     margin-top:-25px; 
     left:110px;
@@ -65,16 +64,16 @@
 
   .bdiv2{
     display:block;
-    width:239px;
-    height:48px;
+    width:50%;
+    height:10%;
     position:relative;
     margin-top:-22px; 
     left:110px;
   }
   .bdiv3{
     display:block;
-    width:70px;
-    height:48px;
+    width:14%;
+    height:10%;
     position:relative;
     margin-top:-25px; 
     left:300px;
@@ -101,7 +100,10 @@ a{
   display:none;
 }
 
-@media only screen and (max-width: 768px){
+@media only screen and (min-width: 760px) and (max-width:1024px){
+  .details-container{
+    margin-top: 20px;
+  }
 .details-container h3{
   font-size: 22px;
 }
@@ -113,19 +115,19 @@ a{
 
 }
 .rooms2{
-  padding-left: 65px;
+  padding-left: 40px;
 }
 .rooms p, .rooms3 p{
-   font-size: 14px;
+   font-size: 15px;
 }
 .bdiv1, .bdiv2{
   width:200px;
   margin-top:-25px; 
-  left:95px;
+  left:100px;
 }
 .bdiv3{
   margin-top:-25px; 
-  left:236px;
+  left:250px;
 }
 .lock{
   width:22px;
@@ -133,7 +135,10 @@ a{
 }
 }
 
-@media only screen and (max-width: 480px){
+@media only screen and (min-width : 320px) and (max-width: 480px){
+  .details-container{
+    margin-top: 10px;
+  }
   .details-container h3{
     font-size: 20px;
     text-align: center;
@@ -166,15 +171,15 @@ a{
     line-height: 24px;
    }
   .bdiv1{
-    width:200px;
+    width:50%;
     margin-top:-15px; 
     left: 15px;
     text-align: right;
   }
   .bdiv2{
     display:block;
-    width:200px;
-    height:55px;
+    width:50%;
+    height: 10%;
     position:relative;
     margin-top:-8px; 
     left:10px;
@@ -196,4 +201,11 @@ a{
     height:15px;
     width:15px;
   }
+}
+@media only screen 
+and (min-width : 320px) and (max-width : 400px){
+  .rooms p, .rooms3 p{
+    font-size: 14px;
+    line-height: 22px;
+   }
 }

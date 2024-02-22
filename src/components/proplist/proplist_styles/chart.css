@@ -2,6 +2,7 @@
 .piechart{
   display: flex;
   height:200px;
+
  }
 
 .chart{
@@ -59,10 +60,12 @@
 @media only screen and (max-width: 768px){
   .legend{
     margin:0px 60px  20px;
+    
   }
   .filled-circle{
     padding: 2px 11px;
     border-radius: 100%;
+    margin-right:0;
    }
    .col1{
     padding-right:0;
@@ -70,8 +73,9 @@
   }
  
   .col2,.col3{
-    font-size: 20px;
+    font-size: 25px;
   }
+  
 }
 @media (max-width: 480px) {
   .filled-circle{
@@ -81,8 +85,8 @@
     font-size: 17px;
   }
   .chart{
-  padding-top:0px;
-  padding-bottom: 0px;
+  padding-top:0;
+  padding-bottom: 0;
   }
   .chartvalue{
    font-size: 20px;
@@ -92,6 +96,7 @@
  }
  .piechart{
    height:170px;
+   
  }
 
 }

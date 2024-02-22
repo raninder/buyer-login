@@ -10,6 +10,8 @@ const Sidebar = () => {
 				<h1>$525,000</h1>
 				<button>GET PRE-QUALIFIED</button>
 			</div>
+
+		<div className="mortgage">	
 			<div className="payment">
 				<div className="head">
 					<h3>Monthly Payment</h3>
@@ -21,6 +23,7 @@ const Sidebar = () => {
 				<RangeBars />
 			</div>
 		</div>
+	</div>	
 	);
 }
  

@@ -39,7 +39,7 @@ const Chart = () => {
 					<Pie
 							data={data} 
 							cx={'56%'}
-							cy={'31%'}
+							cy={'28%'}
 							innerRadius={'35%'}
 							outerRadius={'55%'} 
 							dataKey="amount"

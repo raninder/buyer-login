@@ -24,8 +24,8 @@ function MaterialAccordion({data1,data2}) {
           <Typography>
             <div className="rooms3">
                 <h5> Utility</h5>
-                <p className='key-value'><span><img src={arrow} className="point" alt="arrow" /><span className="align">Sewer information:  </span></span>{data1.sewer_info}</p>
-                <p className='key-value'><span><img src={arrow} className="point" alt="arrow" /><span className="align">Water information: </span></span>{data1.water_info}</p>
+                <p className='key-value'><span><img src={singleArrow} className="point1" alt="arrow" /><img src={arrow} className="point" alt="arrow" /><span className="align">Sewer information:  </span></span>{data1.sewer_info}</p>
+                <p className='key-value'><span><img src={singleArrow} className="point1" alt="arrow" /><img src={arrow} className="point" alt="arrow" /><span className="align">Water information: </span></span>{data1.water_info}</p>
               </div>
          
           </Typography>

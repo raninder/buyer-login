@@ -23,7 +23,7 @@
 	justify-content:space-between;
  }
 .frequency{
-	padding: 0px 15px;
+	padding: 0px 20px;
 }
 
 input[type="range"],.frequency{
@@ -45,7 +45,40 @@ input[type="range"],.frequency{
 	font-weight: 700;
 }
 
-@media only screen and (max-width: 480px){
+@media only screen and (min-width: 1024px)and  (max-width:1375px){
+	.range{
+		margin: 15px;
+		font-size: 24px;
+		line-height: 26px;
+		font-weight:700;
+		}
+	.slider-container .value{
+		margin:2px;
+		border-radius: 10px;
+		padding:3px;
+		font-size: 23px;
+		font-weight:400;
+	}
+}
+
+@media only screen and (min-width : 320px) and (max-width : 400px){
+	.range{
+		margin: 10px;
+		font-size: 16px;
+		line-height: 15px;
+	}
+	.slider-container .value{
+	  font-size: 18px;
+	}
+	input[type="range"],.frequency{
+		margin:5px 0px;
+	}
+	.period button{
+		font-size: 18px;
+	}
+}
+
+@media only screen and (min-width : 400px) and (max-width : 480px){
 	.range{
 		margin: 10px;
 		font-size: 18px;

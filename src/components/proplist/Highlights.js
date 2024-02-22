@@ -15,13 +15,13 @@ const Highlights = ({data}) => {
 				<div className="col1-col2">
 				<div className="column1">
 					<div className="key">
-          <img src={parking} alt="parking" height="15" width="15"/><span className="key-icon">Parking</span>
+          <img src={parking} alt="parking" className='high-icon'/><span className="key-icon">Parking</span>
 					</div>
 					<div className="key">
-          <img src={basement} alt="basement" height="15" width="15"/><span className="key-icon">Basement</span>
+          <img src={basement} alt="basement" className='high-icon' /><span className="key-icon">Basement</span>
 					</div>
 					<div className="key">
-          <img src={cooling} alt="cooling" height="15" width="15"/><span className="key-icon">Cooling</span>
+          <img src={cooling} alt="cooling" className='high-icon' /><span className="key-icon">Cooling</span>
 					</div>
 				</div>
 				
@@ -40,13 +40,13 @@ const Highlights = ({data}) => {
 				<div className="col3-col4">
 				<div className="column3">
 					<div className="key">
-          <img src={HOA} alt="HOA" height="15" width="15"/><span className="key-icon">HOA</span>
+          <img src={HOA} alt="HOA" className='high-icon'/><span className="key-icon">HOA</span>
 					</div>
 					<div className="key">
-          <img src={price} alt="price per sq ft" height="15" width="15"/><span className="key-icon">Price/Sqft</span>
+          <img src={price} alt="price per sq ft" className='high-icon'/><span className="key-icon">Price/Sqft</span>
 					</div>
 					<div className="key">
-          <img src={listed} alt="listed" height="15" width="15"/><span className="key-icon">Listed</span>
+          <img src={listed} alt="listed" className='high-icon'/><span className="key-icon">Listed</span>
 					</div>
 				</div>
 

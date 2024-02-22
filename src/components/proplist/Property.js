@@ -45,7 +45,7 @@ import { useLocation } from 'react-router-dom'
   return ( 
       
     <>
-    <Navbar />
+    {/* <Navbar /> */}
     <div>
       {isPending && <div>Loading....</div>}
       { data && <Header data={obj}/> }
@@ -66,7 +66,7 @@ import { useLocation } from 'react-router-dom'
       
       ) } 
     </div>
-    <Footer/>
+    {/* <Footer/> */}
     </>
    );
 }

@@ -53,7 +53,7 @@ function RangeBars() {
        	handleChange={handlePercentChange}
        	value1={marketValue} 
 				value2={percentValue}
-				title= {"Share percentages" }
+				title= {"Share Percentages" }
 			/>
 			<Range
 		 		min={1000} 

@@ -1,6 +1,6 @@
 /* price component */
 iframe{
-  height: 130px;
+  height: 100%;
   width:100%;
   border:0;
 }
@@ -13,14 +13,17 @@ iframe{
 }
 .price-container{
   width:60%;
-
+ 
+}
+.price-container p{
+  margin:10px;
 }
 .price-icons{
   margin:5px;
 }
 .map{
   width:40%;
-  }
+ }
 
 .price-container>.price{
   font-size: 35px;
@@ -43,8 +46,10 @@ iframe{
   line-height: 31.84px;
 }
 .price-icons img{
-  height:32px;
-  width:32px;
+  /* height:32px;
+  width:32px; */
+  height:5%;
+  width:5%;
 }
 
 .price-container button{
@@ -54,18 +59,7 @@ iframe{
   display:none;
 }
 
-/* @media only screen and (max-width: 600px){
-  .price-container{
-    width:45%;
-    padding:10px;
-  }
-  .map{
-    width:45%;
-  }
-
-  } */
-
-  @media (max-width: 768px) {
+ @media only screen and (min-width: 760px) and (max-width:1024px){
 		.price-container button{
 			display:block;
       width: 266px;
@@ -83,15 +77,17 @@ iframe{
 			margin-top:20px;
 		}
 		.price-container{
-      width:48%;
+      width:58%;
       padding:10px;
     }
+
     .map{
-      width:50%;
-      height:95%;
+      width:40%;
+      margin-right: 30px;
     }
     iframe{
-      height: 220px;
+      height: 160px;
+      margin-top: 20px;
      }
      .loc{
       font-size: 20px;
@@ -106,41 +102,44 @@ iframe{
       }
 	}
 
-  
-  @media (max-width: 480px) {
+@media only screen and (min-width : 320px) and (max-width : 480px){
     .desc-container{
         padding:10px;
+        margin-top:30px;
+        margin-left: 0;
+        margin-right:0px;
     }
     .price-container button{
       margin-top:5px;
-      width: 248px;
-			height: 48px;
+      width: 200px;
+			height: 40px;
+      font-size: 18px;
     }
     .price-container>.price{
-      font-size: 26px;
-      line-height: 30px;
+      font-size: 24px;
+      line-height: 20px;
      }
   .price-container{
-    width:68%;
+    width:70%;
     padding:10px;
   }
   .map{
-    width:32%;
+    width:30%;
    
   }
   iframe{
     height: 100px;
-    margin-top:20px;
+    margin-top:10px;
    }
    .price-icons>span{
-     font-size: 18px;
+     font-size: 15px;
    }
    .price-icons img{
-    height:26px;
-    width:26px;
+    height:20px;
+    width:20px;
   }
   .loc{
-    font-size: 15px;
+    font-size: 14px;
    }
    .loc img{
     height:14px;
@@ -149,10 +148,61 @@ iframe{
     .ago{
       display:block;
       font-family: Raleway;
-      font-size: 15px;
+      font-size: 12px;
       font-weight: 500;
       line-height: 17px;
       color: rgba(112, 112, 112, 1);
       text-align: right;
      }
 }
+
+/* @media only screen and  (min-width:540px){
+
+  .desc-container{
+    margin-top:60px;
+  }
+  .price-container button{
+    margin-top:5px;
+    width: 200px;
+    height: 40px;
+    font-size: 18px;
+  }
+  .price-container>.price{
+    font-size: 24px;
+    line-height: 20px;
+   }
+.price-container{
+  width:70%;
+}
+.map{
+  width:30%;
+ 
+}
+iframe{
+  height: 100px;
+  margin-top:10px;
+ }
+ .price-icons>span{
+   font-size: 15px;
+ }
+ .price-icons img{
+  height:20px;
+  width:20px;
+}
+.loc{
+  font-size: 14px;
+ }
+ .loc img{
+  height:14px;
+  width:14px;
+  }
+  .ago{
+    display:block;
+    font-family: Raleway;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 17px;
+    color: rgba(112, 112, 112, 1);
+    text-align: right;
+   }
+} */

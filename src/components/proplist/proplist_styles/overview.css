@@ -20,10 +20,8 @@
 }
 .mls1, .mls2{
   font-family: 'raleway';
-  /* font-weight:400; */
   font-size: 20px;
   color: rgba(37, 37, 37, 1);
-
  }
  .mls-value{
   font-weight: bolder;
@@ -84,8 +82,26 @@ hr{
   height:64px;
   width:64px;
 }
-
-@media only screen and (max-width: 768px){
+@media only screen and (min-width: 1024px)and  (max-width:1375px){
+  .mls1, .mls2{
+    font-family: 'raleway';
+    font-size: 16px;
+    color: rgba(37, 37, 37, 1);
+   }
+   .score{
+    display: flex;
+    margin: 10px;
+  }
+   .score-data{
+     margin:8px;
+     font-size: 20px;
+  }
+  .score-data>.data{
+    margin-top: 10px;
+    font-size: 20px;
+  }
+}
+@media only screen and (min-width: 760px) and (max-width:1024px){
   .score{
     margin: 10px;
   }
@@ -106,45 +122,109 @@ hr{
     font-size: 15px;
   }
 }
-@media only screen and (max-width: 480px){
-.overview-heading>h3{
-  font-size: 20px;
-}
-.mls1, .mls2{
-   font-size:10px;
-}
-.mls-value{
-  font-weight: bolder;
+
+@media only screen 
+and (min-width : 320px) and (max-width : 400px){
+  .overview-container{
+    margin-top:10px;
+   }
+  .overview-heading>h3{
+    font-size: 20px;
+  }
+  .mls1, .mls2{
+     font-size:8.5px;
+     }
+     .mls div{
+       margin-right:8px;
+      padding: 5px;
+    
+    }
+  .mls-value{
+    font-weight: bolder;
+   }
+   .overview-content{
+    /* margin-top:10px; */
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .subheading{
+    font-size: 18px;
+    line-height: 10px;
+  }
+  /* .score{
+    margin: 5px;
+  } */
+  .score-data{ 
+    font-size: 10px;
+  }
+  .walking{
+    height:30px;
+    width:24px;
+  }
+  .bike{
+    height:34px;
+    width:26px;
+  }
+  .bus{
+    height:30px;
+    width:30px;
+  }
+  .score{
+     margin: 2px;
+  }
+  .score-icon{
+    margin-top: 10px;
+  }
+  }
+
+  @media only screen 
+and (min-width : 400px) and (max-width : 480px){
+  .overview-container{
+    margin-top:10px;
+   }
+  .overview-heading>h3{
+    font-size: 20px;
+  }
+  .mls1, .mls2{
+     font-size:10px;
+  }
+  /* .mls-value{
+    font-weight: bolder;
+   } */
+   .mls div{
+    margin-right:8px;
+   padding: 5px 10px;
+ 
  }
- .overview-content{
-  /* margin-top:10px; */
-  font-size: 14px;
-  line-height: 18px;
-}
-.subheading{
-  font-size: 18px;
-  line-height: 10px;
-}
-.score-data{ 
-  /* margin-left:10px; */
-  font-size: 12px;
-}
-.walking{
-  height:32px;
-  width:26px;
-}
-.bike{
-  height:36px;
-  width:28px;
-}
-.bus{
-  height:32px;
-  width:32px;
-}
-.score{
-   margin: 4px;
-}
-.score-icon{
-  margin-top: 10px;
-}
-}
+   .overview-content{
+    /* margin-top:10px; */
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .subheading{
+    font-size: 18px;
+    line-height: 10px;
+  }
+
+  .score-data{ 
+    font-size: 12px;
+  }
+  .walking{
+    height:32px;
+    width:26px;
+  }
+  .bike{
+    height:36px;
+    width:28px;
+  }
+  .bus{
+    height:32px;
+    width:32px;
+  }
+  .score{
+     margin: 4px;
+  }
+  .score-icon{
+    margin-top: 10px;
+  }
+  }
