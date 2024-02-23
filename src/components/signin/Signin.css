@@ -4,8 +4,10 @@
   top: 40%;
   }
   .login .logo{
-    width:310px;
-    height:75px;
+    /* width:310px;
+    height:75px; */
+    width:60%;
+    height:9%;
 
   }
  .login h1{
@@ -25,7 +27,8 @@
   flex-direction: column;
   position:relative;
   top:20px;
-  width: 600px;
+  /* width: 600px; */
+  width:100%;
 }
 
 .login > form > label {
@@ -147,4 +150,131 @@ text-align: center;
 .d3img {
 height:100%;
 width:100%;
+}
+
+
+@media only screen and (min-width : 360px) and (max-width : 480px){
+  .signup-container{
+    display:flex;
+    flex-direction: column;
+    padding:20px;
+}
+.login, .right-div{
+  width:100%;
+}
+form{
+  /* padding-right:30px; */
+}
+.login .logo{
+  /* width:310px;
+  height:75px; */
+  width:80%;
+  height:10%;
+}
+.login h1{
+  font-size: 30px;
+  line-height: 40px;
+}
+.google-btn, .fb-btn{
+  width:180px;
+  height:50px;
+  padding:8px;
+  margin:5px;
+ }
+ .social span{
+  width: 40px;
+  height:18px;
+  font-family: DM Sans;
+  font-size: 15px;
+}
+.social img{
+  margin-right:6px;
+}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+  .signup-container{
+    padding:20px;
+  }
+  .login {
+    width: 55%;
+  }
+  .right-div{
+    width:45%;
+  }
+  .google-btn, .fb-btn{
+    width:180px;
+    height:50px;
+    padding:8px;
+    margin:5px;
+   }
+   .social span{
+    width: 40px;
+    height:18px;
+    font-family: DM Sans;
+    font-size: 15px;
+   }
+  .social img{
+    margin-right:6px;
+  }
+}
+@media only screen and (min-width:720px) and (max-width:800){
+.login{
+  background-color: aquamarine;
+}
+}
+@media only screen and (min-width:1180px){
+    .login{
+      height:1200px;
+    }
+    .login > form > label {
+      font-size: 22px;
+      line-height: 25px;
+      margin-bottom: 16px;
+      margin-top: 20px;
+    }
+    .login > form > input {
+      height: 54px;
+      padding: 8px 8px 8px 16px;
+      border-radius: 8px;
+     }
+    .login > form > button {
+      height: 54px;
+      margin-top:40px;
+      font-size: 22px;
+      }
+
+      .login p{
+        margin-top: 40px;
+        font-size:20px;
+        line-height: 24px;
+       }
+      fieldset.title {
+        margin:30px;
+       }
+      
+      fieldset.title legend {
+        font-size: 16px;
+        line-height: 20px;
+      }
+      
+      .social{
+        padding-top:20px;
+      }
+      .google-btn, .fb-btn{
+        width:220px;
+        height:60px;
+        padding:10px;
+       }
+          
+      .social img{
+        margin-right:10px;
+        width: 35px;
+        height: 33px;
+        vertical-align:middle;
+      }
+      .social span{
+        font-size: 20px;
+        line-height: 24px; 
+      }
 }
