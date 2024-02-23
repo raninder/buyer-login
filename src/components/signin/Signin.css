@@ -1,11 +1,19 @@
+html, body {
+  overflow: hidden;
+  /* overflow-x: clip; */
+}
+body {
+  position: relative;
+
+ }
+
 .signup-container{
   display:flex;
   position:relative;
   top: 40%;
+  padding:20px;
   }
   .login .logo{
-    /* width:310px;
-    height:75px; */
     width:60%;
     height:9%;
 
@@ -159,15 +167,14 @@ width:100%;
     flex-direction: column;
     padding:20px;
 }
-.login, .right-div{
+.login {
   width:100%;
 }
-form{
-  /* padding-right:30px; */
+.right-div{
+  display:none;
 }
+
 .login .logo{
-  /* width:310px;
-  height:75px; */
   width:80%;
   height:10%;
 }
@@ -218,11 +225,7 @@ form{
     margin-right:6px;
   }
 }
-@media only screen and (min-width:720px) and (max-width:800){
-.login{
-  background-color: aquamarine;
-}
-}
+
 @media only screen and (min-width:1180px){
     .login{
       height:1200px;
