@@ -46,14 +46,25 @@ iframe{
   line-height: 31.84px;
 }
 .price-icons img{
-  /* height:32px;
-  width:32px; */
   height:5%;
   width:5%;
 }
 
 .price-container button{
   display:none;
+  width: 266px;
+  height: 50px;
+  border:1px solid blueviolet;
+  border-radius: 8px;
+  background-color: rgba(119, 49, 228, 1);
+  padding:10px;
+  color:white;
+  font-family: Raleway;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: capitalize;
+  margin-top:20px;
   }
 .ago{
   display:none;
@@ -62,20 +73,7 @@ iframe{
  @media only screen and (min-width: 760px) and (max-width:1024px){
 		.price-container button{
 			display:block;
-      width: 266px;
-			height: 50px;
-			border:1px solid blueviolet;
-			border-radius: 8px;
-			background-color: rgba(119, 49, 228, 1);
-			padding:10px;
-			color:white;
-			font-family: Raleway;
-			font-size: 22px;
-			font-weight: 700;
-			line-height: 20px;
-      text-transform: capitalize;
-			margin-top:20px;
-		}
+    }
 		.price-container{
       width:58%;
       padding:10px;
@@ -102,7 +100,7 @@ iframe{
       }
 	}
 
-@media only screen and (min-width : 320px) and (max-width : 480px){
+  @media only screen and (max-width : 480px){
     .desc-container{
         padding:10px;
         margin-top:30px;
@@ -110,6 +108,7 @@ iframe{
         margin-right:0px;
     }
     .price-container button{
+      display:block;
       margin-top:5px;
       width: 200px;
 			height: 40px;
@@ -156,53 +155,16 @@ iframe{
      }
 }
 
-/* @media only screen and  (min-width:540px){
 
-  .desc-container{
-    margin-top:60px;
-  }
-  .price-container button{
-    margin-top:5px;
-    width: 200px;
-    height: 40px;
-    font-size: 18px;
-  }
+@media only screen and (min-width : 360px) and (max-width:360px){
   .price-container>.price{
-    font-size: 24px;
-    line-height: 20px;
+    font-size: 22px;
+    line-height: 18px;
    }
-.price-container{
-  width:70%;
-}
-.map{
-  width:30%;
- 
-}
-iframe{
-  height: 100px;
-  margin-top:10px;
- }
- .price-icons>span{
-   font-size: 15px;
- }
- .price-icons img{
-  height:20px;
-  width:20px;
-}
-.loc{
-  font-size: 14px;
- }
- .loc img{
-  height:14px;
-  width:14px;
-  }
-  .ago{
-    display:block;
-    font-family: Raleway;
+   .loc{
     font-size: 12px;
-    font-weight: 500;
-    line-height: 17px;
-    color: rgba(112, 112, 112, 1);
-    text-align: right;
    }
-} */
+   .price-icons>span{
+    line-height: 20px;
+  }
+}

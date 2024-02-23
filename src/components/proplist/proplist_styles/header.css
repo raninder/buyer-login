@@ -167,7 +167,6 @@
   }
 }
 @media only screen and (min-width: 760px) and (max-width:1024px){
-  /* @media only screen and (max-width: 768px){ */
   .box{
     margin-left:20px;
     margin-right:20px;
@@ -211,7 +210,6 @@
   .img-button{
     top:88%;
     width:28%;
-    /* height:18%; */
     height:7%;
     font-size: 20px;
     border-radius: 38px;
@@ -232,35 +230,3 @@
    }
 }
 
-/* @media only screen and  (min-width:540px){
-  .img2, .img3{
-    display:none;
-  }
-  .img1{
-    width:98%;
-  }
-  .viewBtn1, .viewBtn2{
-    position:absolute;
-    top:100%;
-    width:40%;
-    height:12%;
-}
-  .viewBtn1{
-    left:4%;
-  }
-  .viewBtn2{
-    left:45%;
-  }
-  .img-button{
-    position:absolute;
-    top:80%;
-    width:40%;
-    height:12%;
-   }
-  .like-icons{
-    position:absolute;
-    top: 5%;
-    left: 70%;
-  }
-
-} */

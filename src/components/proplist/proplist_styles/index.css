@@ -14,12 +14,12 @@ body {
   font-family: sans-serif;
   padding:20px;
   border-radius: 10px;
-  overflow-x: hidden;
 }
 
 @media only screen and (min-width: 1024px) {
   html, body {
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
+    overflow-x: clip;
   }
   body {
     position: relative;
@@ -28,7 +28,7 @@ body {
 
 @media only screen and (min-width: 760px) and (max-width:1024px){
   html, body {
-    overflow-x: hidden;
+    overflow-x: clip;
   }
   body {
     position: relative;
@@ -40,10 +40,9 @@ body {
   }
 
 }
-@media only screen 
-and (min-width : 320px) and (max-width : 480px){
+@media only screen and (min-width : 320px) and (max-width : 480px){
   html, body {
-    overflow-x: hidden;
+    overflow-x: clip;
   }
   body {
     position: relative;

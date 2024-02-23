@@ -2,8 +2,7 @@
 	
 	.sidebar{
 		height:2460px;
-		/* height:4000px; */
-	}
+		}
 	.sidebar .top{
 		text-align: center;
 		margin:20px;
@@ -54,7 +53,7 @@
 		.mortgage{
 			position:sticky;
 			top:0;
-		
+			
 		}
 	.payment{
 		background-color: white;
@@ -91,13 +90,8 @@
 		border-radius: 0px 0px 15px 15px;
 	}
 
-	/* @media only screen and (min-width: 1024px)and  (max-width:1375px){
-		.sidebar{
-			height:7000px;
-		}
-	} */
-	
-	@media only screen and (min-width: 760px) and (max-width:1024px){
+
+	 @media only screen and (min-width: 760px) and (max-width:1024px){
 		.sidebar{
 			margin-top: 10px;
 			margin-right:20px;
@@ -114,7 +108,7 @@
 			font-size: 28px;
 			padding-right:20px;
 		}
-	}
+	} 
 
 
 	@media only screen and (max-width: 480px){
@@ -125,9 +119,9 @@
 	.top{
 		display: none;
 	}
-	.mortgage{
+	/* .mortgage{
 		position:static;
-		}
+		} */
 		
 		.head>h3{
 			font-size: 20px;
