@@ -9,7 +9,8 @@ import {Icon} from 'react-icons-kit';
 import {eyeOff} from 'react-icons-kit/feather/eyeOff';
 import {eye} from 'react-icons-kit/feather/eye'
 
-const LoginForm = ({googleLogin,facebookLogin}) => {
+// const LoginForm = ({googleLogin,facebookLogin}) => {
+  const LoginForm = () => {
   const [email, setEmail]  = useState(null)
   const [password, setPassword] = useState(null)
   const [errorMsg, setErrorMsg] = useState("");
@@ -64,7 +65,7 @@ const LoginForm = ({googleLogin,facebookLogin}) => {
             <p>
                New user!{" "}
               <span>
-                <Link to="/signup" style={{ textDecoration: 'none' }}>Sign Up</Link>
+                <Link to="/signup" className="signup" style={{ textDecoration: 'none' }}>Sign Up</Link>
               </span>
             </p>
     
@@ -72,8 +73,11 @@ const LoginForm = ({googleLogin,facebookLogin}) => {
               <legend>or continue with</legend>
             </fieldset>
             <div className="social">
-               <button type="button" className="google-btn" onClick = {googleLogin}><img src={Google} alt="google"></img><span>Google </span></button>
-               <button type="button" className="fb-btn" onClick = {facebookLogin}><img src={Facebook} alt="google"></img><span>Facebook</span> </button>
+               {/* <button type="button" className="google-btn" onClick = {googleLogin}><img src={Google} alt="google"></img><span>Google </span></button>
+               <button type="button" className="fb-btn" onClick = {facebookLogin}><img src={Facebook} alt="google"></img><span>Facebook</span> </button> */}
+            
+            <button type="button" className="google-btn" ><img src={Google} alt="google"></img><span>Google </span></button>
+               <button type="button" className="fb-btn" ><img src={Facebook} alt="google"></img><span>Facebook</span> </button>
             </div>
         </div>
         <div className='right-div'>

@@ -1,34 +1,52 @@
+html, body {
+  overflow: hidden;
+  /* overflow-x: clip; */
+}
+body {
+  position: relative;
+
+ }
+
 .signup-container{
   display:flex;
   position:relative;
   top: 40%;
+  padding:20px;
+  }
+  .login .logo{
+    width:60%;
+    height:9%;
+
   }
  .login h1{
   font-family: anton;
   font-weight: 400px;
   font-size: 36px;
   line-height: 43.74px;
+  margin-top:20px;
  }
  .login {
-  width: 45%;
-  padding:7%
+  width: 50%;
+  padding:7%;
 }
 
 .login > form {
   display: flex;
   flex-direction: column;
   position:relative;
-  width: 495px;
+  top:20px;
+  /* width: 600px; */
+  width:100%;
 }
 
 .login > form > label {
   font-family: DM Sans;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
   line-height: 23.44px;
   letter-spacing: -0.2800000011920929px;
   text-align: left;
-  margin-bottom: 7px;
+  margin-bottom: 8px;
   margin-top: 10px;
 }
 .login > form > input {
@@ -51,6 +69,7 @@ height: 48px;
 margin-top:30px;
 padding: 10px 32px 46px 32px;
 border-radius: 8px;
+border:1px solid #7731E4;
 background-color:#7731E4;
 color:white;
 font-family: DM Sans;
@@ -66,17 +85,19 @@ text-align: center;
 }
 
 .login p{
+  margin-top: 30px;
   font-family: DM Sans;
   font-weight: 700;
   font-size:16px;
   line-height: 21.74px;
   text-align: center;
 }
-.login > span {
+.signup {
   color:#7731E4;
 }
 
 fieldset.title {
+  margin:20px;
   border-top: 1px solid #aaa;
   border-bottom: none;
   border-left: none;
@@ -137,4 +158,126 @@ text-align: center;
 .d3img {
 height:100%;
 width:100%;
+}
+
+
+@media only screen and (min-width : 360px) and (max-width : 480px){
+  .signup-container{
+    display:flex;
+    flex-direction: column;
+    padding:20px;
+}
+.login {
+  width:100%;
+}
+.right-div{
+  display:none;
+}
+
+.login .logo{
+  width:80%;
+  height:10%;
+}
+.login h1{
+  font-size: 30px;
+  line-height: 40px;
+}
+.google-btn, .fb-btn{
+  width:180px;
+  height:50px;
+  padding:8px;
+  margin:5px;
+ }
+ .social span{
+  width: 40px;
+  height:18px;
+  font-family: DM Sans;
+  font-size: 15px;
+}
+.social img{
+  margin-right:6px;
+}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+  .signup-container{
+    padding:20px;
+  }
+  .login {
+    width: 55%;
+  }
+  .right-div{
+    width:45%;
+  }
+  .google-btn, .fb-btn{
+    width:180px;
+    height:50px;
+    padding:8px;
+    margin:5px;
+   }
+   .social span{
+    width: 40px;
+    height:18px;
+    font-family: DM Sans;
+    font-size: 15px;
+   }
+  .social img{
+    margin-right:6px;
+  }
+}
+
+@media only screen and (min-width:1180px){
+    .login{
+      height:1200px;
+    }
+    .login > form > label {
+      font-size: 22px;
+      line-height: 25px;
+      margin-bottom: 16px;
+      margin-top: 20px;
+    }
+    .login > form > input {
+      height: 54px;
+      padding: 8px 8px 8px 16px;
+      border-radius: 8px;
+     }
+    .login > form > button {
+      height: 54px;
+      margin-top:40px;
+      font-size: 22px;
+      }
+
+      .login p{
+        margin-top: 40px;
+        font-size:20px;
+        line-height: 24px;
+       }
+      fieldset.title {
+        margin:30px;
+       }
+      
+      fieldset.title legend {
+        font-size: 16px;
+        line-height: 20px;
+      }
+      
+      .social{
+        padding-top:20px;
+      }
+      .google-btn, .fb-btn{
+        width:220px;
+        height:60px;
+        padding:10px;
+       }
+          
+      .social img{
+        margin-right:10px;
+        width: 35px;
+        height: 33px;
+        vertical-align:middle;
+      }
+      .social span{
+        font-size: 20px;
+        line-height: 24px; 
+      }
 }

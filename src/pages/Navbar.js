@@ -22,7 +22,7 @@ const Navbar = () => {
                 </div>
                 <div className="right-section">
                     <Link to = '/signin'><button className="btn btn-signin">Sign In</button></Link>
-                    <button className="btn btn-getstarted">Get Started</button>
+                    <Link to = '/proplist'><button className="btn btn-getstarted">Get Started</button></Link>
                 </div>
             </div>
     );

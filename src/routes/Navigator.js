@@ -16,6 +16,10 @@ import AgentsPage from '../pages/AgentsPage';
 import AboutUs from '../pages/AboutUs';
 import HowItWorks from '../pages/HowItWorks';
 import Signin from '../pages/Signin';
+import PropHome from '../components/proplist/PropHome';
+import Property from '../components/proplist/Property';
+import PropertyList from '../pages/PropertyList';
+
 
 export default function Navigator() {
   return (
@@ -29,6 +33,8 @@ export default function Navigator() {
         <Route path="/agents" element={<AgentsPage />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/signin" element={<Signin />} />
+        <Route path="/proplist" element={<PropertyList />} />
+        <Route path="/properties/:id" element={<Property/>} />
         <Route path="/form1" element={<Form1Page />} />
         <Route path="/form2" element={<Form2Page />} />
         <Route path="/form3" element={<Form3Page />} />
