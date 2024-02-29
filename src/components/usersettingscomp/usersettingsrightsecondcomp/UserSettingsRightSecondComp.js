@@ -28,7 +28,7 @@ const ProfileCompletionGauge = () => {
   };
 
   return (
-    <div style={{ position: "relative", width: "12em", height: "12em" }}>
+    <div className="usersettings-right-second-comp-doughnut">
       <Doughnut data={data} options={options} />
       <div
         style={{
@@ -39,7 +39,7 @@ const ProfileCompletionGauge = () => {
           textAlign: "center",
         }}
       >
-        <span style={{ fontSize: "2em", fontWeight: "bold" }}>75%</span>
+        <span className="usersettings-right-second-comp-doughnut-value">75%</span>
       </div>
     </div>
   );

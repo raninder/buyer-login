@@ -21,7 +21,6 @@ const data = [
 ];
 
 const cellCommonStyles = {
-  height: "2.5rem",
   padding: 0,
   fontSize: "1.1rem",
 };
@@ -29,6 +28,7 @@ const cellCommonStyles = {
 const CustomTable = () => {
   return (
     <TableContainer
+      className="usersettings-third-comp-table-container"
       component={Paper}
       elevation={0}
       variant="outlined"
@@ -48,24 +48,29 @@ const CustomTable = () => {
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
             >
               <TableCell
+                className="usersettings-third-comp-table-cell"
                 sx={{
                   ...cellCommonStyles,
-                  width: "5%",
+                  width: "7%",
                 }}
                 component="th"
                 scope="row"
               >
-                <img src={mapPointIcon} />
+                <IconButton className="usersettings-third-comp-table-cell-icon" aria-label="map">
+                  <img className="usersettings-third-comp-table-cell-img" src={mapPointIcon} />
+                </IconButton>
               </TableCell>
               <TableCell
+                className="usersettings-third-comp-table-cell"
                 sx={{
                   ...cellCommonStyles,
-                  width: "10%",
+                  width: "12%",
                 }}
               >
                 {row.label}
               </TableCell>
               <TableCell
+                className="usersettings-third-comp-table-cell"
                 sx={{
                   ...cellCommonStyles,
                   width: "75%",
@@ -76,22 +81,24 @@ const CustomTable = () => {
                 {row.value}
               </TableCell>
               <TableCell
+                className="usersettings-third-comp-table-cell"
                 sx={{
                   ...cellCommonStyles,
                   width: "5%",
                 }}
                 align="right"
               >
-                <IconButton aria-label="edit">
-                  <img src={editIcon} />
+                <IconButton className="usersettings-third-comp-table-cell-icon" aria-label="edit">
+                  <img className="usersettings-third-comp-table-cell-img" src={editIcon} />
                 </IconButton>
               </TableCell>
               <TableCell
-                sx={{ ...cellCommonStyles, width: "5%"}}
+                className="usersettings-third-comp-table-cell"
+                sx={{ ...cellCommonStyles, width: "5%" }}
                 align="right"
               >
-                <IconButton aria-label="delete">
-                  <img src={deleteIcon} />
+                <IconButton className="usersettings-third-comp-table-cell-icon" aria-label="delete">
+                  <img className="usersettings-third-comp-table-cell-img" src={deleteIcon} />
                 </IconButton>
               </TableCell>
             </TableRow>

@@ -27,8 +27,9 @@ function CheckboxListSecondary() {
         const labelId = `checkbox-list-secondary-label-${item.id}`;
         return (
           <ListItem
+            className="user-settings-right-first-comp-item"
             key={item.id}
-            secondaryAction={<img src={checkboxicon} />}
+            secondaryAction={<img className="user-settings-right-first-comp-icon" src={checkboxicon} />}
             disablePadding
             sx={{
               borderBottom: "1px solid rgba(0, 0, 0, 0.10)",
@@ -36,10 +37,11 @@ function CheckboxListSecondary() {
               "&:last-of-type": {
                 borderBottom: "none",
               },
+              padding:"0",
             }}
           >
-            <ListItemButton>
-              <ListItemText id={labelId} primary={item.text} />
+            <ListItemButton className="user-settings-right-first-comp-button">
+              <ListItemText className="user-settings-right-first-comp-text" id={labelId} primary={item.text} />
             </ListItemButton>
           </ListItem>
         );

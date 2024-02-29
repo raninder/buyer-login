@@ -1,4 +1,5 @@
 import React from 'react';
+import "./verifiedFlag.css"
 
 const statusStyles = {
   Verified: {
@@ -22,14 +23,9 @@ const statusStyles = {
 const VerifiedFlag = ({ status }) => {
   const style = {
     ...statusStyles[status.replace(' ', '')],
-    borderRadius: '20px',
-    padding: '4px 12px',
-    display: 'inline-block',
-    fontSize: '0.8rem',
-    fontWeight: '700',
   };
 
-  return <span style={style}>{status}</span>;
+  return <span className='verified-flag' style={style}>{status}</span>;
 };
 
 export default VerifiedFlag;

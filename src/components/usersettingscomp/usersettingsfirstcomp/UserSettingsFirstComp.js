@@ -6,57 +6,31 @@ import CardTitle from "../shared/CardTitle";
 import NormalTitle from "../shared/NormalTitle";
 import VerifiedFlag from "../shared/VerifiedFlag";
 import PurpleButton from "../shared/PurpleButton";
-import formData from "./profileFormData"
+import formData from "./profileFormData";
 
 const CardName = "Judy Garcia";
 
 const InputField = ({ placeholder }) => {
   return (
     <TextField
-      sx={{
-        width: "100%",
-        height: "89%",
-        "& .MuiOutlinedInput-root": {
-          "& fieldset": {
-            borderColor: "#D9CDCD",
-            borderWidth: "2px",
-            borderRadius: "10px",
-          },
-          "&:hover fieldset": {
-            borderColor: "#7731E4",
-          },
-          "&.Mui-focused fieldset": {
-            borderColor: "#7731E4",
-          },
-        },
-      }}
+      className="user-settings-first-comp-textfield"
       value={placeholder}
     />
   );
 };
 
-const FormItem = ({
-  titleName,
-  disableFlag,
-  flagStatus,
-  placeholder,
-  width,
-}) => {
+const FormItem = ({ titleName, disableFlag, flagStatus, placeholder, emailTip }) => {
   return (
-    <div
-      className="user-settings-first-comp-profile-form-item"
-      style={{ width: width ? width : "auto" }}
-    >
+    <div className="user-settings-first-comp-profile-form-item">
       <div className="user-settings-first-comp-profile-form-title-line">
         <NormalTitle name={titleName} />
         {!disableFlag && <VerifiedFlag status={flagStatus} />}
       </div>
       <InputField placeholder={placeholder} />
+      {emailTip && <EmailTip />}
     </div>
   );
 };
-
-
 
 const ProfileForm = ({ data }) => {
   return (
@@ -67,8 +41,8 @@ const ProfileForm = ({ data }) => {
           titleName={item.titleName}
           flagStatus={item.flagStatus}
           placeholder={item.placeholder}
-          width={item.width}
           disableFlag={item.disableFlag}
+          emailTip={item.emailTip}
         />
       ))}
     </div>
@@ -78,10 +52,8 @@ const ProfileForm = ({ data }) => {
 const EmailTip = () => {
   return (
     <div className="user-settings-first-comp-email-tip">
-      <span>
-        <span> Don't want any emails? </span>
-        <a style={{ color: "#7731E4" }}>Unsubscribe.</a>{" "}
-      </span>
+      <div> {"Don't want any emails? \u00a0"} </div>
+      <a style={{ color: "#7731E4", fontWeight: "700" }}>Unsubscribe.</a>
     </div>
   );
 };
@@ -91,21 +63,26 @@ export default function UserSettingsFirstComp() {
     <>
       <div className="user-settings-first-comp-container">
         <div className="user-settings-first-comp-upper-rectangle"></div>
-        <div className="user-settings-first-comp-profile-name">
-          <CardTitle name={CardName} />
-        </div>
+
         <ProfileForm data={formData} />
-        <EmailTip />
-        <PurpleButton
-          text="Save Updates"
-          width="12em"
-          style={{ position: "absolute", right: "3.5%", bottom: "5%" }}
-        />
-        <div className="user-settings-first-comp-image-overlay"></div>
-        <div className="user-settings-first-comp-profile-edit">
-          <IconButton>
-            <img src={profileEdit} />
-          </IconButton>
+        <div className="user-settings-first-comp-save-button">
+          <PurpleButton
+            text="Save Updates"
+            width="10em"
+          />
+        </div>
+        <div className="user-settings-first-comp-profile-image-and-name-and-edit">
+          <div className="user-settings-first-comp-profile-image-and-name">
+            <div className="user-settings-first-comp-image-overlay"></div>
+            <div className="user-settings-first-comp-profile-name">
+              <CardTitle name={CardName} />
+            </div>
+          </div>
+          <div className="user-settings-first-comp-profile-edit">
+            <IconButton>
+              <img src={profileEdit} />
+            </IconButton>
+          </div>
         </div>
       </div>
     </>

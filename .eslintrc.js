@@ -33,5 +33,7 @@ module.exports = {
          "react/jsx-key": "off",
          "react/no-unknown-property": "off",
          "react/no-unescaped-entities": "off",
+         "no-unused-vars": "off",
+         "no-dupe-keys": "off",
     }
 }

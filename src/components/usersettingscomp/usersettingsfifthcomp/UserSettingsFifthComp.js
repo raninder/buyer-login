@@ -16,8 +16,10 @@ import deleteIcon from "../../../assets/images/delete.svg";
 import VerifiedFlag from "../shared/VerifiedFlag";
 import { documentData } from "./tableData";
 import PurpleButton from "../shared/PurpleButton";
+import purpleBackgroundEditIcon from "../../../assets/images/purple-background-edit-icon.svg"
+import documentIcon from "../../../assets/images/document-icon.svg"
 
-const CardName = "Saved Searches Settings";
+const CardName = "Upload Documents";
 
 const documentItems = [
   {
@@ -33,6 +35,35 @@ const documentItems = [
       "To ensure the safety of our agents, we need you to verify your identity before we can take you on a home tour.",
   },
 ];
+
+const DocumentCard = () => {
+  return (
+    <div className="user-settings-fifth-comp-document-card" style={{ display: "flex", background: "rgba(119, 49, 228, 0.10)", borderRadius: "9px", padding: "0.5em 1em", maxWidth:"20em" }}>
+      <div className="user-settings-fifth-comp-document-card-document-icon" style={{ marginRight: "0.6em" }}>
+        <img src={documentIcon}></img>
+      </div>
+      <div className="user-settings-fifth-comp-document-card-text">
+        <div className="user-settings-fifth-comp-document-card-title" style={{ fontSize: "0.8em", fontWeight: "700", marginBottom: "0.5em" }}>
+          Co-ownership Agreement
+        </div>
+        <div className="user-settings-fifth-comp-document-card-description-and-date" style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", fontSize: "0.8em", fontWeight: "700", marginRight: "0.2em" }}>
+          <div className="user-settings-fifth-comp-document-card-description" style={{ fontSize: "0.6em", color: "#616161", width: "70%", fontWeight: "700" }}>
+            Mutual Non-Disclosure Agreement
+          </div>
+          <div className="user-settings-fifth-comp-document-card-date" style={{ fontSize: "0.8em", color: "#616161", fontWeight: "400" }}>
+            5/5/2021
+          </div>
+        </div>
+        <div className="user-settings-fifth-comp-document-card-category" style={{ fontSize: "0.4em", fontWeight: "600", color: "#545454", marginTop: "0.5em" }}>
+          draft
+        </div>
+      </div>
+      <div className="user-settings-fifth-comp-document-card-edit-icon" style={{ fontSize: "0.8em", fontWeight: "700" }}>
+        <img src={purpleBackgroundEditIcon}></img>
+      </div>
+    </div>
+  );
+};
 
 const DocumentItem = ({ title, buttonName, description }) => {
   return (
@@ -54,8 +85,7 @@ const DocumentItem = ({ title, buttonName, description }) => {
 };
 
 const cellCommonStyles = {
-  padding: "0.3em 0.7em 0.3em 0.7em",
-  fontSize: "1.3rem",
+
 };
 
 const headCellCommonStyles = {
@@ -88,26 +118,21 @@ const headCellTitles = [
 const CustomTable = () => {
   return (
     <TableContainer
+      className="usersettings-fifth-comp-table-container"
       component={Paper}
       elevation={0}
       variant="outlined"
-      sx={{
-        width: `calc(100% - 5.4em)`,
-        margin: "0 2.7em 0 2.7em",
-        mt: "2rem",
-        border: "0",
-      }}
     >
       <Table aria-label="custom document table">
         <TableHead>
           <TableRow
             sx={{
-              borderBottom: "0.25em solid #7152A2",
+              borderBottom: "0.15em solid #7152A2",
               backgroundColor: "#E8DCFA",
             }}
           >
             {headCellTitles.map((title, index) => (
-              <TableCell key={index} sx={{ ...headCellCommonStyles }}>
+              <TableCell className="usersettings-fifth-comp-table-cell usersettings-fifth-comp-table-head" key={index} sx={{ ...headCellCommonStyles }}>
                 {title}
               </TableCell>
             ))}
@@ -120,6 +145,7 @@ const CustomTable = () => {
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
             >
               <TableCell
+                className="usersettings-fifth-comp-table-cell"
                 sx={{
                   ...cellCommonStyles,
                   width: "5%",
@@ -128,6 +154,7 @@ const CustomTable = () => {
                 {index + 1}
               </TableCell>
               <TableCell
+                className="usersettings-fifth-comp-table-cell"
                 sx={{
                   ...cellCommonStyles,
                   width: "22%",
@@ -136,6 +163,7 @@ const CustomTable = () => {
                 {doc.documentName}
               </TableCell>
               <TableCell
+                className="usersettings-fifth-comp-table-cell"
                 sx={{
                   ...cellCommonStyles,
                   fontWeight: "700",
@@ -145,6 +173,7 @@ const CustomTable = () => {
                 {doc.type}
               </TableCell>
               <TableCell
+                className="usersettings-fifth-comp-table-cell"
                 sx={{
                   ...cellCommonStyles,
                   fontWeight: "700",
@@ -154,6 +183,7 @@ const CustomTable = () => {
                 {doc.date}
               </TableCell>
               <TableCell
+                className="usersettings-fifth-comp-table-cell"
                 sx={{
                   ...cellCommonStyles,
                   fontWeight: "700",
@@ -162,14 +192,14 @@ const CustomTable = () => {
               >
                 {doc.timestamp}
               </TableCell>
-              <TableCell align="right">
-                <IconButton aria-label="edit">
-                  <img src={editIcon} />
+              <TableCell align="right" className="usersettings-fifth-comp-table-cell">
+                <IconButton aria-label="edit" className="usersettings-fifth-comp-table-cell-icon" >
+                  <img src={editIcon} className="usersettings-fifth-comp-table-cell-img" />
                 </IconButton>
               </TableCell>
-              <TableCell align="right">
-                <IconButton aria-label="delete">
-                  <img src={deleteIcon} />
+              <TableCell align="right" className="usersettings-fifth-comp-table-cell">
+                <IconButton aria-label="delete" className="usersettings-fifth-comp-table-cell-icon">
+                  <img src={deleteIcon} className="usersettings-fifth-comp-table-cell-img" />
                 </IconButton>
               </TableCell>
             </TableRow>
@@ -192,7 +222,13 @@ export default function UserSettingsFifthComp() {
               description={item.description}
             />
           ))}
-          <CustomTable />
+          <div className="user-settings-fifth-comp-table">
+            <CustomTable />
+          </div>
+          <div className="user-settings-fifth-comp-document">
+            <DocumentCard />
+            <DocumentCard />
+          </div>
         </Card>
       </div>
     </>

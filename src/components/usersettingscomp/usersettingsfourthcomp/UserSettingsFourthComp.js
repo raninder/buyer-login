@@ -37,8 +37,12 @@ export default function UserSettingsFourthComp() {
             <FriendCard />
           </div>
           <div className="user-settings-fourth-comp-button-group">
-            <PurpleButton text="Add your Co-buyer"/>
-            <PurpleButton text="Add your friend"/>
+            <div className="user-settings-fourth-comp-button">
+              <PurpleButton text="Add your Co-buyer" />
+            </div>
+            <div className="user-settings-fourth-comp-button">
+              <PurpleButton text="Add your friend" />
+            </div>
           </div>
         </Card>
       </div>

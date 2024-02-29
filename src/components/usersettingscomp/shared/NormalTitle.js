@@ -1,8 +1,9 @@
 import React from "react";
+import "./normalTitle.css"
 
 export default function NormalTitle ({name}) {
     return (
-        <span className="normal-title" style={{fontSize:"1.2rem", fontWeight: 700, color: "#000"}} >
+        <span className="normal-title">
             {name}
         </span>
     )
