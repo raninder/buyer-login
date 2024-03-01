@@ -1,15 +1,11 @@
 import React from 'react';
 import "./AboutCompTwo.css";
-import image1 from "../../../assets/images/aboutus-2-1.png"
-import image2 from "../../../assets/images/aboutus-2-2.png"
 export default function AboutCompTwo() {
   return (
     <div className='about-main2'>
-      <div className='about-main2-cont'>
+       <div className='about-main2-cont'>
         <div className='about-main2-top'>
-          <div className='about-main2-grid-left'>
-            <img src={image1} alt='house' />
-          </div>
+          <div className='about-main2-grid-left'></div>
           <div className='about-main2-grid-right'>
             <span>Making homeownership achievable</span>
             <ul>
@@ -21,13 +17,11 @@ export default function AboutCompTwo() {
         <div className='about-main2-bottom'>
           <div className='about-main2-grid-right'>
             <span>Our Vision</span>
-            <span>Our Vision is to help One Million<br />Canadians become Homeowners</span>
+            <span>Our Vision is to help One Million<br/>Canadians become Homeowners</span>
           </div>
-          <div className='about-main2-grid-bottom-right'>
-            <img src={image2} alt='house' />
-          </div>
+          <div className='about-main2-grid-left'></div>
         </div>
-      </div>
+       </div>
     </div>
   )
 }
