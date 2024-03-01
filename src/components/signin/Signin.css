@@ -1,5 +1,5 @@
 html, body {
-  overflow: hidden;
+  /* overflow: hidden; */
   /* overflow-x: clip; */
 }
 body {
@@ -12,7 +12,8 @@ body {
   position:relative;
   top: 40%;
   padding:20px;
-  }
+  /* overflow-x: clip; */
+   }
   .login .logo{
     width:60%;
     height:9%;

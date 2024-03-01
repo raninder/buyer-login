@@ -6,10 +6,20 @@ import 'toolcool-range-slider';
 export default function LandingEigthComp() {
     var CanvasJS = CanvasJSReact.CanvasJS;
     var CanvasJSChart = CanvasJSReact.CanvasJSChart;
+    const chartData = [
+		{ name: 'Mortgage', amount: 630, color:'#F5C34E' },
+		{ name: 'Co-owner', amount: 303, color:'#7731E4' },
+		{ name: 'Municipal Taxes', amount: 200, color:'#497C92' },
+		{ name: 'School Taxes', amount: 303,color:'#111' }
+	];
     const options = {
-        width:500,
+        // width:500,
+        // height:300,
+        width:450,
         height:300,
         animationEnabled: true,
+        // responsive: true,
+        // maintainAspectRatio: true,
         subtitles: [{
             text: "$ 1568/month",
             verticalAlign: "center",
@@ -27,6 +37,7 @@ export default function LandingEigthComp() {
                 {  y: 17, color:"#111"},
             ]
         }]
+        
     }
   return (
     <div className='landing-main8'>
@@ -43,7 +54,7 @@ export default function LandingEigthComp() {
                    <span className='chart-value'>$ 190000</span>
                 </div>
                 <toolcool-range-slider
-                slider-width="400px"
+                slider-width="100%"
                 className="slider"
                  pointer-bg="#7731E4"
                  slider-bg-fill="#7731E4"
@@ -59,7 +70,7 @@ export default function LandingEigthComp() {
                    <span className='chart-value'>$ 190000</span>
                 </div>
                 <toolcool-range-slider
-                 slider-width="400px"
+                 slider-width="100%"
                  pointer-bg="#7731E4"
                  slider-bg-fill="#7731E4"
                  pointer-bg-focus="#7731E4"
@@ -74,7 +85,7 @@ export default function LandingEigthComp() {
                    <span className='chart-value'>$ 190000</span>
                 </div>
                 <toolcool-range-slider
-                 slider-width="400px"
+                 slider-width="100%"
                  pointer-bg="#7731E4"
                  slider-bg-fill="#7731E4"
                  pointer-bg-focus="#7731E4"
@@ -89,7 +100,7 @@ export default function LandingEigthComp() {
                    <span className='chart-value'>6.45%</span>
                 </div>
                 <toolcool-range-slider
-                 slider-width="400px"
+                 slider-width="100%"
                  pointer-bg="#7731E4"
                  slider-bg-fill="#7731E4"
                  pointer-bg-focus="#7731E4"
@@ -104,7 +115,7 @@ export default function LandingEigthComp() {
                    <span className='chart-value'>30 years</span>
                 </div>
                 <toolcool-range-slider
-                 slider-width="400px"
+                 slider-width="100%"
                  pointer-bg="#7731E4"
                  slider-bg-fill="#7731E4"
                  pointer-bg-focus="#7731E4"
@@ -113,9 +124,27 @@ export default function LandingEigthComp() {
                  min="0" 
                  max="50"></toolcool-range-slider>
            </div>
+           <div className='chart-value-wrapper'>
+               <div className='chart-value-cont'>
+                   <span className='chart-value-head'>Frequency</span>
+                   <span className='chart-value'><button>Monthly</button><button>Bi weekly</button></span>
+                </div>
+             </div>   
+
         </div>
+        <div className="canvas-chart">
       <CanvasJSChart 
       options = {options}/>
+      <table className="legend">
+				{chartData.map((item, index) =>
+				<tr>
+						<td className='colmn1'> <span style={{ 'background-color': item.color  }} className='filled-circle' ></span></td>
+						<td className='colmn2'>{item.name}  </td> <td className='colmn3'>    ${item.amount} </td>
+				
+				</tr>
+				)}
+  		 </table>
+      </div>
       </div>
     </div>
   )
