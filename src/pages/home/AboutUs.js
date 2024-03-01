@@ -7,7 +7,7 @@ import AboutCompFour from "../../components/aboutcomp/AboutCompFour/AboutCompFou
 export default function AboutUs() {
   return (
     <div>
-     {/* <Navbar/> */}
+     <Navbar/>
      <AboutCompOne/>
      <AboutCompTwo/>
      <AboutCompThree/>
