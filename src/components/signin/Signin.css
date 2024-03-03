@@ -1,19 +1,9 @@
-html, body {
-  /* overflow: hidden; */
-  /* overflow-x: clip; */
-}
-body {
-  position: relative;
-
- }
-
 .signup-container{
   display:flex;
   position:relative;
   top: 40%;
   padding:20px;
-  /* overflow-x: clip; */
-   }
+  }
   .login .logo{
     width:60%;
     height:9%;
@@ -36,7 +26,6 @@ body {
   flex-direction: column;
   position:relative;
   top:20px;
-  /* width: 600px; */
   width:100%;
 }
 
