@@ -2,7 +2,7 @@ import { useParams } from "react-router";
 import Overview from "./Overview";
 import Header from "./Header";
 import Price from "./Price";
-import Navbar from "../../pages/Navbar";
+import Navbar from "./Navbar";
 import Footer from "../footer/Footer";
 import Similar from "./Similar";
 import Highlights from "./Highlights";
@@ -45,7 +45,7 @@ import { useLocation } from 'react-router-dom'
   return ( 
       
     <>
-    {/* <Navbar /> */}
+    <Navbar />
     <div>
       {isPending && <div>Loading....</div>}
       { data && <Header data={obj}/> }
