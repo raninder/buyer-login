@@ -1,0 +1,50 @@
+.about-main2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 0rem;
+}
+
+.about-main2-cont{
+    width: 60vw;
+    height: 70vh;
+}
+
+.about-main2-bottom{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 60vw;
+    height: 35vh;
+}
+
+.about-main2-top{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 60vw;
+    height: 35vh;
+}
+
+.about-main2-grid-left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30vw;
+    height: 35vh;
+    background-color: #7731E4;
+}
+
+.about-main2-grid-right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30vw;
+    height: 35vh;
+    background-color: lightgrey;
+}
