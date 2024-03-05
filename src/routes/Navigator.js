@@ -19,6 +19,7 @@ import Signin from '../pages/Signin';
 import PropHome from '../components/proplist/PropHome';
 import Property from '../components/proplist/Property';
 import PropertyList from '../pages/PropertyList';
+import Notification from '../components/notification/Notification'
 
 
 export default function Navigator() {
@@ -35,6 +36,7 @@ export default function Navigator() {
         <Route path="/signin" element={<Signin />} />
         <Route path="/proplist" element={<PropertyList />} />
         <Route path="/properties/:id" element={<Property/>} />
+        <Route path="/notifications" element={<Notification />} />
         <Route path="/form1" element={<Form1Page />} />
         <Route path="/form2" element={<Form2Page />} />
         <Route path="/form3" element={<Form3Page />} />

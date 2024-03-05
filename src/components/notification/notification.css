@@ -1,0 +1,40 @@
+body{ overflow:hidden;
+position:relative; }
+.notifications-container{
+    height:100vh;
+    padding:20px 20px 10px 20px;
+    background-color: white;
+  }
+
+.notifications-container>h1{
+  font-family: Raleway;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: -0.2800000011920929px;
+  text-align: center;
+
+}
+.notifications-container hr{
+  margin:20px 0px;
+}
+.section{
+  display:flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-size: raleway;
+  line-height: 22px;
+  font-weight: 700;
+  padding:10px;
+  border-bottom: 1px solid #CBCBCB;
+}
+
+.bedbath{
+  font-family: Open Sans;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+
+}
