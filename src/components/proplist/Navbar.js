@@ -5,9 +5,6 @@ import './proplist_styles/nav.css'
 import { Avatar } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import Modal from "@material-ui/core/Modal";
-import Popout from 'react-popout'
-
 
 const Navbar = () => {
   
