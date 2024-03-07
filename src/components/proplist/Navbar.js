@@ -5,12 +5,20 @@ import './proplist_styles/nav.css'
 import { Avatar } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import Modal from "@material-ui/core/Modal";
+import Notification from '../notification/Notification'
 
 const Navbar = () => {
   
-const openWindow = () => {
-  window.open('/notifications', "mywindow", "width=350, height=600");
-}
+	const [open, setOpen] = useState(false);
+ 
+	const handleClose = () => {
+			setOpen(false);
+	};
+
+	const handleOpen = () => {
+			setOpen(true);
+	};
 	return ( 
 		<>
       <header>
@@ -22,11 +30,30 @@ const openWindow = () => {
             <input  type="search" className="search" /> 
 						<img src={search} alt="search icon" className='search-icon'/>
 						<span className="notif">
-                <img src={notification} alt="notification" className='bell-icon' onClick={openWindow}/>
+                <img src={notification} alt="notification" className='bell-icon' onClick={handleOpen}/>
               <Avatar />
 						</span>
 						</form>
-            
+            <Modal
+                onClose={handleClose}
+                open={open}
+                style={{
+                    position: "absolute",
+										top: "-75%",
+										left:"50%",
+                    border: "2px solid #000",
+                    backgroundColor: "lightgray",
+                    boxShadow: "2px solid black",
+                    height: 700,
+                    width: 450,
+                    margin: "auto",
+                                      
+                }}
+            >
+                <>
+                   <Notification/>
+                </>
+            </Modal>
 				</div>
 			</header>
 		</>			

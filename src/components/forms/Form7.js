@@ -3,6 +3,7 @@ import { Container, InputAdornment, Typography, Box, Button, TextField, IconButt
 import { ArrowBack, ArrowForward } from '@mui/icons-material';
 import StyledLinearProgress from '../StyledLinearProgress';
 import '../../css/form2.css';
+// import './form6.css'
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios'; // Ensure Axios is installed
 
@@ -21,7 +22,6 @@ function Form7() {
 
   const textFieldStyle = {
     marginBottom: 3,
-    width: '563px',
     height: '48px',
     borderRadius: '6px',
   };
@@ -46,8 +46,8 @@ function Form7() {
 
   return (
     <Container>
-      <div style={{ margin: '10px auto', padding: '20px' }}>
-        <StyledLinearProgress variant="determinate" value={7} />
+      <div className='form6-container'>
+         <StyledLinearProgress variant="determinate" value={7} />
         <Box display="flex" alignItems="center" justifyContent="center" mb={2}>
           <IconButton onClick={() => navigate('/form6')}>
             <ArrowBack />
@@ -68,9 +68,8 @@ function Form7() {
           Enter your desired monthly mortgage payment details
         </Typography>
 
-        {/* Current Monthly Rent Input */}
         <Box display="flex" flexDirection="column" alignItems="center" mt={5}>
-          <Box width="563px" textAlign="left">
+          <Box className="rent-box" >
             <Typography variant="subtitle1">Current monthly rent</Typography>
             <TextField
               variant="outlined"
@@ -79,11 +78,11 @@ function Form7() {
               sx={textFieldStyle}
               InputProps={{ startAdornment: <InputAdornment position="start">$</InputAdornment> }}
               id="currentRent"
+              fullWidth
             />
           </Box>
 
-          {/* Desired Co-ownership Monthly Payments Input */}
-          <Box width="563px" textAlign="left">
+         <Box className="rent-box" >
             <Typography variant="subtitle1">Desired co-ownership monthly payments</Typography>
             <TextField
               variant="outlined"
@@ -92,15 +91,22 @@ function Form7() {
               sx={textFieldStyle}
               InputProps={{ startAdornment: <InputAdornment position="start">$</InputAdornment> }}
               id="desiredPayment"
+              fullWidth
             />
           </Box>
         </Box>
 
-        {/* Next Button */}
+       
         <Box display="flex" justifyContent="center" mt={2}>
           <Button
             variant="contained"
-            style={{ width: '305px', height: '56px', borderRadius: '39px', backgroundColor: '#7731E4' }}
+            className="next-btn"
+            style={{
+              fontSize:'1.1rem',
+              borderRadius: '8px',
+              color:'white',
+              backgroundColor: '#7731E4',
+              }}
             onClick={handleNextClick}
             disabled={!currentRent.trim() || !desiredPayment.trim()}
           >

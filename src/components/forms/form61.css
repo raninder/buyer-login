@@ -1,0 +1,48 @@
+.form6-container{
+  margin: 10px auto;
+  padding: 20px;
+  background-color: white;
+  /* display:flex;
+  flex-direction: column;
+  justify-content: center; */
+}
+
+.option{
+    width: 563px;
+}  
+
+   
+.form-buttons{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+}
+.next-btn{
+    width: 270px;
+    height: 50px;
+    /* padding:16px 32px 16px 32px; */
+}
+.skip-btn{
+  width: 270px;
+  height: 50px;
+  background:transparent;
+  border:none;
+  outline:none;
+  display:block;
+  cursor:pointer;
+  font-size: 1.1rem;
+  color:#7731E4;
+  margin-top: 1rem;
+  }
+
+@media only screen and (max-width : 767px){
+
+  .option{
+    width: 300px;
+}  
+   
+.next-btn{
+    width: 160px;
+    height: 40px;
+   }
+}
