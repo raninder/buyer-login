@@ -25,10 +25,11 @@
 
     .about-main1-img {
         position: relative;
-        width: 50vw;
+        width: 80vw;
     }
 
     .about-main1-img img {
+        width: 100%;
         position: relative;
         right: 25%;
         bottom: 6rem;
