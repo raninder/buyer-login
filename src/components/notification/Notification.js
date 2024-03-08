@@ -13,7 +13,7 @@ return(
       <p> Your 1234 Main Street saved home</p>
       <p className="bedbath">$325k | 3beds | 3ba | 1986 sqft</p>
     </div>
-    <div className="thumbimg">
+    <div className="thumbing">
       <img src= {Thumb} alt="house" />
     </div>
   </div>
@@ -24,7 +24,7 @@ return(
       <p> Your 1234 Main Street saved home</p>
       <p className="bedbath">$325k | 3beds | 3ba | 1986 sqft</p>
     </div>
-    <div className="thumbimg">
+    <div className="thumbing">
       <img src= {Thumb} alt="house" />
     </div>
   </div>
@@ -35,7 +35,7 @@ return(
       <p> Your 1234 Main Street saved home</p>
       <p className="bedbath"s>$325k | 3beds | 3ba | 1986 sqft</p>
     </div>
-    <div className="thumbimg">
+    <div className="thumbing">
       <img src= {Thumb} alt="house" />
     </div>
   </div>
@@ -46,7 +46,7 @@ return(
       <p> Your 1234 Main Street saved home</p>
       <p className="bedbath"s>$325k | 3beds | 3ba | 1986 sqft</p>
     </div>
-    <div className="thumbimg">
+    <div className="thumbing">
       <img src= {Thumb} alt="house" />
     </div>
   </div>
@@ -57,7 +57,7 @@ return(
       <p> Your 1234 Main Street saved home</p>
       <p className="bedbath"s>$325k | 3beds | 3ba | 1986 sqft</p>
     </div>
-    <div className="thumbimg">
+    <div className="thumbing">
       <img src= {Thumb} alt="house" />
     </div>
   </div>

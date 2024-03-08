@@ -37,18 +37,19 @@ const Navbar = () => {
             <Modal
                 onClose={handleClose}
                 open={open}
-                style={{
-                    position: "absolute",
-										top: "-75%",
-										left:"50%",
-                    border: "2px solid #000",
-                    backgroundColor: "lightgray",
-                    boxShadow: "2px solid black",
-                    height: 700,
-                    width: 450,
-                    margin: "auto",
-                                      
-                }}
+                // className={'notif-style'}
+                // style={{
+                //     position: "absolute",
+								// 		top: "-75%",
+								// 		left:"50%",
+                //     border: "2px solid #000",
+                //     backgroundColor: "lightgray",
+                //     boxShadow: "2px solid black",
+                //     height: 700,
+                //     width: 450,
+                //     margin: "auto",
+                                  
+                // }}
             >
                 <>
                    <Notification/>
