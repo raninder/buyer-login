@@ -38,7 +38,8 @@
   margin-bottom: 8px;
   margin-top: 10px;
 }
-.login > form > input {
+
+.login > form > .input {
   height: 48px;
   padding: 8px 8px 8px 16px;
   border-radius: 8px;
@@ -50,6 +51,12 @@
   position: absolute;
   top: 54%;
   right: 4%;
+  opacity:50%;
+}
+.eye-icon-signup{
+  position: absolute;
+  top: 46%;
+  right: 5%;
   opacity:50%;
 }
 

@@ -8,7 +8,7 @@ import {
   updateProfile,
   signInWithEmailAndPassword,
 } from '../../firebase';
-import { selectUserEmail, selectUserName } from '../../features/userSlice';
+// import { login,logout, selectUserEmail, selectUserName } from '../../features/userSlice';
 import { login,logout, selectUser } from '../../features/userSlice';
 import  {FacebookAuthProvider, GoogleAuthProvider, signInWithPopup} from 'firebase/auth';
 import { useDispatch, useSelector } from 'react-redux';
@@ -16,25 +16,29 @@ import { useDispatch, useSelector } from 'react-redux';
 const Signupcomp = () => {
   const [isLogin, setIsLogin] = useState(false);
   const [user, setUser] = useState(null);
-
   const dispatch = useDispatch();
-  const userName = useSelector(selectUserName)
-  const userEmail = useSelector(selectUserEmail)
-
-
+  // const userName = useSelector(selectUserName)
+  // const userEmail = useSelector(selectUserEmail)
+  //   const userName = useSelector(selectUser.displayName)
+  // const userEmail = useSelector(selectUser.email)
 
  const handleGoogleLogin = () =>{
   let provider = new GoogleAuthProvider();
   signInWithPopup(auth, provider)
       .then((result)=>{
         setIsLogin(true);
-        setUser(result.user)
-        
+        //action.payload
+        dispatch(login({
+          userName: result.user.displayName,
+          userEmail: result.user.email
+          // displayName: result.user.displayName,
+          // email: result.user.email
+        }))
       } )
       .catch( (e) => {
-      
+        //handle the error when login fails
         alert(`login error ${e}`);
-        setIsLogin(false); 
+        setIsLogin(false); // Sets 'isLogin' to false on login failure
       })
  }
 
@@ -43,9 +47,16 @@ const Signupcomp = () => {
   signInWithPopup(auth, provider)
       .then((result)=>{
         setIsLogin(true);
-        setUser(result.user)
+        //action.payload
+        dispatch(login({
+          userName: result.user.displayName,
+          userEmail: result.user.email
+          // displayName: result.user.displayName,
+          // email: result.user.email
+        }))
       } )
       .catch( (e) => {
+        //handle the error when login fails
         alert(`login error ${e}`);
         setIsLogin(false); 
       })
@@ -59,7 +70,6 @@ const Signupcomp = () => {
       auth.signOut()
       .then(()=> {
         setIsLogin(false);
-        setUser(null)
         dispatch(logout())
       })
       .catch((err)=>alert(err.message))
@@ -67,14 +77,7 @@ const Signupcomp = () => {
 
   return(
     <div>
-    {(isLogin && user)? <LoginTrue name = {user.displayName} email = {user.email} logout={handleLogout}/>:
-    (isLogin && user==null)? <LoginTrue name = {userName} email = {userEmail} logout={handleLogout}/>:
-    <LoginForm setIsLogin = {setIsLogin} googleLogin={handleGoogleLogin} facebookLogin={handleFacebookLogin} />
-    }
-
-      {/* {isLogin ? 
-       
-      <LoginTrue name = {user.displayName} email = {user.email} logout={handleLogout}/> : <LoginForm setIsLogin = {setIsLogin} googleLogin={handleGoogleLogin} facebookLogin={handleFacebookLogin} />} */}
+      {isLogin ? <LoginTrue name = {userName} email = {userEmail} logout={handleLogout}/> : <LoginForm setIsLogin = {setIsLogin} googleLogin={handleGoogleLogin} facebookLogin={handleFacebookLogin} />}
     </div>
     )
 
