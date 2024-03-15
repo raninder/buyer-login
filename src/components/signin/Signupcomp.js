@@ -14,7 +14,7 @@ import {
   onAuthStateChanged,
   signInWithEmailAndPassword,
 } from '../../firebase';
-import { collection, addDoc } from "firebase/firestore";
+import { collection, addDoc, doc, setDoc } from "firebase/firestore";
 import { useDispatch, useSelector } from 'react-redux';
 // import { login,logout, selectUserEmail, selectUserName } from '../../features/userSlice';
 import { login, selectUser, selectUserId} from '../../features/userSlice';
@@ -52,12 +52,20 @@ const Signupcomp= () => {
        console.log("userauth", userAuth)
        console.log("uuiidd", userAuth.user.uid)
        setUserID(userAuth.user.uid)
+      //  db.collection("users")
+      //     .doc(credential.user.uid)
+      //     .set({
+      //       email: email,
+      //       password: password
+      //     });
+      const docRef = doc(db, 'users', userAuth.user.uid)
+      setDoc(docRef, { merge: true })
    
-      addDoc(collection(db, "users"), {
-        uid: userAuth.user.uid,
-        name: userAuth.user.displayName,
-        email: userAuth.user.email,
-      })
+      // addDoc(collection(db, "users"), {
+      //   uid: userAuth.user.uid,
+      //   name: userAuth.user.displayName,
+      //   email: userAuth.user.email,
+      // })
       
       // Update the newly created user with a display name and a picture
         updateProfile(userAuth.user, {
