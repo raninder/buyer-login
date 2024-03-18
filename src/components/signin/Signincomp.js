@@ -2,72 +2,79 @@ import { useState } from 'react';
 import './Signin.css'
 import LoginTrue from './LoginTrue';
 import LoginForm from './LoginForm'
-// import {
-//   auth,
-//   createUserWithEmailAndPassword,
-//   updateProfile,
-//   signInWithEmailAndPassword,
-// } from '../../firebase.config';
-// import { login,logout, selectUserEmail, selectUserName } from '../../features/userSlice';
-// import  {FacebookAuthProvider, GoogleAuthProvider, signInWithPopup} from 'firebase/auth';
-// import { useDispatch, useSelector } from 'react-redux';
+import {
+  auth,
+  createUserWithEmailAndPassword,
+  updateProfile,
+  signInWithEmailAndPassword,
+} from '../../firebase';
+import { selectUserEmail, selectUserName } from '../../features/userSlice';
+import { login,logout, selectUser } from '../../features/userSlice';
+import  {FacebookAuthProvider, GoogleAuthProvider, signInWithPopup} from 'firebase/auth';
+import { useDispatch, useSelector } from 'react-redux';
 
 const Signupcomp = () => {
   const [isLogin, setIsLogin] = useState(false);
-  // const dispatch = useDispatch();
-  // const userName = useSelector(selectUserName)
-  // const userEmail = useSelector(selectUserEmail)
+  const [user, setUser] = useState(null);
 
-//  const handleGLogin = () =>{
-//   let provider = new GoogleAuthProvider();
-//   signInWithPopup(auth, provider)
-//       .then((result)=>{
-//         setIsLogin(true);
-//         //action.payload
-//         dispatch(login({
-//           userName: result.user.displayName,
-//           userEmail: result.user.email
-//         }))
-//       } )
-//       .catch( (e) => {
-//         //handle the error when login fails
-//         alert(`login error ${e}`);
-//         setIsLogin(false); // Sets 'isLogin' to false on login failure
-//       })
-//  }
+  const dispatch = useDispatch();
+  const userName = useSelector(selectUserName)
+  const userEmail = useSelector(selectUserEmail)
 
-//  const handleFLogin = () =>{
-//   let provider = new FacebookAuthProvider();
-//   signInWithPopup(auth, provider)
-//       .then((result)=>{
-//         setIsLogin(true);
-//         //action.payload
-//         dispatch(login({
-//           userName: result.user.displayName,
-//           userEmail: result.user.email
-//         }))
-//       } )
-//       .catch( (e) => {
-//         //handle the error when login fails
-//         alert(`login error ${e}`);
-//         setIsLogin(false); 
-//       })
-//  }
 
-// //Function to logout user
-//      const handleLogout = () => {
-//       auth.signOut()
-//       .then(()=> {
-//         setIsLogin(false);
-//         dispatch(logout())
-//       })
-//       .catch((err)=>alert(err.message))
-//     }
+
+ const handleGoogleLogin = () =>{
+  let provider = new GoogleAuthProvider();
+  signInWithPopup(auth, provider)
+      .then((result)=>{
+        setIsLogin(true);
+        setUser(result.user)
+        
+      } )
+      .catch( (e) => {
+      
+        alert(`login error ${e}`);
+        setIsLogin(false); 
+      })
+ }
+
+ const handleFacebookLogin = () =>{
+  let provider = new FacebookAuthProvider();
+  signInWithPopup(auth, provider)
+      .then((result)=>{
+        setIsLogin(true);
+        setUser(result.user)
+      } )
+      .catch( (e) => {
+        alert(`login error ${e}`);
+        setIsLogin(false); 
+      })
+ }
+
+
+  
+
+//Function to logout user
+     const handleLogout = () => {
+      auth.signOut()
+      .then(()=> {
+        setIsLogin(false);
+        setUser(null)
+        dispatch(logout())
+      })
+      .catch((err)=>alert(err.message))
+    }
 
   return(
     <div>
-      {/* {isLogin ? <LoginTrue name = {userName} email = {userEmail} logout={handleLogout}/> : <LoginForm googleLogin={handleGLogin} facebookLogin={handleFLogin}/>} */}
-       <LoginForm />
+    {(isLogin && user)? <LoginTrue name = {user.displayName} email = {user.email} logout={handleLogout}/>:
+    (isLogin && user==null)? <LoginTrue name = {userName} email = {userEmail} logout={handleLogout}/>:
+    <LoginForm setIsLogin = {setIsLogin} googleLogin={handleGoogleLogin} facebookLogin={handleFacebookLogin} />
+    }
+
+      {/* {isLogin ? 
+       
+      <LoginTrue name = {user.displayName} email = {user.email} logout={handleLogout}/> : <LoginForm setIsLogin = {setIsLogin} googleLogin={handleGoogleLogin} facebookLogin={handleFacebookLogin} />} */}
     </div>
     )
 

@@ -64,8 +64,8 @@
 .like-icons{
   display:flex;
   position: absolute;
-  top: 5%;
-  left: 90%;
+  top: 4%;
+  left: 88%;
   z-index:1;
 }
 .img-border{

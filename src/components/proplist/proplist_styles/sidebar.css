@@ -1,7 +1,7 @@
   /* sidebar component */
 	
 	.sidebar{
-		height:2460px;
+		height:2442px;
 		}
 	.sidebar .top{
 		text-align: center;
@@ -119,9 +119,6 @@
 	.top{
 		display: none;
 	}
-	/* .mortgage{
-		position:static;
-		} */
 		
 		.head>h3{
 			font-size: 20px;

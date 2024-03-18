@@ -1,9 +1,9 @@
-import { FacebookLoginButton } from "react-social-login-buttons";
-
-const LoginTrue = ({name,email, logout}) => (
+const LoginTrue = ({name,email, logout}) => {
+  
+return(
   <>
     <h1>Welcome!</h1>
-    {/* <img src={user.photoURL} alt="" /> */}
+    
     <p>
       Welcome {name}! Your account {email} has been
       successfully logged in 
@@ -13,5 +13,6 @@ const LoginTrue = ({name,email, logout}) => (
     </button>
   </>
 );
+}
 
 export default LoginTrue
