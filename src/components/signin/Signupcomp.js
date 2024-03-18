@@ -52,21 +52,10 @@ const Signupcomp= () => {
        console.log("userauth", userAuth)
        console.log("uuiidd", userAuth.user.uid)
        setUserID(userAuth.user.uid)
-      //  db.collection("users")
-      //     .doc(credential.user.uid)
-      //     .set({
-      //       email: email,
-      //       password: password
-      //     });
+    
       const docRef = doc(db, 'users', userAuth.user.uid)
       setDoc(docRef, { merge: true })
-   
-      // addDoc(collection(db, "users"), {
-      //   uid: userAuth.user.uid,
-      //   name: userAuth.user.displayName,
-      //   email: userAuth.user.email,
-      // })
-      
+     
       // Update the newly created user with a display name and a picture
         updateProfile(userAuth.user, {
           displayName: uname,
