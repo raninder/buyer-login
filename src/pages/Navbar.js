@@ -1,6 +1,6 @@
 import React from 'react';
 import '../css/Navbar.css';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Logo from "../assets/icons/logo.png";
 
 const Navbar = () => {
@@ -21,8 +21,8 @@ const Navbar = () => {
                     <a className="nav-link" onClick={() => goToPage('/contactus')}>Contact Us</a>
                 </div>
                 <div className="right-section">
-                    <button className="btn btn-signin">Sign In</button>
-                    <button className="btn btn-getstarted">Get Started</button>
+                    <Link to = '/signin'><button className="btn btn-signin">Sign In</button></Link>
+                    <Link to = '/proplist'><button className="btn btn-getstarted">Get Started</button></Link>
                 </div>
             </div>
     );

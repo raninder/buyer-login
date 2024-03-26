@@ -25,7 +25,7 @@ export default function LandingSecondComp() {
          </div>
       </div>
       <div className='landing-main2-htw-btn'>
-        <span>How it works</span>
+         <button>How it works</button>
       </div>
     </div>
   )

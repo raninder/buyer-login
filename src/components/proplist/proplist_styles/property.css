@@ -1,0 +1,57 @@
+/* Hero component */
+.main{
+  display: flex;
+  flex-direction: row;
+}
+.left{
+  margin:20px;
+  width: 64%;
+
+}
+.right{
+  margin:20px;
+  width: 35%;
+}
+
+
+@media only screen and (min-width: 1024px)and  (max-width:1375px){
+  .left{
+    margin:20px;
+    width: 58%;
+  
+  }
+  .right{
+    margin:10px;
+    width: 40%;
+  }
+}
+@media only screen and (min-width: 760px) and (max-width:1024px){
+  .main{
+    display: flex;
+    flex-direction: column;
+  }
+  .left{
+    margin:20px;
+   width: 98%;
+  }
+  .right{
+  margin-left:10px;
+  margin-right:10px;
+   width: 100%;
+  
+  }
+}
+
+/* phones */ 
+  @media only screen and (min-width : 320px) and (max-width : 480px){
+  .main{
+    display: flex;
+    flex-direction: column;
+  }
+  .left,.right{
+    margin:0;
+    width: 100%;
+  }
+
+}
+

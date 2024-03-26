@@ -12,20 +12,35 @@ import ArticleContent from '../pages/Article';
 import LandingPage from '../pages/home/LandingPage';
 import ContactUsPage from '../pages/home/ContactUsPage';
 import Blog from '../pages/Blog';
-import AgentsPage from '../pages/home/AgentsPage';
-import AboutUs from '../pages/home/AboutUs';
-import HowItWorks from '../pages/home/HowItWorks';
+// import AgentsPage from '../pages/AgentsPage';
+// import AboutUs from '../pages/AboutUs';
+// import HowItWorks from '../pages/HowItWorks';
+import Signin from '../pages/Signin';
+import Signup from '../pages/Signup';
+import PropHome from '../components/proplist/PropHome';
+import Property from '../components/proplist/Property';
+import PropertyList from '../pages/PropertyList';
+import Notification from '../components/notification/Notification'
+import LoginTrue from '../components/signin/LoginTrue';
+
+
 export default function Navigator() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/aboutus" element={<AboutUs />} />
-        <Route path="/howitworks" element={<HowItWorks />} />
+        {/* <Route path="/aboutus" element={<AboutUs />} /> */}
+        {/* <Route path="/howitworks" element={<HowItWorks />} /> */}
         <Route path="/Article" element={<ArticleContent />} />
         <Route path="/contactus" element={<ContactUsPage />} />
-        <Route path="/agents" element={<AgentsPage />} />
+        {/* <Route path="/agents" element={<AgentsPage />} /> */}
         <Route path="/blog" element={<Blog />} />
+        <Route path="/signin" element={<Signin />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/logout" element={<LoginTrue />} />
+        <Route path="/proplist" element={<PropertyList />} />
+        <Route path="/properties/:id" element={<Property/>} />
+        <Route path="/notifications" element={<Notification />} />
         <Route path="/form1" element={<Form1Page />} />
         <Route path="/form2" element={<Form2Page />} />
         <Route path="/form3" element={<Form3Page />} />

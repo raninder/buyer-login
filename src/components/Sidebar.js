@@ -2,11 +2,11 @@ import React from 'react';
 import { Box, Button, Typography, IconButton, Divider, List, ListItem, ListItemText } from '@mui/material';
 import { ArrowBack } from '@mui/icons-material';
 
+
 function Sidebar() {
   return (
     <Box style={{ width: 250, height: '100vh', boxShadow: '5px 0 5px rgba(0, 0, 0, 0.1)', display: 'flex', flexDirection: 'column', overflowY: 'hidden' }}>
-      
-    <Box display="flex" alignItems="center" justifyContent="space-between" padding="10px">
+      <Box display="flex" alignItems="center" justifyContent="space-between" padding="10px">
       <Typography variant="h6">
         Dashboard
       </Typography>
