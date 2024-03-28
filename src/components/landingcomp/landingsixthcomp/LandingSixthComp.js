@@ -9,6 +9,7 @@ export default function LandingSixthComp() {
     <div className='landing-main6'>
       <span className='landing-main6-header'>Canadians buying homes with family, friends to combat housing affordability woes: Royal LePage survey</span>
       <div className='landing-main6-charts-wrapper'>
+      <div className='landing-main6-charts-wrapper-cont1'>
           <div className='landing-main6-chart-cont'>
             <img className='landing-main6-chart' src={Chart1}/>
             <span>Canadian co-owners cite a lack of housing affordability as a major motivator for choosing to co-purchase a property</span>
@@ -17,6 +18,9 @@ export default function LandingSixthComp() {
             <img className='landing-main6-chart' src={Chart2}/>
             <span>Canadian co-owners say they own a single-family detached property</span>
           </div>
+        </div> 
+
+        <div className='landing-main6-charts-wrapper-cont2'>
           <div className='landing-main6-chart-cont'>
             <img className='landing-main6-chart' src={Chart3}/>
             <span>Co-owners co-own a home with their parents</span>
@@ -25,6 +29,7 @@ export default function LandingSixthComp() {
             <img className='landing-main6-chart' src={Chart4}/>
             <span>Homeowners co-own a property with someone other than their spouse</span>
           </div>
+          </div> 
       </div>
     </div>
   )

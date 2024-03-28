@@ -5,7 +5,7 @@ function Form6Page() {
   return (
     <Layout title="Form Page 6">
       <Form6 />
-    </Layout>
+       </Layout>
   );
 }
 

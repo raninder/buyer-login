@@ -5,7 +5,7 @@ import { Box } from '@mui/material';
 
 const Layout = ({ children }) => {
   return (
-    <div className="layout">
+    <div className="layout" style={{background:'white'}}>
       <CustomAppBar />
       <Box display="flex">
           <Sidebar />

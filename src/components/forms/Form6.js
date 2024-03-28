@@ -6,10 +6,14 @@ import {
   Button,
   IconButton,
 } from '@mui/material';
+import { styled } from "@mui/material/styles";
 import { ArrowBack, ArrowForward } from '@mui/icons-material';
 import StyledLinearProgress from '../StyledLinearProgress';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios'; // Ensure Axios is installed
+// import './form6.css'
+import '../../css/form2.css';
+
 
 function Form6() {
   const [selectedValue, setSelectedValue] = useState('');
@@ -36,15 +40,15 @@ function Form6() {
   };
 
   return (
-    <Container>
-      <div style={{ margin: '10px auto', padding: '20px' }}>
+    <Container >
+      <div className='form6-container'>
         <StyledLinearProgress variant="determinate" value={6} />
         <Box display="flex" alignItems="center" justifyContent="center" mb={2}>
-          <IconButton onClick={() => navigate('/form5')}>
+           <IconButton onClick={() => navigate('/form5')}>
             <ArrowBack />
           </IconButton>
-          <Typography variant="subtitle1" style={{ marginLeft: '10px', marginRight: '10px' }}>
-            Financial Situation: Source
+          <Typography variant="subtitle1" style={{ marginLeft: '.4rem', marginRight: '.4rem' }}>
+              Financial Situation: Source
           </Typography>
           <IconButton onClick={handleNextClick} disabled={!selectedValue.trim()}>
             <ArrowForward />
@@ -62,8 +66,8 @@ function Form6() {
         <Box display="flex" flexDirection="column" alignItems="center" mt={2}>
           <Button
             variant={selectedValue === 'Traditional Employment' ? 'contained' : 'outlined'}
+            className='option'
             style={{
-              width: '563px',
               color: 'black',
               textAlign: 'center',
               fontFamily: 'Raleway',
@@ -72,7 +76,7 @@ function Form6() {
               fontWeight: '700',
               borderRadius: '47px',
               border: '2.375px solid #E7E7E7',
-              marginBottom: '10px',
+              marginBottom: '0.7rem',
             }}
             onClick={() => handleSelect('Traditional Employment')}
           >
@@ -80,8 +84,8 @@ function Form6() {
           </Button>
           <Button
             variant={selectedValue === 'Self Employed' ? 'contained' : 'outlined'}
+            className='option'
             style={{
-              width: '563px',
               color: 'black',
               textAlign: 'center',
               fontFamily: 'Raleway',
@@ -98,8 +102,8 @@ function Form6() {
           </Button>
           <Button
             variant={selectedValue === 'Pension & Disability Incomes' ? 'contained' : 'outlined'}
+            className='option'
             style={{
-              width: '563px',
               color: 'black',
               textAlign: 'center',
               fontFamily: 'Raleway',
@@ -116,8 +120,8 @@ function Form6() {
           </Button>
           <Button
             variant={selectedValue === 'Alimony and Child Support' ? 'contained' : 'outlined'}
+            className='option'
             style={{
-              width: '563px',
               color: 'black',
               textAlign: 'center',
               fontFamily: 'Raleway',
@@ -134,8 +138,8 @@ function Form6() {
           </Button>
           <Button
             variant={selectedValue === 'Other' ? 'contained' : 'outlined'}
+            className='option'
             style={{
-              width: '563px',
               color: 'black',
               textAlign: 'center',
               fontFamily: 'Raleway',
@@ -155,10 +159,11 @@ function Form6() {
         <Box display="flex" justifyContent="center" mt={2}>
           <Button
             variant="contained"
+            className="next-btn"
             style={{
-              width: '305px',
-              height: '56px',
-              borderRadius: '39px',
+              fontSize:'1.1rem',
+              borderRadius: '8px',
+              color:'white',
               backgroundColor: '#7731E4',
             }}
             onClick={handleNextClick}
