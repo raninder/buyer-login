@@ -23,6 +23,7 @@ import Property from '../components/proplist/Property';
 import PropertyList from '../pages/PropertyList';
 import Notification from '../components/notification/Notification'
 import LoginTrue from '../components/signin/LoginTrue';
+import ProtectedRoute from '../utils/ProtectedRoute';
 
 
 export default function Navigator() {
@@ -33,7 +34,7 @@ export default function Navigator() {
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/howitworks" element={<HowItWorks />} />
         <Route path="/Article" element={<ArticleContent />} />
-        <Route path="/contactus" element={<ContactUsPage />} />
+        <Route path="/contactus" element={<ProtectedRoute><ContactUsPage /></ProtectedRoute>} />
         <Route path="/agents" element={<AgentsPage />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/usersettings" element={< UserSettingsPage/>} />

@@ -66,7 +66,7 @@ import { useLocation } from 'react-router-dom'
       
       ) } 
     </div>
-    {/* <Footer/> */}
+    <Footer/>
     </>
    );
 }

@@ -3,7 +3,9 @@ import { createSlice } from '@reduxjs/toolkit'
 // initial user state
 const initialState = {
   userName: null,
-  userEmail: null
+  userEmail: null,
+  isAuthenticated:false,
+ 
 }
 
 const userSlice = createSlice({
@@ -18,7 +20,7 @@ const userSlice = createSlice({
       state.email = action.payload.email;
       state.uid = action.payload.uid;
       state.photoURL = action.payload.photoURL;
-      
+      state.isAuthenticated=true
     },
     logout: (state) => {
       // state.userName = null;
@@ -28,6 +30,7 @@ const userSlice = createSlice({
       // state.uid = null;
       // state.photoURL = null;
     },
+
   }
 });
 
@@ -37,6 +40,7 @@ export const {login,logout} = userSlice.actions
 export const selectUserName = (state) => state.user.displayName
 export const selectUserEmail = (state) => state.user.email
 export const selectUserId = (state) => state.user.uid
+
 // export const selectUser = (state) => state.user.user;
 // export const selectUserName = (state) => state.user.userName
 // export const selectUserEmail = (state) => state.user.userEmail
