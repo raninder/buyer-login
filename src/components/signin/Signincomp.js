@@ -12,6 +12,7 @@ import { selectUserEmail, selectUserName } from '../../features/userSlice';
 import { login,logout, selectUser } from '../../features/userSlice';
 import  {FacebookAuthProvider, GoogleAuthProvider, signInWithPopup} from 'firebase/auth';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link, useNavigate } from 'react-router-dom'
 
 const Signupcomp = () => {
   const [isLogin, setIsLogin] = useState(false);
@@ -21,7 +22,7 @@ const Signupcomp = () => {
   const userName = useSelector(selectUserName)
   const userEmail = useSelector(selectUserEmail)
 
-
+  const navigate = useNavigate();
 
  const handleGoogleLogin = () =>{
   let provider = new GoogleAuthProvider();
@@ -67,8 +68,12 @@ const Signupcomp = () => {
 
   return(
     <div>
-    {(isLogin && user)? <LoginTrue name = {user.displayName} email = {user.email} logout={handleLogout}/>:
+    {/* {(isLogin && user)? <LoginTrue name = {user.displayName} email = {user.email} logout={handleLogout}/>:
     (isLogin && user==null)? <LoginTrue name = {userName} email = {userEmail} logout={handleLogout}/>:
+    <LoginForm setIsLogin = {setIsLogin} googleLogin={handleGoogleLogin} facebookLogin={handleFacebookLogin} />
+    } */}
+    { isLogin ?    navigate("/form1") 
+    :
     <LoginForm setIsLogin = {setIsLogin} googleLogin={handleGoogleLogin} facebookLogin={handleFacebookLogin} />
     }
 
