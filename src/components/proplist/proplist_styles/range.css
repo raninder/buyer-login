@@ -18,7 +18,7 @@
 	font-size: 25px;
 	font-weight:400;
 }
-.heading, .frequency{
+.range-heading, .frequency{
 	display:flex;
 	justify-content:space-between;
  }

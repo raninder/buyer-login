@@ -9,7 +9,7 @@ import './proplist_styles/details.css'
 
 const DetailsInterior = ({data}) => {
 	return ( 
-		<div className="details">
+		<div className="details-interior-container">
 			<Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}

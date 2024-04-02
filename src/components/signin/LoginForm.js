@@ -111,8 +111,7 @@ const LoginForm = ({setIsLogin,googleLogin,facebookLogin}) => {
                <button type="button" className="google-btn" onClick = {googleLogin}><img src={Google} alt="google"></img><span>Google </span></button> 
                <button type="button" className="fb-btn" onClick = {facebookLogin}><img src={Facebook} alt="google"></img><span>Facebook</span> </button> 
             
-            {/* <button type="button" className="google-btn" ><img src={Google} alt="google"></img><span>Google </span></button>
-               <button type="button" className="fb-btn" ><img src={Facebook} alt="google"></img><span>Facebook</span> </button> */}
+           
             </div>
         </div>
         <div className='right-div'>

@@ -25,7 +25,7 @@ iframe{
   width:40%;
  }
 
-.price-container>.price{
+.price-container>.price-container-price{
   font-size: 35px;
   font-weight: 700;
   line-height: 45px;
@@ -33,7 +33,7 @@ iframe{
   text-align: left;
   color: rgba(119, 49, 228, 1);
 }
-.loc{
+.price-container-loc{
   color: rgba(112, 112, 112, 1);
   font-size: 25px;
   font-weight:400;
@@ -87,7 +87,7 @@ iframe{
       height: 160px;
       margin-top: 20px;
      }
-     .loc{
+     .price-container-loc{
       font-size: 20px;
      }
      .price-icons>span{
@@ -114,7 +114,7 @@ iframe{
 			height: 40px;
       font-size: 18px;
     }
-    .price-container>.price{
+    .price-container>.price-container-price{
       font-size: 24px;
       line-height: 20px;
      }
@@ -137,10 +137,10 @@ iframe{
     height:20px;
     width:20px;
   }
-  .loc{
+  .price-container-loc{
     font-size: 14px;
    }
-   .loc img{
+   .price-container-loc img{
     height:14px;
     width:14px;
     }
@@ -157,11 +157,11 @@ iframe{
 
 
 @media only screen and (min-width : 360px) and (max-width:360px){
-  .price-container>.price{
+  .price-container>.price-container-price{
     font-size: 22px;
     line-height: 18px;
    }
-   .loc{
+   .price-container-loc{
     font-size: 12px;
    }
    .price-icons>span{

@@ -1,16 +1,16 @@
 /* similar component */
-.similar{
+.similar-container{
   font-family: DM Sans;
   padding:20px;
 }
-.similar h3{
+.similar-container h3{
   font-size: 28px;
   font-weight: 700;
   line-height: 20px;
   letter-spacing: 0em;
   padding-bottom:20px;
 }
-.homes{
+.similar-homes{
   display:flex;
 }
 .home-card{
@@ -20,24 +20,24 @@
   padding-bottom:10px;
  
 }
-.home{
-  width:18rem;
+.similar-home{
+  width:19.7rem;
   font-size: 12px;
   border:1px lightgrey;
   border-radius: 8px;
   line-height: 20px;
   
 }
-.home-card>.price{
+.home-card>.similar-home-price{
   color: rgba(119, 49, 228, 1);
   font-weight: 700;
   font-size: 20px;
 }
-.price{
+.similar-home-price{
   display:flex;
   justify-content: space-between;
 }
-.weeks{
+.similar-home-weeks{
   color: rgba(112, 112, 112, 1);
   font-weight: 500;
   font-size: 11px;
@@ -49,16 +49,15 @@
 .similar-icons span{
   font-size: 14px;
   font-weight: 700;
-  line-height: 20px;
   margin-right:5px;
 }
-.home-card > .icon{
+.home-card > .loc-icon{
  font-size: 12px;
 font-weight: 400;
-line-height: 20px;
+
 color: rgba(112, 112, 112, 1);
 }
-.icon img{
+.loc-icon img{
   width: 7.68px;
   height: 7.68px;
 }
@@ -71,32 +70,32 @@ color: rgba(112, 112, 112, 1);
 
 /* ipad pro */
   @media only screen and (max-width:1366px){
-  .home{
+  .similar-home{
     width:13rem;
   }
 }
 /* ipad air */
   @media only screen and (max-width:1180px){
-  .home{
+  .similar-home{
     width:10rem;
    }
 
 }
 /* surface pro */
   @media only screen and  (max-width:912px){
-  .home{
+  .similar-home{
       width:15rem;
     }
   } 
   @media only screen and (max-width: 768px){
-  .similar{
+  .similar-container{
     margin-top: 20px;
     margin-right:20px;
     }
-  .home-card>.price{
+  .home-card>.similar-home-price{
     font-size: 13px;
   }
-  .weeks{
+  .similar-home-weeks{
     font-size: 8px;
   }
   .similar-icons span{
@@ -104,7 +103,7 @@ color: rgba(112, 112, 112, 1);
     font-weight: 700;
     line-height: 12px;
   }
-  .home{
+  .similar-home{
     width:12.75rem;
   }
   .home-card > .icon{
@@ -124,26 +123,26 @@ color: rgba(112, 112, 112, 1);
 }
 
   @media only screen and (min-width : 360px) and (max-width : 400px){
-  .similar{
+  .similar-container{
     margin-top: 10px;
     margin-right:0;
   }
   .similar3{
     display:none;
   }
-  .similar h3{
+  .similar-container h3{
     font-size: 20px;
   }
   .home-card{
     margin:.5rem;
   }
-  .home-card>.price{
+  .home-card>.similar-home-price{
     font-size: 14px;
  }
-  .weeks{
+  .similar-home-weeks{
     font-size:9px;
   }
-  .home{
+  .similar-home{
     width:9.25rem;
   }
   
@@ -157,22 +156,22 @@ color: rgba(112, 112, 112, 1);
     margin-right: 5px;
     font-size: 12px;
   }
-  .home-card > .icon{
+  .home-card > .loc-icon{
     font-size: 8px;
 }
 }
 	@media only screen and (min-width : 400px) and (max-width : 480px){
-  .similar{
+  .similar-container{
     margin-top: 10px;
     margin-right:0;
   }
   .similar3{
     display:none;
   }
-  .similar h3{
+  .similar-container h3{
     font-size: 20px;
   }
-  .home{
+  .similar-home{
      width:10rem;
   }
   .home-card{
@@ -186,19 +185,19 @@ color: rgba(112, 112, 112, 1);
     margin-right: 5px;
     font-size:12px;
   }
-  .home-card>.price{
+  .home-card>.similar-home-price{
     font-size: 14px;
  }
-  .weeks{
+  .similar-home-weeks{
     font-size:9px;
   }
-  .home-card > .icon{
+  .home-card > .loc-icon{
     font-size: 9px;
 }
 }
 
 @media only screen and  (min-width : 360px) and (max-width : 360px){
-   .home{
+   .similar-home{
     width:8.5rem;
   }
 }

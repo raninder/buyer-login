@@ -1,37 +1,37 @@
   /* sidebar component */
 	
 	.sidebar{
-		height:2442px;
+		height:3240px;
 		}
-	.sidebar .top{
+	.sidebar .sidebar-top-container{
 		text-align: center;
 		margin:20px;
 	}
-	.top>h3, .head{
+	.sidebar-top-container>h3, .sidebar-mortgage-head{
 		font-family: Raleway;
 		font-size: 30px;
 		font-weight: 700;
 		line-height: 30px;
 		color: rgba(154, 154, 154, 1);
 	}
-	.head>h3{
+	.sidebar-mortgage-head>h3{
 		color: black;
 		padding:10px;
 		font-size: 30px;
 	}
-	.head>button{
+	.sidebar-mortgage-head>button{
 		color: rgba(119, 49, 228, 1);
 		font-size: 25px;
 		padding:10px;
 	}
-	.top>h1{
+	.sidebar-top-container>h1{
 		font-family: Open Sans;
 		font-size: 60px;
 		font-weight: 700;
 		line-height: 65px;
 		letter-spacing: -1.1621675491333008px;
 		}
-		.top>button{
+		.sidebar-top-container>button{
 			width: 100%;
 			height: 70px;
 			margin-top:10px;
@@ -50,23 +50,23 @@
 			text-transform: uppercase;
 		}
 	
-		.mortgage{
+		.sidebar-mortgage-container{
 			position:sticky;
 			top:0;
 			
 		}
-	.payment{
+	.sidebar-mortgage-payment{
 		background-color: white;
 		display: flex;
 		flex-direction: column;
 		border-radius: 15px 15px 0px 0px;
 	}
-	.payment>.head{
+	.sidebar-mortgage-payment>.sidebar-mortgage-head{
 		display: flex;
 		justify-content: space-between;
 		margin:10px;
 	}
-	.head button{
+	.sidebar-mortgage-head button{
 		background:transparent;
 		border:none;
 		color:blueviolet;
@@ -98,13 +98,13 @@
 			padding:10px;
 			height:	auto;
 		}
-		.top{
+		.sidebar-top-container{
 			display: none;
 		}
-		.payment{
+		.sidebar-mortgage-payment{
 			margin-top: -20px;
 		}
-		.head>button{
+		.sidebar-mortgage-head>button{
 			font-size: 28px;
 			padding-right:20px;
 		}
@@ -116,17 +116,17 @@
 			margin-top: 10px;
 			height:	auto;
 	}
-	.top{
+	.sidebar-top-container{
 		display: none;
 	}
 		
-		.head>h3{
+		.sidebar-mortgage-head>h3{
 			font-size: 20px;
 		}
-		.head>button{
+		.sidebar-mortgage-head>button{
 			font-size: 16px;
 		}
-		.payment, .range-container{
+		.sidebar-mortgage-payment, .range-container{
 			border-radius: 0px;
 		}
 	}

@@ -4,7 +4,7 @@ const Range = ({ title,min, max,step,value1,value2,value3,value4,value5,handleCh
   
   return (
     <div className="slider-container">
-			<div className="heading">
+			<div className="range-heading">
 				<span className="title"> {title}</span>
 				{value2? <div><span className="value">${value1}</span><span className="value">{value2}%</span></div>
 				:
