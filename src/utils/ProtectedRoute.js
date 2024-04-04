@@ -4,7 +4,6 @@ import {Navigate, useLocation} from "react-router-dom"
 import { selectUserEmail, selectUserName } from '../features/userSlice';
 
 const ProtectedRoute = ({children}) => {
-    // const user = useSelector((state) => state.user);
     const user = useSelector(selectUserEmail)
     const auth = useSelector((store) => store.isAuthenticated);
     let location = useLocation();
