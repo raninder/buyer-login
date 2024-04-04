@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './Signin.css'
 import LoginTrue from './LoginTrue';
 import LoginForm from './LoginForm'
+import { useNavigate } from 'react-router-dom';
 import {
   auth,
   createUserWithEmailAndPassword,
@@ -13,9 +14,11 @@ import { login,logout, selectUser } from '../../features/userSlice';
 import  {FacebookAuthProvider, GoogleAuthProvider, signInWithPopup} from 'firebase/auth';
 import { useDispatch, useSelector } from 'react-redux';
 
+
 const Signupcomp = () => {
   const [isLogin, setIsLogin] = useState(false);
   const [user, setUser] = useState(null);
+  const navigate = useNavigate();
 
   const dispatch = useDispatch();
   const userName = useSelector(selectUserName)
@@ -67,10 +70,15 @@ const Signupcomp = () => {
 
   return(
     <div>
-    {(isLogin && user)? <LoginTrue name = {user.displayName} email = {user.email} logout={handleLogout}/>:
+    {/* {(isLogin && user)? <LoginTrue name = {user.displayName} email = {user.email} logout={handleLogout}/>:
     (isLogin && user==null)? <LoginTrue name = {userName} email = {userEmail} logout={handleLogout}/>:
     <LoginForm setIsLogin = {setIsLogin} googleLogin={handleGoogleLogin} facebookLogin={handleFacebookLogin} />
+    } */}
+    { isLogin ?    navigate("/form1") 
+    :
+    <LoginForm setIsLogin = {setIsLogin} googleLogin={handleGoogleLogin} facebookLogin={handleFacebookLogin} />
     }
+
 
       {/* {isLogin ? 
        
