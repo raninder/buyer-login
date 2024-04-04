@@ -79,7 +79,7 @@ const Signupcomp= () => {
         alert(err);
       });
       console.log("uid", userID);
-      // navigate("/signin")
+      navigate("/signin")
       
   };
   

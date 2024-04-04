@@ -22,7 +22,7 @@ export default function LandingPage() {
      <LandingSixthComp/>
      <LandingSeventhComp/>
      <LandingEigthComp/>
-     {/* <Footer/> */}
+     <Footer/>
     </div>
   )
 }
