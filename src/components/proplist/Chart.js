@@ -19,23 +19,7 @@ const Chart = () => {
 				<ResponsiveContainer width="100%" height={300}>
 				<PieChart >
 					
-						{/* <Legend formatter={(value, entry, index) => <span className="text-color-class">{value}</span>}
-						wrapperStyle={{ marginBottom:'20px'}}
-							layout="vertical" 
-							verticalAlign="bottom"
-					
-							payload={
-									data.map((item,index) => ({
-										id: item.name,
-										color:item.color,
-										// type: "circle",
-										value: `${item.name} ${item.amount}`
-							})
-						)
-					}
-					
-					/> */}
-				
+							
 					<Pie
 							data={data} 
 							cx={'56%'}
@@ -67,7 +51,8 @@ const Chart = () => {
 				
 					</tr>
 				)}
-  		 </table>
+				 {/* eslint-disable-next-line no-mixed-spaces-and-tabs */}
+  		</table>
 	</>
 	);
 }
