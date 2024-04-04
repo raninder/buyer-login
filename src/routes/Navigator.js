@@ -12,9 +12,10 @@ import ArticleContent from '../pages/Article';
 import LandingPage from '../pages/home/LandingPage';
 import ContactUsPage from '../pages/home/ContactUsPage';
 import Blog from '../pages/Blog';
-// import AgentsPage from '../pages/AgentsPage';
-// import AboutUs from '../pages/AboutUs';
-// import HowItWorks from '../pages/HowItWorks';
+import AgentsPage from '../pages/AgentsPage';
+import AboutUs from '../pages/AboutUs';
+import HowItWorks from '../pages/HowItWorks';
+import UserSettingsPage from '../pages/UserSettingsPage';
 import Signin from '../pages/Signin';
 import Signup from '../pages/Signup';
 import PropHome from '../components/proplist/PropHome';
@@ -29,12 +30,13 @@ export default function Navigator() {
     <Router>
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        {/* <Route path="/aboutus" element={<AboutUs />} /> */}
-        {/* <Route path="/howitworks" element={<HowItWorks />} /> */}
+        <Route path="/aboutus" element={<AboutUs />} />
+        <Route path="/howitworks" element={<HowItWorks />} />
         <Route path="/Article" element={<ArticleContent />} />
         <Route path="/contactus" element={<ContactUsPage />} />
-        {/* <Route path="/agents" element={<AgentsPage />} /> */}
+        <Route path="/agents" element={<AgentsPage />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/usersettings" element={< UserSettingsPage/>} />
         <Route path="/signin" element={<Signin />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/logout" element={<LoginTrue />} />
