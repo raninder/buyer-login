@@ -12,7 +12,11 @@ import ArticleContent from '../pages/Article';
 import LandingPage from '../pages/home/LandingPage';
 import ContactUsPage from '../pages/home/ContactUsPage';
 import Blog from '../pages/Blog';
+<<<<<<< HEAD
 import AgentsPage from '../pages/home/AgentsPage';
+=======
+import AgentsPage from '../pages/AgentsPage';
+>>>>>>> 59e93abc72162426079904770c10950858d822d9
 import AboutUs from '../pages/home/AboutUs';
 import HowItWorks from '../pages/home/HowItWorks';
 import UserSettingsPage from '../pages/UserSettingsPage';

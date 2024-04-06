@@ -35,7 +35,11 @@ module.exports = {
          "react/no-unescaped-entities": "off",
          "no-unused-vars": "off",
          "no-dupe-keys": "off",
+<<<<<<< HEAD
          "no-mixed-spaces-and-tabs": 0,
 
+=======
+         "no-mixed-spaces-and-tabs": "off",
+>>>>>>> 59e93abc72162426079904770c10950858d822d9
     }
 }
