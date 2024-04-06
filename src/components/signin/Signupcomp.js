@@ -16,7 +16,6 @@ import {
 } from '../../firebase';
 import { collection, addDoc, doc, setDoc } from "firebase/firestore";
 import { useDispatch, useSelector } from 'react-redux';
-// import { login,logout, selectUserEmail, selectUserName } from '../../features/userSlice';
 import { login, selectUser, selectUserId} from '../../features/userSlice';
 
 const Signupcomp= () => {
@@ -31,10 +30,7 @@ const Signupcomp= () => {
   const [icon, setIcon] = useState(eyeOff);
   const [userID, setUserID] = useState("");
   const dispatch = useDispatch();
-  // const userName = useSelector(selectUserName)
-  // const userEmail = useSelector(selectUserEmail)
-  // const userName = useSelector(selectUser.displayName)
-  // const userEmail = useSelector(selectUser.email)
+
   const handleSignup = (e) =>{
     e.preventDefault();
     if (!uname||!email || !password) {

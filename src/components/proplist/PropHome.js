@@ -2,7 +2,7 @@ import PropertyList from './PropertyList';
 import { onSnapshot, collection } from "firebase/firestore";
 import {useEffect, useState} from 'react'
 import {db} from '../../firebase';
-import './proplist_styles/index.css'
+
 
 const PropHome = () => {
 	const [propData, setPropData] = useState([])
@@ -23,7 +23,7 @@ const PropHome = () => {
   }, [])
 	
 	return ( 
-			<div className="home">
+			<div className="property-list-home">
 				<h1>Home</h1>
 			
 			{isPending && <div> Loading... </div> }	

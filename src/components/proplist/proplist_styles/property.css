@@ -1,54 +1,75 @@
 /* Hero component */
-.main{
+.property-container{
+  background-color: lightgray;
+  font-family:DM Sans;
+}
+.overview-container, .highlights-container, .details-container, .similar-container, .nearby{
+  margin-top: 10px;
+  background-color: white;
+  font-family: sans-serif;
+  padding:20px;
+  border-radius: 10px;
+}
+
+.property-main-container{
   display: flex;
   flex-direction: row;
 }
-.left{
+.property-left-container{
   margin:20px;
   width: 64%;
 
 }
-.right{
+.property-right-container{
   margin:20px;
   width: 35%;
 }
 
 
 @media only screen and (min-width: 1024px)and  (max-width:1375px){
-  .left{
+  .property-left-container{
     margin:20px;
     width: 58%;
   
   }
-  .right{
+  .property-right-container{
     margin:10px;
     width: 40%;
   }
 }
 @media only screen and (min-width: 760px) and (max-width:1024px){
-  .main{
+  .overview-container,.desc-container,.highlights-container, .details-container, .similar-container, .nearby{
+  margin-top: 5px;
+  margin-right:20px;
+  padding:10px;
+  }
+  .property-main-container{
     display: flex;
     flex-direction: column;
   }
-  .left{
+  .property-left-container{
     margin:20px;
-   width: 98%;
+    width: 98%;
   }
-  .right{
-  margin-left:10px;
-  margin-right:10px;
-   width: 100%;
+  .property-right-container{
+    margin-left:10px;
+    margin-right:10px;
+    width: 100%;
   
   }
 }
 
 /* phones */ 
   @media only screen and (min-width : 320px) and (max-width : 480px){
-  .main{
+    .overview-container,.highlights-container, .details-container, .similar-container, .nearby{
+      margin: 0;
+      padding:10px;
+      }
+  .property-main-container{
     display: flex;
     flex-direction: column;
   }
-  .left,.right{
+  .property-left-container,.property-right-container{
     margin:0;
     width: 100%;
   }

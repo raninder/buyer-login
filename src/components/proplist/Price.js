@@ -9,7 +9,7 @@ const Price = ({data}) => {
 	return (
 		<div class="desc-container">
 			<div className="price-container">
-					<p className="price">{data.price}  </p>
+					<p className="price-container-price">{data.price}  </p>
 					<p className="price-icons">
 					<span><img src={bed} alt="bed" /> {data.beds}  </span>
 					<span><img src={bath} alt="bath" /> {data.baths}  </span>
@@ -17,7 +17,7 @@ const Price = ({data}) => {
 					</p>
 				
 					<p>
-						<span className="loc"><img src={location} alt="area" /> {data.location}</span>
+						<span className="price-container-loc"><img src={location} alt="area" /> {data.location}</span>
 					</p>
 					<button>Get pre-qualified</button>
 			</div>
