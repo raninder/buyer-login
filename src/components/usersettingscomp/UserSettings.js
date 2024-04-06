@@ -10,7 +10,6 @@ import UserSettingsFifthComp from "./usersettingsfifthcomp/UserSettingsFifthComp
 import UserSettingsSixthComp from "./usersettingssixthcomp/UserSettingsSixthComp";
 import UserSettingsRightFirstComp from "./usersettingsrightfirstcomp/UserSettingsRightFirstComp";
 import UserSettingsRightSecondComp from "./usersettingsrightsecondcomp/UserSettingsRightSecondComp";
-import UserSettingsSecondComp from "./usersettingssecondcomp/UserSettingsSecondComp";
 import Sidebar from "../Sidebar";
 
 export default function UserSettings() {
