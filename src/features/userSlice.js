@@ -30,6 +30,7 @@ const userSlice = createSlice({
       // state.uid = null;
       // state.photoURL = null;
     },
+  
 
   }
 });
