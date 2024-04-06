@@ -10,7 +10,7 @@
   letter-spacing: 0em;
   padding-bottom:20px;
 }
-.details h2{
+.details-interior-container h2{
   font-family: Raleway;
   font-size: 26px;
   font-weight: 700;
@@ -107,7 +107,7 @@ a{
 .details-container h3{
   font-size: 22px;
 }
-.details h2{
+.details-interiot-container h2{
   font-size: 19px;
 }
 .rooms h5, .rooms3>h5{
@@ -144,7 +144,7 @@ a{
     text-align: center;
     
   }
-  .details h2{
+  .details-interior-container h2{
     font-size: 18px;
   }
   .rooms{

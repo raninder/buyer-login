@@ -2,7 +2,7 @@ import { useParams } from "react-router";
 import Overview from "./Overview";
 import Header from "./Header";
 import Price from "./Price";
-import Navbar from "./Navbar";
+import  CustomAppBar from "../CustomAppBar"
 import Footer from "../footer/Footer";
 import Similar from "./Similar";
 import Highlights from "./Highlights";
@@ -45,13 +45,13 @@ import { useLocation } from 'react-router-dom'
   return ( 
       
     <>
-    <Navbar />
-    <div>
+    < CustomAppBar />
+    <div className="property-container">
       {isPending && <div>Loading....</div>}
       { data && <Header data={obj}/> }
       {data && (
-      <div className="main">
-        <div className="left">
+      <div className="property-main-container">
+        <div className="property-left-container">
           <Price data={obj} />
           <Overview data={obj}></Overview>
           <Highlights data={highData}/>

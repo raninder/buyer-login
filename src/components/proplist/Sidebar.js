@@ -5,15 +5,15 @@ import './proplist_styles/sidebar.css';
 const Sidebar = () => {
 	return ( 
 		<div className= "sidebar">
-			<div className="top">
+			<div className="sidebar-top-container">
 				<h3> Home Price</h3>
 				<h1>$525,000</h1>
 				<button>GET PRE-QUALIFIED</button>
 			</div>
 
-		<div className="mortgage">	
-			<div className="payment">
-				<div className="head">
+		<div className="sidebar-mortgage-container">	
+			<div className="sidebar-mortgage-payment">
+				<div className="sidebar-mortgage-head">
 					<h3>Monthly Payment</h3>
 					<button> Reset</button>
 				</div>
