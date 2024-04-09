@@ -1,7 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './Signin.css'
 import Logo from "../../assets/icons/logo.png";
-import { Link } from 'react-router-dom'
 import signin from "../../assets/images/signin.png"
 import Google from "../../assets/images/Google.png"
 import Facebook from "../../assets/images/Facebook.png"
@@ -17,6 +16,7 @@ import {
 } from '../../firebase';
 import { useDispatch, useSelector } from 'react-redux';
 import { login,logout, selectUserEmail, selectUserName } from '../../features/userSlice';
+import { Link, useNavigate } from 'react-router-dom'
 
 const LoginForm = ({setIsLogin,googleLogin,facebookLogin}) => {
   const [email, setEmail]  = useState(null)
@@ -24,10 +24,18 @@ const LoginForm = ({setIsLogin,googleLogin,facebookLogin}) => {
   const [errorMsg, setErrorMsg] = useState("");
    const [type, setType] = useState('password');
   const [icon, setIcon] = useState(eyeOff);
+  const [user, setUser] = useState();
   const dispatch = useDispatch();
   const userName = useSelector(selectUserName)
   const userEmail = useSelector(selectUserEmail)
+  const navigate = useNavigate();
+
  
+useEffect(()=>{
+  const loggedUser = localStorage.getItem('user');
+  setUser(JSON.parse(loggedUser))
+},[])
+
   const handleLogin = (e) =>{
     e.preventDefault();
     if (!email || !password) {
@@ -41,6 +49,9 @@ const LoginForm = ({setIsLogin,googleLogin,facebookLogin}) => {
     // userAuth.user contains all our user details
       .then((userAuth) => {
         setIsLogin(true);
+        console.log("userauth", userAuth.user)
+        localStorage.setItem('user',JSON.stringify(userAuth.user))
+  
       // store the user's information in the redux state
         console.log('email2',userAuth.user.email)
         dispatch(
@@ -68,9 +79,12 @@ const LoginForm = ({setIsLogin,googleLogin,facebookLogin}) => {
        setType('password')
     }
  }
+ 
 
    return(
+   
     <div className='signup-container'>
+       {user ?   navigate("/form1") :
        <div className='login'>
           <img src={Logo} alt="Company Logo" className="logo" />
            <h1> Let's get started</h1>
@@ -114,6 +128,7 @@ const LoginForm = ({setIsLogin,googleLogin,facebookLogin}) => {
            
             </div>
         </div>
+     }
         <div className='right-div'>
           <img src={signin} alt="3D Property" className="d3img" />
         </div>

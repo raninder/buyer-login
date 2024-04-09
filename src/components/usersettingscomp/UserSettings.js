@@ -3,14 +3,13 @@ import Navbar from "../../pages/Navbar"
 import Footer from "../footer/Footer";
 import "./style.css"
 import UserSettingsFirstComp from "./usersettingsfirstcomp/UserSettingsFirstComp";
-import { UserSettingsSecondCompFirst, UserSettingsSecondCompSecond } from "./usersettingssecondcomp/UserSettingsSecondComp";
+import UserSettingsSecondComp,{ UserSettingsSecondCompFirst, UserSettingsSecondCompSecond } from "./usersettingssecondcomp/UserSettingsSecondComp";
 import UserSettingsThirdComp from "./usersettingsthirdcomp/UserSettingsThirdComp";
 import UserSettingsFourthComp from "./usersettingsfourthcomp/UserSettingsFourthComp";
 import UserSettingsFifthComp from "./usersettingsfifthcomp/UserSettingsFifthComp";
 import UserSettingsSixthComp from "./usersettingssixthcomp/UserSettingsSixthComp";
 import UserSettingsRightFirstComp from "./usersettingsrightfirstcomp/UserSettingsRightFirstComp";
 import UserSettingsRightSecondComp from "./usersettingsrightsecondcomp/UserSettingsRightSecondComp";
-import UserSettingsSecondComp from "./usersettingssecondcomp/UserSettingsSecondComp";
 import Sidebar from "../Sidebar";
 
 export default function UserSettings() {

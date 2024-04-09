@@ -23,6 +23,7 @@ function CustomAppBar() {
         .then(()=> {
         //   setIsLogin(false);
         //   setUser(null)
+            localStorage.clear();
           dispatch(logout())
           navigate('/')
         })
