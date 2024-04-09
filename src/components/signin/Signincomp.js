@@ -1,26 +1,22 @@
 import { useState, useEffect } from 'react';
 import './Signin.css'
-import LoginTrue from './LoginTrue';
 import LoginForm from './LoginForm'
 import {
   auth,
   db,
-  createUserWithEmailAndPassword,
-  updateProfile,
-  signInWithEmailAndPassword,
+  
 } from '../../firebase';
 import { collection, addDoc, doc, setDoc } from "firebase/firestore";
 import { selectUserEmail, selectUserName } from '../../features/userSlice';
 import { login,logout, selectUser } from '../../features/userSlice';
 import  {FacebookAuthProvider, GoogleAuthProvider, signInWithPopup} from 'firebase/auth';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 
 const Signincomp = () => {
   const [isLogin, setIsLogin] = useState(false);
   const [user, setUser] = useState(null);
-  const [userLogged, setUserLogged] = useState();
   const dispatch = useDispatch();
   const userName = useSelector(selectUserName)
   const userEmail = useSelector(selectUserEmail)
@@ -79,18 +75,14 @@ const Signincomp = () => {
     }
 
   return(
-    // { isLogin ?    navigate("/form1") 
+   
     <div>
     
-    {/* { userLogged ?    navigate("/form1")  */}
-    { isLogin ?    navigate("/form1") 
-     
-    :
+ 
+    { isLogin ?    navigate("/form1") :
     <LoginForm setIsLogin = {setIsLogin} googleLogin={handleGoogleLogin} facebookLogin={handleFacebookLogin} />
     }
 
-
-      
     </div>
     )
 
