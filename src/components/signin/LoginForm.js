@@ -33,7 +33,7 @@ const LoginForm = ({setIsLogin,googleLogin,facebookLogin}) => {
  
 useEffect(()=>{
   const loggedUser = localStorage.getItem('user');
-  setUser(JSON.parse(loggedUser))
+  setUser(loggedUser)
 },[])
 
   const handleLogin = (e) =>{
@@ -50,8 +50,8 @@ useEffect(()=>{
       .then((userAuth) => {
         setIsLogin(true);
         console.log("userauth", userAuth.user)
-        localStorage.setItem('user',JSON.stringify(userAuth.user))
-  
+        localStorage.setItem('user',userAuth.user.uid)
+        
       // store the user's information in the redux state
         console.log('email2',userAuth.user.email)
         dispatch(

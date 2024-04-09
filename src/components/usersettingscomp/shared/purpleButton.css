@@ -1,7 +1,6 @@
 .purple-button {
         padding: 0.6em 1em 0.6em 1em;
         background-color: blueviolet;
-        /* background-color: "#7731E4", */
         color:white;
         height:  "auto";
         width:  100%;
@@ -9,6 +8,7 @@
         font-family: "sans-serif";
         font-weight: 700;
         border-radius: 10px;
+        border-color: blueviolet;
 }
 
 .purple-button:hover {}

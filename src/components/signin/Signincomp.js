@@ -33,6 +33,7 @@ const Signincomp = () => {
       .then((result)=>{
         setIsLogin(true);
         setUser(result.user)
+        localStorage.setItem('user',result.user.uid)
         const docRef = doc(db, 'users', result.user.uid)
          setDoc(docRef, {
         name:auth.currentUser.displayName||null,
@@ -40,7 +41,7 @@ const Signincomp = () => {
         email: auth.currentUser.email||null,
         userImg: auth.currentUser.photoURL||null,
       },{ merge: true })
-        localStorage.setItem("user", JSON.stringify(result.user));
+        
       } )
       .catch( (e) => {
       
@@ -54,6 +55,7 @@ const Signincomp = () => {
   signInWithPopup(auth, provider)
       .then((result)=>{
         setIsLogin(true);
+        localStorage.setItem('user',result.user.uid)
         setUser(result.user)
       } )
       .catch( (e) => {

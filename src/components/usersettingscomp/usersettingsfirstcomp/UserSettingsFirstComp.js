@@ -52,8 +52,9 @@ const EmailTip = () => {
 
 export default function UserSettingsFirstComp() {
   const [userData, setUserData] = useState([]);
-  const userId = auth.currentUser.uid;
-  // console.log("auth id", userId)
+  // const userId = auth.currentUser.uid;
+  const userId = localStorage.getItem("user")
+  console.log("auth id", userId)
   
   useEffect(() => {
     
