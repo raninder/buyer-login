@@ -1,6 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Form1Page from '../pages/forms/Form1Page';
+import PrimaryApplicantPage from '../pages/forms/PrimaryApplicantPage';
 import Form2Page from '../pages/forms/Form2Page';
 import Form3Page from '../pages/forms/Form3Page';
 import Form4Page from '../pages/forms/Form4Page';
@@ -44,15 +45,23 @@ export default function Navigator() {
         <Route path="/proplist" element={<PropertyList />} />
         <Route path="/properties/:id" element={<Property/>} />
         <Route path="/notifications" element={<Notification />} />
-        <Route path="/form1" element={<Form1Page />} />
-        {/* <Route path="/form1" element={<ProtectedRoute><Form1Page /></ProtectedRoute>} />
-        <Route path="/form2" element={<ProtectedRoute><Form2Page /></ProtectedRoute>} />
+        {/* <Route path="/form1" element={<Form1Page />} /> */}
+        <Route path="/PrimaryApplicant" element={<PrimaryApplicantPage />} />
+        <Route path="/form2" element={<Form2Page />} />
+        <Route path="/form3" element={<Form3Page />} />
+        <Route path="/form4" element={<Form4Page />} />
+        <Route path="/form5" element={<Form5Page />} />
+        <Route path="/form6" element={<Form6Page />} />
+        <Route path="/form7" element={<Form7Page />} />
+        <Route path="/form8" element={<Form8Page />} />
+        <Route path="/form1" element={<ProtectedRoute><Form1Page /></ProtectedRoute>} />
+        {/* <Route path="/form2" element={<ProtectedRoute><Form2Page /></ProtectedRoute>} />
         <Route path="/form2" element={<ProtectedRoute><Form3Page /></ProtectedRoute>} />
         <Route path="/form2" element={<ProtectedRoute><Form4Page /></ProtectedRoute>} />
         <Route path="/form2" element={<ProtectedRoute><Form5Page /></ProtectedRoute>} />
         <Route path="/form2" element={<ProtectedRoute><Form6Page /></ProtectedRoute>} />
         <Route path="/form2" element={<ProtectedRoute><Form7Page /></ProtectedRoute>} />
-        <Route path="/form2" element={<ProtectedRoute><Form8Page /></ProtectedRoute>} /> */}
+        <Route path="/form2" element={<ProtectedRoute><Form8Page /></ProtectedRoute>} />  */}
         
       </Routes>
     </Router>
