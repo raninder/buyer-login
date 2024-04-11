@@ -44,14 +44,15 @@ export default function Navigator() {
         <Route path="/proplist" element={<PropertyList />} />
         <Route path="/properties/:id" element={<Property/>} />
         <Route path="/notifications" element={<Notification />} />
-        <Route path="/form1" element={<ProtectedRoute><Form1Page /></ProtectedRoute>} />
+        <Route path="/form1" element={<Form1Page />} />
+        {/* <Route path="/form1" element={<ProtectedRoute><Form1Page /></ProtectedRoute>} />
         <Route path="/form2" element={<ProtectedRoute><Form2Page /></ProtectedRoute>} />
         <Route path="/form2" element={<ProtectedRoute><Form3Page /></ProtectedRoute>} />
         <Route path="/form2" element={<ProtectedRoute><Form4Page /></ProtectedRoute>} />
         <Route path="/form2" element={<ProtectedRoute><Form5Page /></ProtectedRoute>} />
         <Route path="/form2" element={<ProtectedRoute><Form6Page /></ProtectedRoute>} />
         <Route path="/form2" element={<ProtectedRoute><Form7Page /></ProtectedRoute>} />
-        <Route path="/form2" element={<ProtectedRoute><Form8Page /></ProtectedRoute>} />
+        <Route path="/form2" element={<ProtectedRoute><Form8Page /></ProtectedRoute>} /> */}
         
       </Routes>
     </Router>
