@@ -63,7 +63,7 @@ export default function UserSettings() {
                     <UserSettingsRightSecondComp />
                 </div>
             </div>
-            <Footer />
+            {/* <Footer /> */}
         </div>
     );
 }
