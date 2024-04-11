@@ -3,7 +3,6 @@ import { Container, InputAdornment, Typography, Box, Button, TextField, IconButt
 import { ArrowBack, ArrowForward } from '@mui/icons-material';
 import StyledLinearProgress from '../StyledLinearProgress';
 import '../../css/form2.css';
-// import './form6.css'
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios'; // Ensure Axios is installed
 

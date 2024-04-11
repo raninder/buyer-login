@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "@mui/material";
 import "./purpleButton.css"
 
-export default function PurpleButton({ text, style, fontSize, width, height }) {
+export default function PurpleButton({ text, style, fontSize, width, height, ...rest }) {
   return (
     <Button
       variant="contained"
@@ -21,6 +21,7 @@ export default function PurpleButton({ text, style, fontSize, width, height }) {
           backgroundColor: "#9c6ee1",
         },
         ...style,
+        ...rest
       }}
     >
       {text}

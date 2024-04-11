@@ -11,7 +11,6 @@ import { ArrowBack, ArrowForward } from '@mui/icons-material';
 import StyledLinearProgress from '../StyledLinearProgress';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios'; // Ensure Axios is installed
-// import './form6.css'
 import '../../css/form2.css';
 
 

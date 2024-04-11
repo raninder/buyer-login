@@ -89,6 +89,14 @@
     height: fit-content;
 }
 
+/* ipad air */
+@media only screen and (min-width: 1024px)and  (max-width:1375px){
+    .landing-main7-post{
+        margin:1rem;
+    }
+    
+} 
+
 /* laptop */
 @media screen and (min-width: 1024px) and (max-width: 1440px) {
     .landing-main7{

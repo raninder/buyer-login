@@ -67,7 +67,7 @@ function MaterialAccordion({data1,data2}) {
         <AccordionDetails>
           <Typography>
             <p className="download">To view the details, download the mobile application.</p>
-            <p><a href="">Download now</a></p>
+            <p><a className="download-link" href="">Download now</a></p>
           </Typography>
         </AccordionDetails>
       </Accordion>

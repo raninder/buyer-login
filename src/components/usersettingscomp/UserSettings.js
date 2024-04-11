@@ -3,7 +3,7 @@ import Navbar from "../../pages/Navbar"
 import Footer from "../footer/Footer";
 import "./style.css"
 import UserSettingsFirstComp from "./usersettingsfirstcomp/UserSettingsFirstComp";
-import UserSettingsSecondComp, { UserSettingsSecondCompFirst, UserSettingsSecondCompSecond } from "./usersettingssecondcomp/UserSettingsSecondComp";
+import UserSettingsSecondComp,{ UserSettingsSecondCompFirst, UserSettingsSecondCompSecond } from "./usersettingssecondcomp/UserSettingsSecondComp";
 import UserSettingsThirdComp from "./usersettingsthirdcomp/UserSettingsThirdComp";
 import UserSettingsFourthComp from "./usersettingsfourthcomp/UserSettingsFourthComp";
 import UserSettingsFifthComp from "./usersettingsfifthcomp/UserSettingsFifthComp";

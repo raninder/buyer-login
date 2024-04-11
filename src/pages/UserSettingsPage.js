@@ -4,8 +4,8 @@ import Layout from "../components/Layout";
 
 export default function UserSettingsPage() {
   return (
-    // <Layout >
+    <Layout >
     <UserSettings />
-    // </Layout>
+     </Layout>
   );
 }

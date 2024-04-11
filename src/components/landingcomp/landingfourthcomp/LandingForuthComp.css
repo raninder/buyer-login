@@ -93,6 +93,18 @@ margin:2rem 0rem;
         line-height: 50px;
     }
 }
+/* ipad air */
+@media only screen and (min-width: 1024px)and  (max-width:1375px){
+    .main4-couple{
+        width:50%;
+        
+    }
+    .main4-cobuyer-btn span{
+        font-size: 1.3rem;
+    }
+    
+} 
+
 /* tablet */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     .landing-main4{

@@ -107,6 +107,38 @@ width: 60%;
     }
 
 }
+/* ipad air */
+@media only screen and (min-width: 1024px)and  (max-width:1375px){
+  
+    .landing-main1{
+        padding: 5rem 1rem 0rem 4.5rem;
+       
+    }
+    .landing-main1-header, .landing-main1-header-ext{
+        font-size: 9rem; 
+        line-height: 170px; 
+    }
+    .landing-main1-btn-cont{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 3rem;
+        width:40%;
+       
+    }
+    .landing-main1-browse-btn button{
+        font-size: 0.9rem;
+        padding: 0rem 0.3rem;
+    }
+    
+}
+/* @media only screen and  (min-width:912px) and (max-width: 940px){
+    .landing-main1-header{
+        color:red;
+    }
+
+} */
 /* tablet */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
    
