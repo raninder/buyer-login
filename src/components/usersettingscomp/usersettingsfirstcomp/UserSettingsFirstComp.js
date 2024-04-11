@@ -52,6 +52,7 @@ const EmailTip = () => {
 
 export default function UserSettingsFirstComp() {
   const [userData, setUserData] = useState([]);
+  const [isReadonly, setIsReadonly] = useState(true);
   // const userId = auth.currentUser.uid;
   const userId = localStorage.getItem("user")
   console.log("auth id", userId)
@@ -73,14 +74,16 @@ export default function UserSettingsFirstComp() {
   const handleUpload = async() =>{
    
     console.log('current User', auth.currentUser.uid, auth.currentUser.displayName);
+    console.log("userData3", userData)
+    console.log('email', userData.email)
     
     //update userid document with profile data
     try{
       await setDoc(doc(db, "users", auth.currentUser.uid),{
         name:auth.currentUser.displayName||null,
-        mobile: userData.mobile||null,
+        phoneNumber: userData.mobile||null,
         gender: userData.gender||null,
-        email: userData.email||auth.currentUser.email,
+        email: userData.email,
         address: userData.address||null,
         userImg: auth.currentUser.photoURL||null,
       },
@@ -92,6 +95,15 @@ export default function UserSettingsFirstComp() {
       }
 
   }
+
+  const handleProfileEdit = (e) => {
+    // setIsReadonly(false)
+    setUserData({ ...userData, email: e.target.value })
+ 
+    };
+    const handleInputChange = (e) => {
+      setUserData({ ...userData, mobile: e.target.value })
+    };
   return (
     <>
       <div className="user-settings-first-comp-container">
@@ -101,13 +113,13 @@ export default function UserSettingsFirstComp() {
          <div className="user-settings-first-comp-profile-form">
          
               <FormItem
-                name="mobile"
+                name="phoneNumber"
                 titleName="Mobile Phone"
                 flagStatus="Verified"
                 placeholder="123423423"
                 disableFlag = {false}
-                value = {userData?userData.mobile:''}
-                onChange = {(e) => setUserData({ ...userData, mobile: e.target.value })}
+                value = {userData?userData.phoneNumber:''}
+                onChange = {(e) => setUserData({ ...userData, phoneNumber: e.target.value })}
                 
               />
 
@@ -119,7 +131,9 @@ export default function UserSettingsFirstComp() {
                 disableFlag = {false}
                 value={ userData?userData.email:''}
                 emailTip={true}
-                onChange = {(e) => setUserData({ ...userData, email: e.target.value })}
+                // readOnly="readonly"
+                // readOnly={isReadonly}
+                onChange = { (e) => setUserData({ ...userData, email: e.target.value })}
               />
              <FormItem
                 name="gender"
@@ -156,12 +170,14 @@ export default function UserSettingsFirstComp() {
             <div className="user-settings-first-comp-image-overlay"></div>
             <div className="user-settings-first-comp-profile-name">
               {/* <CardTitle name={CardName} /> */}
-              <CardTitle name={userData.name||CardName} />
+              <CardTitle name={userData.name||userData.firstName||CardName} />
             </div>
           </div>
           <div className="user-settings-first-comp-profile-edit">
-            <IconButton>
-              <img src={profileEdit} />
+            <IconButton onClick={handleProfileEdit}>
+             
+                <img src={profileEdit} />
+              
             </IconButton>
           </div>
         </div>
