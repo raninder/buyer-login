@@ -47,7 +47,7 @@ function Form3() {
         throw new Error('User ID not found');
         await setDoc(doc(db, "users", userId), {
           buyingTimeframe: buyingTimeframe
-        });
+        }, { merge: true });
       // Update buying timeframe in Firebase Firestore
       // This part is missing in the provided code. You need to handle Firestore operations here.
 

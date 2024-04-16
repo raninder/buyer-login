@@ -36,7 +36,7 @@ function Form6() {
         // Update income source in Firestore
         await setDoc(doc(db, "users", userId), {
           incomeSource: selectedValue
-        });
+        }, { merge: true });
   
         // Dispatch action to update income source in Redux store
         dispatch(updateIncomeSource(selectedValue));

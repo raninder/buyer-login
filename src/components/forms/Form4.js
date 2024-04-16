@@ -38,7 +38,7 @@ function Form4() {
           payableAmount: parseFloat(payableAmount),
           perMonthSelected,
           unit: perMonthSelected ? 'Per Month' : 'Per Year',
-        });
+        }, { merge: true });
 
         dispatch(setFinancialData({
           income: parseFloat(income),

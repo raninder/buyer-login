@@ -25,7 +25,7 @@ function Form5() {
         const userId = localStorage.getItem("user");
 
         await setDoc(doc(db, "users", userId), {
-          downPayment: selectedValue });
+          downPayment: selectedValue }, { merge: true });
         dispatch(setErrorMessage("Data successfully submitted.")); // Use setErrorMessage instead of setServerMessage
         navigate('/form6');
       } catch (error) {
