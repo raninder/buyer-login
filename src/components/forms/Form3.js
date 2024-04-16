@@ -1,7 +1,3 @@
-
-
-
-
 import React, { useState } from 'react';
 import { Container, Typography, Box, Button, IconButton } from '@mui/material';
 import { ArrowBack, ArrowForward } from '@mui/icons-material';
