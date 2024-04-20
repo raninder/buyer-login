@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
 import {
   Container,
   Typography,
@@ -29,12 +30,62 @@ function Form5() {
       } catch (error) {
         console.error('Error:', error.response ? error.response.data : error.message);
         setServerMessage(error.response ? error.response.data.message : 'An error occurred');
+=======
+import { Container, Typography, Box, Button, IconButton } from '@mui/material';
+import { ArrowBack, ArrowForward } from '@mui/icons-material';
+import StyledLinearProgress from '../StyledLinearProgress';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { db } from '../../firebase';
+import { setDownPayment } from '../../featureForm/userSlice';
+import { setErrorMessage } from '../../featureForm/errorSlice';
+import { doc, setDoc } from 'firebase/firestore'; // Changed import for setDoc
+
+function Form5() {
+  const [serverMessage, setServerMessage] = useState('');
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const selectedValue = useSelector(state => state.user.downPayment); // Select down payment from Redux state
+
+  const handleSelect = (value) => {
+    dispatch(setDownPayment(value)); // Dispatch action to set down payment
+  };
+
+  const handleNextClick = async () => {
+    if (selectedValue && selectedValue.trim() !== '') {
+      try {
+        const userId = localStorage.getItem("user");
+
+        await setDoc(doc(db, "users", userId), {
+          downPayment: selectedValue }, { merge: true });
+        dispatch(setErrorMessage("Data successfully submitted.")); // Use setErrorMessage instead of setServerMessage
+        navigate('/form6');
+      } catch (error) {
+        console.error('Error:', error);
+        dispatch(setErrorMessage('An error occurred')); // Use setErrorMessage instead of setServerMessage
+>>>>>>> 3afa2417c934e9a1b90de23bf33910d40927d2bb
       }
     } else {
       alert('Please select a down payment option before proceeding.');
     }
   };
 
+<<<<<<< HEAD
+=======
+  const buttonStyle = {
+    width: '100%', // Full width for small screens
+    color: 'black',
+    textAlign: 'center',
+    fontFamily: 'Raleway',
+    fontSize: '15px',
+    fontStyle: 'normal',
+    fontWeight: '700',
+    borderRadius: '47px',
+    border: '2.375px solid #E7E7E7',
+    marginBottom: '10px',
+  };
+
+>>>>>>> 3afa2417c934e9a1b90de23bf33910d40927d2bb
   return (
     <Container>
       <div style={{ margin: '10px auto', padding: '20px' }}>
@@ -50,16 +101,23 @@ function Form5() {
             <ArrowForward />
           </IconButton>
         </Box>
+<<<<<<< HEAD
         {serverMessage && (
           <Typography color="error" style={{ marginBottom: '10px' }}>
             {serverMessage}
           </Typography>
         )}
+=======
+        <Typography color="error" style={{ marginBottom: '10px' }}>
+          {serverMessage}
+        </Typography>
+>>>>>>> 3afa2417c934e9a1b90de23bf33910d40927d2bb
         <Typography variant="h5" style={{ marginBottom: '10px', textAlign: 'center' }}>
           How much do you have for down payment?
         </Typography>
 
         <Box display="flex" flexDirection="column" alignItems="center" mt={2}>
+<<<<<<< HEAD
           {/* Down payment options as buttons */}
           <Button
             variant={selectedValue === 'Nothing' ? 'contained' : 'outlined'}
@@ -75,12 +133,18 @@ function Form5() {
               border: '2.375px solid #E7E7E7',
               marginBottom: '10px',
             }}
+=======
+          <Button
+            variant={selectedValue === 'Nothing' ? 'contained' : 'outlined'}
+            style={buttonStyle}
+>>>>>>> 3afa2417c934e9a1b90de23bf33910d40927d2bb
             onClick={() => handleSelect('Nothing')}
           >
             Nothing right now
           </Button>
           <Button
             variant={selectedValue === 'Less than 7k' ? 'contained' : 'outlined'}
+<<<<<<< HEAD
             style={{
               width: '563px',
               color: 'black',
@@ -93,12 +157,16 @@ function Form5() {
               border: '2.375px solid #E7E7E7',
               marginBottom: '10px',
             }}
+=======
+            style={buttonStyle}
+>>>>>>> 3afa2417c934e9a1b90de23bf33910d40927d2bb
             onClick={() => handleSelect('Less than 7k')}
           >
             Less than $7k
           </Button>
           <Button
             variant={selectedValue === '7k - 15k' ? 'contained' : 'outlined'}
+<<<<<<< HEAD
             style={{
               width: '563px',
               color: 'black',
@@ -111,12 +179,16 @@ function Form5() {
               border: '2.375px solid #E7E7E7',
               marginBottom: '10px',
             }}
+=======
+            style={buttonStyle}
+>>>>>>> 3afa2417c934e9a1b90de23bf33910d40927d2bb
             onClick={() => handleSelect('7k - 15k')}
           >
             $7k - $15k
           </Button>
           <Button
             variant={selectedValue === '15k - 25k' ? 'contained' : 'outlined'}
+<<<<<<< HEAD
             style={{
               width: '563px',
               color: 'black',
@@ -129,12 +201,16 @@ function Form5() {
               border: '2.375px solid #E7E7E7',
               marginBottom: '10px',
             }}
+=======
+            style={buttonStyle}
+>>>>>>> 3afa2417c934e9a1b90de23bf33910d40927d2bb
             onClick={() => handleSelect('15k - 25k')}
           >
             $15k - $25k
           </Button>
           <Button
             variant={selectedValue === '25k+' ? 'contained' : 'outlined'}
+<<<<<<< HEAD
             style={{
               width: '563px',
               color: 'black',
@@ -147,6 +223,9 @@ function Form5() {
               border: '2.375px solid #E7E7E7',
               marginBottom: '10px',
             }}
+=======
+            style={buttonStyle}
+>>>>>>> 3afa2417c934e9a1b90de23bf33910d40927d2bb
             onClick={() => handleSelect('25k+')}
           >
             $25k+
@@ -158,8 +237,14 @@ function Form5() {
             style={{
               width: '305px',
               height: '56px',
+<<<<<<< HEAD
               borderRadius: '39px',
               backgroundColor: '#7731E4',
+=======
+              borderRadius: '8px',
+              backgroundColor: '#7731E4',
+              color: 'white',
+>>>>>>> 3afa2417c934e9a1b90de23bf33910d40927d2bb
             }}
             onClick={handleNextClick}
             disabled={selectedValue.trim() === ''}

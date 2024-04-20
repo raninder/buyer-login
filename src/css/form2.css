@@ -22,6 +22,7 @@
     color: #7731E4;
 }
 
+<<<<<<< HEAD
 
 /* new css rd */
 
@@ -45,6 +46,68 @@
     height: 48px;
 }
 
+=======
+.form-container {
+  margin: 10px auto;
+  padding: 20px;
+}
+
+
+
+/* For small devices (phones, 576px and up) */
+@media (min-width: 576px) {
+    .button-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .location-box {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  /* For medium devices (tablets, 768px and up) */
+  @media (min-width: 768px) {
+    .button-container {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+    .location-box {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+  
+  /* For large devices (desktops, 992px and up) */
+  @media (min-width: 992px) {
+    .button-container {
+      justify-content: center;
+    }
+  }
+  
+/* form7 */
+.rent-box {
+  width:35rem;
+  text-align:left;
+}
+.rent-field{
+  width: 563px;
+  height: 48px;
+}
+
+.form6-container{
+  margin: 10px auto;
+  padding: 20px;
+  background-color: white;
+ }
+
+.option{
+    width: 563px;
+}  
+
+>>>>>>> 3afa2417c934e9a1b90de23bf33910d40927d2bb
 /* form8 */
 .pink-container{
     background-color:#FFEEF1;
@@ -129,4 +192,57 @@
         height: 40px;
     }
     
+<<<<<<< HEAD
+=======
+}
+
+
+.location-box button {
+  border-radius: 22px;
+  border: 1px solid var(--primary-purple, #7731E4)
+}
+
+.location-box button:hover {
+  background-color:#7731E4;
+  span {
+      color: white ;
+  } 
+}
+
+.location-box button:active {
+  background-color:#7731E4; 
+}
+
+.location-box button:active span {
+  background-color:#fff; 
+}
+
+.location-box button span {
+  color: #7731E4;
+}
+
+
+
+/* For small devices (phones, 576px and up) */
+@media (min-width: 576px) {
+  .button-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* For medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .button-container {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+/* For large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .button-container {
+    justify-content: center;
+  }
+>>>>>>> 3afa2417c934e9a1b90de23bf33910d40927d2bb
 }

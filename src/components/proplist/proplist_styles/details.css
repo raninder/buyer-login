@@ -78,7 +78,11 @@
     margin-top:-25px; 
     left:300px;
   }
+<<<<<<< HEAD
 .download, .download-link{
+=======
+.download, a{
+>>>>>>> 3afa2417c934e9a1b90de23bf33910d40927d2bb
   font-size: 20px;
   line-height: 24px;
   margin-left: 10px;
@@ -88,7 +92,11 @@
   font-size: 20px;
   font-weight: 400;
 }
+<<<<<<< HEAD
 .download-link{
+=======
+a{
+>>>>>>> 3afa2417c934e9a1b90de23bf33910d40927d2bb
   font-weight: 700;
   color: black;
 }
@@ -185,7 +193,11 @@
     left:10px;
     text-align: right;
   }
+<<<<<<< HEAD
   .download, .download-link{
+=======
+  .download, a{
+>>>>>>> 3afa2417c934e9a1b90de23bf33910d40927d2bb
     font-size: 16px;
     line-height: 20px;
   }

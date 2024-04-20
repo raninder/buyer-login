@@ -143,10 +143,14 @@ export default function LandingEigthComp() {
 				
 				</tr>
 				)}
+<<<<<<< HEAD
                  {/* eslint-disable-next-line no-mixed-spaces-and-tabs */}
   	    </table> 
         
 
+=======
+  		 </table>
+>>>>>>> 3afa2417c934e9a1b90de23bf33910d40927d2bb
       </div>
       </div>
     </div>

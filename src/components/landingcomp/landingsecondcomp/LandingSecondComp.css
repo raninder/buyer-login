@@ -42,6 +42,7 @@
 
 .main2-post-head{
     color: #FFF;
+<<<<<<< HEAD
     text-align: center;
     font-family: 'DM Sans', sans-serif;
     font-size: 1.3rem;
@@ -51,6 +52,17 @@
     text-transform: uppercase;
     margin-top: 0.5rem;
  }
+=======
+text-align: center;
+font-family: 'DM Sans', sans-serif;
+font-size: 1.3rem;
+font-style: normal;
+font-weight: 700;
+line-height: 62px; /* 172.222% */
+text-transform: uppercase;
+margin-top: 0.5rem;
+}
+>>>>>>> 3afa2417c934e9a1b90de23bf33910d40927d2bb
 
 .main2-post-about{
     color: #FFF;
@@ -114,6 +126,7 @@
     }
 
 }
+<<<<<<< HEAD
 /* ipad air */
 @media only screen and (min-width: 1024px)and  (max-width:1375px){
     
@@ -122,6 +135,8 @@
     }
 }                                
 
+=======
+>>>>>>> 3afa2417c934e9a1b90de23bf33910d40927d2bb
 /* tablet */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
 

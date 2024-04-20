@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .purple-button {
         padding: 0.6em 1em 0.6em 1em;
         background-color: blueviolet;
@@ -10,6 +11,9 @@
         border-radius: 10px;
         border-color: blueviolet;
 }
+=======
+.purple-button {}
+>>>>>>> 3afa2417c934e9a1b90de23bf33910d40927d2bb
 
 .purple-button:hover {}
 

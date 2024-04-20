@@ -107,6 +107,7 @@ width: 60%;
     }
 
 }
+<<<<<<< HEAD
 /* ipad air */
 @media only screen and (min-width: 1024px)and  (max-width:1375px){
   
@@ -139,6 +140,8 @@ width: 60%;
     }
 
 } */
+=======
+>>>>>>> 3afa2417c934e9a1b90de23bf33910d40927d2bb
 /* tablet */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
    

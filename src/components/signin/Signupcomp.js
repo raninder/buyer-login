@@ -46,6 +46,7 @@ const Signupcomp= () => {
     createUserWithEmailAndPassword(auth, email, password)
       .then((userAuth) => {
        console.log("userauth", userAuth)
+<<<<<<< HEAD
        console.log("uuiidd", userAuth.user.uid, uname)
        setUserID(userAuth.user.uid)
     
@@ -57,16 +58,28 @@ const Signupcomp= () => {
         userImg: auth.currentUser.photoURL||null,
       },{ merge: true })
       alert("New user created")
+=======
+       console.log("uuiidd", userAuth.user.uid)
+       setUserID(userAuth.user.uid)
+    
+      const docRef = doc(db, 'users', userAuth.user.uid)
+      setDoc(docRef, { merge: true })
+>>>>>>> 3afa2417c934e9a1b90de23bf33910d40927d2bb
      
       // Update the newly created user with a display name and a picture
         updateProfile(userAuth.user, {
           displayName: uname,
           photoURL: file,
         })
+<<<<<<< HEAD
       
     
           .then(
         
+=======
+          .then(
+           
+>>>>>>> 3afa2417c934e9a1b90de23bf33910d40927d2bb
             // Dispatch the user information for persistence in the redux state
             dispatch(
               login({
@@ -87,7 +100,11 @@ const Signupcomp= () => {
         alert(err);
       });
       console.log("uid", userID);
+<<<<<<< HEAD
       navigate("/signin")
+=======
+      // navigate("/signin")
+>>>>>>> 3afa2417c934e9a1b90de23bf33910d40927d2bb
       
   };
   

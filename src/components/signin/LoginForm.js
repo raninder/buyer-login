@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import './Signin.css'
 import Logo from "../../assets/icons/logo.png";
+=======
+import { useState } from 'react';
+import './Signin.css'
+import Logo from "../../assets/icons/logo.png";
+import { Link } from 'react-router-dom'
+>>>>>>> 3afa2417c934e9a1b90de23bf33910d40927d2bb
 import signin from "../../assets/images/signin.png"
 import Google from "../../assets/images/Google.png"
 import Facebook from "../../assets/images/Facebook.png"
@@ -16,7 +23,11 @@ import {
 } from '../../firebase';
 import { useDispatch, useSelector } from 'react-redux';
 import { login,logout, selectUserEmail, selectUserName } from '../../features/userSlice';
+<<<<<<< HEAD
 import { Link, useNavigate } from 'react-router-dom'
+=======
+
+>>>>>>> 3afa2417c934e9a1b90de23bf33910d40927d2bb
 
 const LoginForm = ({setIsLogin,googleLogin,facebookLogin}) => {
   const [email, setEmail]  = useState(null)
@@ -24,6 +35,7 @@ const LoginForm = ({setIsLogin,googleLogin,facebookLogin}) => {
   const [errorMsg, setErrorMsg] = useState("");
    const [type, setType] = useState('password');
   const [icon, setIcon] = useState(eyeOff);
+<<<<<<< HEAD
   const [user, setUser] = useState();
   const dispatch = useDispatch();
   const userName = useSelector(selectUserName)
@@ -36,6 +48,12 @@ useEffect(()=>{
   setUser(loggedUser)
 },[])
 
+=======
+  const dispatch = useDispatch();
+  const userName = useSelector(selectUserName)
+  const userEmail = useSelector(selectUserEmail)
+ 
+>>>>>>> 3afa2417c934e9a1b90de23bf33910d40927d2bb
   const handleLogin = (e) =>{
     e.preventDefault();
     if (!email || !password) {
@@ -48,10 +66,16 @@ useEffect(()=>{
     // returns  an auth object after a successful authentication
     // userAuth.user contains all our user details
       .then((userAuth) => {
+<<<<<<< HEAD
         setIsLogin(true);
         console.log("userauth", userAuth.user)
         localStorage.setItem('user',userAuth.user.uid)
         
+=======
+        
+        setIsLogin(true);
+        localStorage.setItem('user',userAuth.user.uid)
+>>>>>>> 3afa2417c934e9a1b90de23bf33910d40927d2bb
       // store the user's information in the redux state
         console.log('email2',userAuth.user.email)
         dispatch(
@@ -79,12 +103,18 @@ useEffect(()=>{
        setType('password')
     }
  }
+<<<<<<< HEAD
  
 
    return(
    
     <div className='signup-container'>
        {user ?   navigate("/form1") :
+=======
+
+   return(
+    <div className='signup-container'>
+>>>>>>> 3afa2417c934e9a1b90de23bf33910d40927d2bb
        <div className='login'>
           <img src={Logo} alt="Company Logo" className="logo" />
            <h1> Let's get started</h1>
@@ -128,7 +158,10 @@ useEffect(()=>{
            
             </div>
         </div>
+<<<<<<< HEAD
      }
+=======
+>>>>>>> 3afa2417c934e9a1b90de23bf33910d40927d2bb
         <div className='right-div'>
           <img src={signin} alt="3D Property" className="d3img" />
         </div>
