@@ -2,11 +2,6 @@ import React, { useState } from 'react';
 import { Container, InputAdornment, Typography, Box, Button, TextField, IconButton } from '@mui/material';
 import { ArrowBack, ArrowForward } from '@mui/icons-material';
 import StyledLinearProgress from '../StyledLinearProgress';
-<<<<<<< HEAD
-import '../../css/form2.css';
-import { useNavigate } from 'react-router-dom';
-import axios from 'axios'; // Ensure Axios is installed
-=======
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateFormData } from '../../reducers'; // Update import path for updateFormData
@@ -14,19 +9,14 @@ import { db } from '../../firebase'; // Import db from firebase.js
 import { setErrorMessage } from '../../featureForm/errorSlice';  // Import setErrorMessage action
 import { updateForm7 } from '../../featureForm/userSlice';
 import { doc, setDoc } from 'firebase/firestore'; // Changed import for setDoc
->>>>>>> 3afa2417c934e9a1b90de23bf33910d40927d2bb
 
 function Form7() {
   const [currentRent, setCurrentRent] = useState('');
   const [desiredPayment, setDesiredPayment] = useState('');
   const [serverMessage, setServerMessage] = useState('');
-<<<<<<< HEAD
-  const navigate = useNavigate();
-=======
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const userId = useSelector((state) => state.user.userId);
->>>>>>> 3afa2417c934e9a1b90de23bf33910d40927d2bb
 
   const handleInputChange = (event, setStateFunction) => {
     const value = event.target.value;
@@ -35,26 +25,6 @@ function Form7() {
     }
   };
 
-<<<<<<< HEAD
-  const textFieldStyle = {
-    marginBottom: 3,
-    height: '48px',
-    borderRadius: '6px',
-  };
-
-  const handleNextClick = async () => {
-    if (currentRent.trim() !== '' && desiredPayment.trim() !== '') {
-      try {
-        const response = await axios.post('http://localhost:8080/api/pre/rent', {
-          monthlyRent: currentRent,
-          desiredRentOwnPayments: desiredPayment
-        });
-        setServerMessage(response.data.message);
-        navigate('/form8');
-      } catch (error) {
-        console.error('Error:', error.response ? error.response.data : error.message);
-        setServerMessage(error.response ? error.response.data.message : 'An error occurred');
-=======
   const handleNextClick = async () => {
     if (currentRent.trim() !== '' && desiredPayment.trim() !== '') {
       try {
@@ -75,7 +45,6 @@ function Form7() {
       } catch (error) {
         console.error('Error:', error.message);
         setServerMessage('An error occurred while saving data.');
->>>>>>> 3afa2417c934e9a1b90de23bf33910d40927d2bb
       }
     } else {
       alert('Please fill in all fields before proceeding.');
@@ -113,11 +82,7 @@ function Form7() {
               variant="outlined"
               value={currentRent}
               onChange={(event) => handleInputChange(event, setCurrentRent)}
-<<<<<<< HEAD
-              sx={textFieldStyle}
-=======
               sx={{ marginBottom: 3, height: '48px', borderRadius: '6px' }}
->>>>>>> 3afa2417c934e9a1b90de23bf33910d40927d2bb
               InputProps={{ startAdornment: <InputAdornment position="start">$</InputAdornment> }}
               id="currentRent"
               fullWidth
@@ -130,11 +95,7 @@ function Form7() {
               variant="outlined"
               value={desiredPayment}
               onChange={(event) => handleInputChange(event, setDesiredPayment)}
-<<<<<<< HEAD
-              sx={textFieldStyle}
-=======
               sx={{ marginBottom: 3, height: '48px', borderRadius: '6px' }}
->>>>>>> 3afa2417c934e9a1b90de23bf33910d40927d2bb
               InputProps={{ startAdornment: <InputAdornment position="start">$</InputAdornment> }}
               id="desiredPayment"
               fullWidth

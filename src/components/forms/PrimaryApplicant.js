@@ -1,23 +1,14 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-<<<<<<< HEAD
-import { updateUserInfo } from '../../features/userSlice';
-=======
 //import { updateUserInfo } from '../../features/userSlice';
->>>>>>> 3afa2417c934e9a1b90de23bf33910d40927d2bb
 import { Container, Typography, Box, IconButton, Grid, MenuItem, Select, Button } from '@mui/material';
 import { ArrowBack, ArrowForward, ArrowDropDown } from '@mui/icons-material';
 import StyledLinearProgress from '../StyledLinearProgress';
 import { useNavigate } from 'react-router-dom';
-<<<<<<< HEAD
-import { doc, setDoc,updateDoc } from 'firebase/firestore';
-import { db } from '../../firebase';
-=======
-import { doc, updateDoc } from 'firebase/firestore';
+import { doc, updateDoc, setDoc } from 'firebase/firestore';
 import { db } from '../../firebase';
 import { updateUserInfo } from '../../featureForm/userSlice';
 //import { setErrorMessage } from '../../featureForm/errorSlice'; // Import setErrorMessage action
->>>>>>> 3afa2417c934e9a1b90de23bf33910d40927d2bb
 
 function PrimaryApplicant() {
   const [gender, setGender] = useState('');
@@ -29,7 +20,6 @@ function PrimaryApplicant() {
   const navigate = useNavigate();
 
   const handleNextClick = async () => {
-<<<<<<< HEAD
     const userId = localStorage.getItem("user")
     try {
       await setDoc(doc(db, "users", userId),{
@@ -49,43 +39,18 @@ function PrimaryApplicant() {
       //   disability
       // });
 
-=======
-    
-    const userId = localStorage.getItem("user"); // Corrected typo in getItem
-    try {
-      if (!userId) {
-        throw new Error('User ID not found');
-      }
-  
-      await updateDoc(doc(db, "users", userId), {
-        gender,
-        race,
-        veteran,
-        disability
-      });
-  
->>>>>>> 3afa2417c934e9a1b90de23bf33910d40927d2bb
       dispatch(updateUserInfo({
         gender,
         race,
         veteran,
         disability
       }));
-<<<<<<< HEAD
-
-=======
-  
->>>>>>> 3afa2417c934e9a1b90de23bf33910d40927d2bb
       navigate('/form2');
     } catch (error) {
       console.error('Error:', error.message);
       // Handle error message display logic elsewhere
     }
   };
-<<<<<<< HEAD
-=======
-  
->>>>>>> 3afa2417c934e9a1b90de23bf33910d40927d2bb
 
   const canProceed = gender && race && veteran && disability;
 
@@ -201,8 +166,4 @@ function PrimaryApplicant() {
   );
 }
 
-<<<<<<< HEAD
 export default PrimaryApplicant;
-=======
-export default PrimaryApplicant;
->>>>>>> 3afa2417c934e9a1b90de23bf33910d40927d2bb

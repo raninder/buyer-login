@@ -2,19 +2,6 @@ import React, { useState } from 'react';
 import { Container, Typography, Box, Button, IconButton } from '@mui/material';
 import { ArrowBack, ArrowForward } from '@mui/icons-material';
 import StyledLinearProgress from '../StyledLinearProgress';
-<<<<<<< HEAD
-import '../../css/form2.css';
-import { useNavigate } from 'react-router-dom';
-import axios from 'axios'; // Ensure Axios is installed
-
-function Form3() {
-  const [buyingTimeframe, setBuyingTimeframe] = useState('');
-  const [serverMessage, setServerMessage] = useState('');
-  const navigate = useNavigate();
-
-  const handleTimeframeClick = (value) => {
-    setBuyingTimeframe(value);
-=======
 import { useNavigate } from 'react-router-dom';
 import { setErrorMessage } from '../../featureForm/errorSlice';
 import { useDispatch, useSelector } from 'react-redux';
@@ -30,7 +17,6 @@ function Form3() {
 
   const handleTimeframeClick = (value) => {
     dispatch(updateBuyingTimeframe(value)); // Dispatch action to update buying timeframe in Redux store
->>>>>>> 3afa2417c934e9a1b90de23bf33910d40927d2bb
   };
 
   const buttonStyle = {
@@ -44,31 +30,12 @@ function Form3() {
     padding: '16px 205px',
     position: 'relative',
     width: '563px',
-<<<<<<< HEAD
-    marginBottom: '10px', 
-=======
     marginBottom: '10px',
->>>>>>> 3afa2417c934e9a1b90de23bf33910d40927d2bb
     fontFamily: 'Raleway-Bold',
     textTransform: 'none',
   };
 
   const handleNextClick = async () => {
-<<<<<<< HEAD
-    if (buyingTimeframe) {
-      try {
-        const response = await axios.post('http://localhost:8080/api/pre/homeBuying', { lookingToBuy: buyingTimeframe });
-        setServerMessage(response.data.message);
-        navigate('/form4');
-      } catch (error) {
-        console.error('Error:', error.response ? error.response.data : error.message);
-        setServerMessage(error.response ? error.response.data.message : 'An error occurred');
-      }
-    } else {
-      alert('Please select when you are looking to buy before proceeding.');
-    }
-  };
-=======
     try {
       const userId = localStorage.getItem("user");
       console.log('userID', userId); // Corrected console.log syntax
@@ -89,7 +56,6 @@ function Form3() {
   };
   
   const canProceed = buyingTimeframe.trim() !== '';
->>>>>>> 3afa2417c934e9a1b90de23bf33910d40927d2bb
 
   return (
     <Container>

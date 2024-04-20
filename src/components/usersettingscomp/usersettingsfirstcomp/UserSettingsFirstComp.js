@@ -81,9 +81,9 @@ export default function UserSettingsFirstComp() {
     try{
       await setDoc(doc(db, "users", auth.currentUser.uid),{
         name:auth.currentUser.displayName||null,
-        phoneNumber: userData.mobile||null,
+        phoneNumber: userData.phoneNumber||null,
         gender: userData.gender||null,
-        email: userData.email,
+        email: auth.currentUser.email||userData.email,
         address: userData.address||null,
         userImg: auth.currentUser.photoURL||null,
       },

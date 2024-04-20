@@ -47,12 +47,13 @@ export default function Navigator() {
         <Route path="/notifications" element={<Notification />} />
         <Route path="/form1" element={<ProtectedRoute><Form1Page /></ProtectedRoute>} />
         <Route path="/form2" element={<ProtectedRoute><Form2Page /></ProtectedRoute>} />
-        <Route path="/form2" element={<ProtectedRoute><Form3Page /></ProtectedRoute>} />
-        <Route path="/form2" element={<ProtectedRoute><Form4Page /></ProtectedRoute>} />
-        <Route path="/form2" element={<ProtectedRoute><Form5Page /></ProtectedRoute>} />
-        <Route path="/form2" element={<ProtectedRoute><Form6Page /></ProtectedRoute>} />
-        <Route path="/form2" element={<ProtectedRoute><Form7Page /></ProtectedRoute>} />
-        <Route path="/form2" element={<ProtectedRoute><Form8Page /></ProtectedRoute>} /> 
+        <Route path="/form3" element={<ProtectedRoute><Form3Page /></ProtectedRoute>} />
+        <Route path="/form4" element={<ProtectedRoute><Form4Page /></ProtectedRoute>} />
+        <Route path="/form5" element={<ProtectedRoute><Form5Page /></ProtectedRoute>} />
+        <Route path="/form6" element={<ProtectedRoute><Form6Page /></ProtectedRoute>} />
+        <Route path="/form7" element={<ProtectedRoute><Form7Page /></ProtectedRoute>} />
+        {/* <Route path="/form8" element={<ProtectedRoute><Form8Page /></ProtectedRoute>} />  */}
+        <Route path="/form8" element={<Form8Page />} /> 
         
       </Routes>
     </Router>

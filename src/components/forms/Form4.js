@@ -1,14 +1,4 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
-import { Container, InputAdornment, Typography, Box, Button, TextField, IconButton } from '@mui/material';
-import { ArrowBack, ArrowForward } from '@mui/icons-material';
-import StyledLinearProgress from '../StyledLinearProgress';
-import '../../css/form2.css';
-import { useNavigate } from 'react-router-dom';
-import axios from 'axios'; // Ensure Axios is installed
-
-function Form4() {
-=======
 import { Container, Typography, Box, Button, IconButton, TextField, InputAdornment } from '@mui/material';
 import { ArrowBack, ArrowForward } from '@mui/icons-material';
 import StyledLinearProgress from '../StyledLinearProgress';
@@ -25,16 +15,11 @@ function Form4() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
->>>>>>> 3afa2417c934e9a1b90de23bf33910d40927d2bb
   const [income, setIncome] = useState('');
   const [debt, setDebt] = useState('');
   const [payableAmount, setPayableAmount] = useState('');
   const [perMonthSelected, setPerMonthSelected] = useState(true);
   const [serverMessage, setServerMessage] = useState('');
-<<<<<<< HEAD
-  const navigate = useNavigate();
-=======
->>>>>>> 3afa2417c934e9a1b90de23bf33910d40927d2bb
 
   const handleInputChange = (event, setStateFunction) => {
     const value = event.target.value;
@@ -43,11 +28,6 @@ function Form4() {
     }
   };
 
-<<<<<<< HEAD
-  const textFieldStyle = {
-    marginBottom: 3,
-    width: '563px',
-=======
   const handleNextClick = async () => {
     try {
       const userId = localStorage.getItem("user");
@@ -81,7 +61,6 @@ function Form4() {
   const textFieldStyle = {
     marginBottom: 3,
     width: '100%',
->>>>>>> 3afa2417c934e9a1b90de23bf33910d40927d2bb
     height: '48px',
     borderRadius: '6px',
   };
@@ -101,29 +80,6 @@ function Form4() {
     textTransform: 'none',
   };
 
-<<<<<<< HEAD
-  const handleNextClick = async () => {
-    if (income.trim() !== '' && debt.trim() !== '' && payableAmount.trim() !== '') {
-      try {
-        const response = await axios.post('http://localhost:8080/api/pre/income', {
-          grossIncome: income,
-          debt,
-          monthlyPayableAmount: payableAmount,
-          unit: perMonthSelected ? 'Per Month' : 'Per Year',
-        });
-        setServerMessage(response.data.message);
-        navigate('/form5');
-      } catch (error) {
-        console.error('Error:', error.response ? error.response.data : error.message);
-        setServerMessage(error.response ? error.response.data.message : 'An error occurred');
-      }
-    } else {
-      alert('Please fill in all fields before proceeding.');
-    }
-  };
-
-=======
->>>>>>> 3afa2417c934e9a1b90de23bf33910d40927d2bb
   return (
     <Container>
       <div style={{ margin: '10px auto', padding: '20px' }}>
@@ -135,11 +91,7 @@ function Form4() {
           <Typography variant="subtitle1" style={{ marginLeft: '10px', marginRight: '10px' }}>
             Financial Situation: Income
           </Typography>
-<<<<<<< HEAD
-          <IconButton onClick={handleNextClick} disabled={!income.trim() || !debt.trim() || !payableAmount.trim()}>
-=======
           <IconButton onClick={handleNextClick} disabled={!canProceed}>
->>>>>>> 3afa2417c934e9a1b90de23bf33910d40927d2bb
             <ArrowForward />
           </IconButton>
         </Box>
@@ -153,11 +105,7 @@ function Form4() {
         </Typography>
 
         <Box display="flex" flexDirection="column" alignItems="center" mt={5}>
-<<<<<<< HEAD
-          <Box width="563px" textAlign="left">
-=======
           <Box width="100%" textAlign="left">
->>>>>>> 3afa2417c934e9a1b90de23bf33910d40927d2bb
             <Typography variant="subtitle1">Gross Income (before taxes)</Typography>
             <TextField
               variant="outlined"
@@ -179,17 +127,11 @@ function Form4() {
                       Per Month
                     </Button>
                     <Button
-<<<<<<< HEAD
-                      style={{...buttonStyle,
-                        backgroundColor: !perMonthSelected ? '#7731E4' : '',
-                        color: !perMonthSelected ? 'white' : '#7731E4',}}
-=======
                       style={{
                         ...buttonStyle,
                         backgroundColor: !perMonthSelected ? '#7731E4' : '',
                         color: !perMonthSelected ? 'white' : '#7731E4',
                       }}
->>>>>>> 3afa2417c934e9a1b90de23bf33910d40927d2bb
                       onClick={() => setPerMonthSelected(false)}
                       variant={!perMonthSelected ? 'contained' : 'outlined'}
                     >
@@ -202,11 +144,7 @@ function Form4() {
             />
           </Box>
 
-<<<<<<< HEAD
-          <Box width="563px" textAlign="left">
-=======
           <Box width="100%" textAlign="left">
->>>>>>> 3afa2417c934e9a1b90de23bf33910d40927d2bb
             <Typography variant="subtitle1">What is your total amount of debt?</Typography>
             <TextField
               variant="outlined"
@@ -220,11 +158,7 @@ function Form4() {
             />
           </Box>
 
-<<<<<<< HEAD
-          <Box width="563px" textAlign="left">
-=======
           <Box width="100%" textAlign="left">
->>>>>>> 3afa2417c934e9a1b90de23bf33910d40927d2bb
             <Typography variant="subtitle1">Monthly total payable amount?</Typography>
             <TextField
               variant="outlined"
@@ -245,20 +179,12 @@ function Form4() {
             style={{
               width: '305px',
               height: '56px',
-<<<<<<< HEAD
-              borderRadius: '39px',
-              backgroundColor: '#7731E4',
-            }}
-            onClick={handleNextClick}
-            disabled={!income.trim() || !debt.trim() || !payableAmount.trim()}
-=======
               borderRadius: '8px',
               backgroundColor: '#7731E4',
               color: 'white',
             }}
             onClick={handleNextClick}
             disabled={!canProceed}
->>>>>>> 3afa2417c934e9a1b90de23bf33910d40927d2bb
           >
             Next
           </Button>
