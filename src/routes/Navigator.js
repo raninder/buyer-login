@@ -46,6 +46,7 @@ export default function Navigator() {
         <Route path="/properties/:id" element={<Property/>} />
         <Route path="/notifications" element={<Notification />} />
         <Route path="/form1" element={<ProtectedRoute><Form1Page /></ProtectedRoute>} />
+        <Route path="/PrimaryApplicant" element={<ProtectedRoute><PrimaryApplicantPage /></ProtectedRoute>} />
         <Route path="/form2" element={<ProtectedRoute><Form2Page /></ProtectedRoute>} />
         <Route path="/form3" element={<ProtectedRoute><Form3Page /></ProtectedRoute>} />
         <Route path="/form4" element={<ProtectedRoute><Form4Page /></ProtectedRoute>} />
