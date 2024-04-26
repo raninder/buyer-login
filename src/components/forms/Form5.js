@@ -1,38 +1,53 @@
 import React, { useState } from 'react';
-import {
-  Container,
-  Typography,
-  Box,
-  Button,
-  IconButton,
-} from '@mui/material';
+import { Container, Typography, Box, Button, IconButton } from '@mui/material';
 import { ArrowBack, ArrowForward } from '@mui/icons-material';
 import StyledLinearProgress from '../StyledLinearProgress';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios'; // Ensure Axios is installed
+import { useDispatch, useSelector } from 'react-redux';
+import { db } from '../../firebase';
+import { setDownPayment } from '../../featureForm/userSlice';
+import { setErrorMessage } from '../../featureForm/errorSlice';
+import { doc, setDoc } from 'firebase/firestore'; // Changed import for setDoc
 
 function Form5() {
-  const [selectedValue, setSelectedValue] = useState('');
   const [serverMessage, setServerMessage] = useState('');
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const selectedValue = useSelector(state => state.user.downPayment); // Select down payment from Redux state
 
   const handleSelect = (value) => {
-    setSelectedValue(value);
+    dispatch(setDownPayment(value)); // Dispatch action to set down payment
   };
 
   const handleNextClick = async () => {
-    if (selectedValue.trim() !== '') {
+    if (selectedValue && selectedValue.trim() !== '') {
       try {
-        const response = await axios.post('http://localhost:8080/api/pre/payments', { downPayment: selectedValue });
-        setServerMessage(response.data.message);
+        const userId = localStorage.getItem("user");
+
+        await setDoc(doc(db, "users", userId), {
+          downPayment: selectedValue }, { merge: true });
+        dispatch(setErrorMessage("Data successfully submitted.")); // Use setErrorMessage instead of setServerMessage
         navigate('/form6');
       } catch (error) {
-        console.error('Error:', error.response ? error.response.data : error.message);
-        setServerMessage(error.response ? error.response.data.message : 'An error occurred');
+        console.error('Error:', error);
+        dispatch(setErrorMessage('An error occurred')); // Use setErrorMessage instead of setServerMessage
       }
     } else {
       alert('Please select a down payment option before proceeding.');
     }
+  };
+
+  const buttonStyle = {
+    width: '100%', // Full width for small screens
+    color: 'black',
+    textAlign: 'center',
+    fontFamily: 'Raleway',
+    fontSize: '15px',
+    fontStyle: 'normal',
+    fontWeight: '700',
+    borderRadius: '47px',
+    border: '2.375px solid #E7E7E7',
+    marginBottom: '10px',
   };
 
   return (
@@ -50,103 +65,45 @@ function Form5() {
             <ArrowForward />
           </IconButton>
         </Box>
-        {serverMessage && (
-          <Typography color="error" style={{ marginBottom: '10px' }}>
-            {serverMessage}
-          </Typography>
-        )}
+        <Typography color="error" style={{ marginBottom: '10px' }}>
+          {serverMessage}
+        </Typography>
         <Typography variant="h5" style={{ marginBottom: '10px', textAlign: 'center' }}>
           How much do you have for down payment?
         </Typography>
 
         <Box display="flex" flexDirection="column" alignItems="center" mt={2}>
-          {/* Down payment options as buttons */}
           <Button
             variant={selectedValue === 'Nothing' ? 'contained' : 'outlined'}
-            style={{
-              width: '563px',
-              color: 'black',
-              textAlign: 'center',
-              fontFamily: 'Raleway',
-              fontSize: '15px',
-              fontStyle: 'normal',
-              fontWeight: '700',
-              borderRadius: '47px',
-              border: '2.375px solid #E7E7E7',
-              marginBottom: '10px',
-            }}
+            style={buttonStyle}
             onClick={() => handleSelect('Nothing')}
           >
             Nothing right now
           </Button>
           <Button
             variant={selectedValue === 'Less than 7k' ? 'contained' : 'outlined'}
-            style={{
-              width: '563px',
-              color: 'black',
-              textAlign: 'center',
-              fontFamily: 'Raleway',
-              fontSize: '15px',
-              fontStyle: 'normal',
-              fontWeight: '700',
-              borderRadius: '47px',
-              border: '2.375px solid #E7E7E7',
-              marginBottom: '10px',
-            }}
+            style={buttonStyle}
             onClick={() => handleSelect('Less than 7k')}
           >
             Less than $7k
           </Button>
           <Button
             variant={selectedValue === '7k - 15k' ? 'contained' : 'outlined'}
-            style={{
-              width: '563px',
-              color: 'black',
-              textAlign: 'center',
-              fontFamily: 'Raleway',
-              fontSize: '15px',
-              fontStyle: 'normal',
-              fontWeight: '700',
-              borderRadius: '47px',
-              border: '2.375px solid #E7E7E7',
-              marginBottom: '10px',
-            }}
+            style={buttonStyle}
             onClick={() => handleSelect('7k - 15k')}
           >
             $7k - $15k
           </Button>
           <Button
             variant={selectedValue === '15k - 25k' ? 'contained' : 'outlined'}
-            style={{
-              width: '563px',
-              color: 'black',
-              textAlign: 'center',
-              fontFamily: 'Raleway',
-              fontSize: '15px',
-              fontStyle: 'normal',
-              fontWeight: '700',
-              borderRadius: '47px',
-              border: '2.375px solid #E7E7E7',
-              marginBottom: '10px',
-            }}
+            style={buttonStyle}
             onClick={() => handleSelect('15k - 25k')}
           >
             $15k - $25k
           </Button>
           <Button
             variant={selectedValue === '25k+' ? 'contained' : 'outlined'}
-            style={{
-              width: '563px',
-              color: 'black',
-              textAlign: 'center',
-              fontFamily: 'Raleway',
-              fontSize: '15px',
-              fontStyle: 'normal',
-              fontWeight: '700',
-              borderRadius: '47px',
-              border: '2.375px solid #E7E7E7',
-              marginBottom: '10px',
-            }}
+            style={buttonStyle}
             onClick={() => handleSelect('25k+')}
           >
             $25k+
@@ -158,8 +115,9 @@ function Form5() {
             style={{
               width: '305px',
               height: '56px',
-              borderRadius: '39px',
+              borderRadius: '8px',
               backgroundColor: '#7731E4',
+              color: 'white',
             }}
             onClick={handleNextClick}
             disabled={selectedValue.trim() === ''}

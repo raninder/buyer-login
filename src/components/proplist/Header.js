@@ -17,7 +17,7 @@ const Header = ({data}) => {
 	return ( 
 	     
           <div className='box' >
-            <img className="img1" src={data.cover} alt='House image1' />
+            <img className="header-house-img1" src={data.cover} alt='House image1' />
             <button className="viewBtn1"> 
                <img src={walkthrough} alt="walkthrough" height="15" width="15"/>  3D Walkthrough 
             </button> 
@@ -30,15 +30,12 @@ const Header = ({data}) => {
                 <div className="img-border"><img src={circle} className="hicon" alt="subscribe" /></div>
               </div>
             <div className="img-div">
-						  <img className="img2" src={data.img2} alt='' />
-						    <img className="img3" src={data.img3} alt=''/>
-                {/* <p className='img-btn-contaniner'>
-                  <button className="img-button" onClick = {handleClick}> See all 36 images </button> 
-                </p>  */}
+						  <img className="header-house-img2" src={data.img2} alt='' />
+						    <img className="header-house-img3" src={data.img3} alt=''/>
+                
             </div>
-            {/* <p className='img-btn-contaniner'> */}
-                  <button className="img-button" onClick = {handleClick}> See all 36 images </button> 
-                {/* </p>  */}
+              <button className="img-button" onClick = {handleClick}> See all 36 images </button> 
+          
           </div>
    
 	 );

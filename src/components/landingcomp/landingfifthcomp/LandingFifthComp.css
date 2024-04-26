@@ -94,6 +94,20 @@
         line-height: 50px;
     }
 }
+<<<<<<< HEAD
+/* ipad air */
+@media only screen and (min-width: 1024px)and  (max-width:1375px){
+    .main5-couple{
+        width:50%;
+        
+    }
+    .main5-cobuyer-btn span{
+        font-size: 1.3rem;
+    }
+    
+} 
+=======
+>>>>>>> 3afa2417c934e9a1b90de23bf33910d40927d2bb
 /* tablet */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     .landing-main5{

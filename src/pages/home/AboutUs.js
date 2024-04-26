@@ -8,7 +8,7 @@ import Footer from '../../components/footer/Footer';
 export default function AboutUs() {
   return (
     <div>
-      {/* <Navbar/> */}
+      <Navbar/>
       <AboutCompOne />
       <AboutCompTwo />
       <AboutCompThree />

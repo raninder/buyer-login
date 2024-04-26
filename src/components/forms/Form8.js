@@ -4,9 +4,7 @@ import {Container,InputAdornment,Typography,Box,Button,TextField,IconButton,
 import { ArrowBack, ArrowForward } from '@mui/icons-material';
 import StyledLinearProgress from '../StyledLinearProgress';
 import '../../css/form2.css';
-// import './form6.css'
 import { useNavigate } from 'react-router-dom';
-import { whileStatement } from '@babel/types';
 
 function Form8({  nextPage }) {
   const [bankDetails, setIncome] = useState('');
@@ -28,7 +26,7 @@ function Form8({  nextPage }) {
 
   const textFieldStyle = {
     marginBottom: 3,
-    // width: '563px',
+    width: '563px',
     height: '48px',
     borderRadius: '6px',
   };

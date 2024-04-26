@@ -2,17 +2,21 @@ import React, { useState } from 'react';
 import { Container, Typography, Box, Button, IconButton } from '@mui/material';
 import { ArrowBack, ArrowForward } from '@mui/icons-material';
 import StyledLinearProgress from '../StyledLinearProgress';
-import '../../css/form2.css';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios'; // Ensure Axios is installed
+import { setErrorMessage } from '../../featureForm/errorSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { updateBuyingTimeframe } from '../../featureForm/userSlice'; // Import the action creator
+import { doc, setDoc } from 'firebase/firestore'; // Changed import for setDoc
+import { db } from '../../firebase';
 
 function Form3() {
-  const [buyingTimeframe, setBuyingTimeframe] = useState('');
   const [serverMessage, setServerMessage] = useState('');
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const buyingTimeframe = useSelector(state => state.user.buyingTimeframe); // Access buying timeframe from Redux store
 
   const handleTimeframeClick = (value) => {
-    setBuyingTimeframe(value);
+    dispatch(updateBuyingTimeframe(value)); // Dispatch action to update buying timeframe in Redux store
   };
 
   const buttonStyle = {
@@ -26,25 +30,32 @@ function Form3() {
     padding: '16px 205px',
     position: 'relative',
     width: '563px',
-    marginBottom: '10px', 
+    marginBottom: '10px',
     fontFamily: 'Raleway-Bold',
     textTransform: 'none',
   };
 
   const handleNextClick = async () => {
-    if (buyingTimeframe) {
-      try {
-        const response = await axios.post('http://localhost:8080/api/pre/homeBuying', { lookingToBuy: buyingTimeframe });
-        setServerMessage(response.data.message);
-        navigate('/form4');
-      } catch (error) {
-        console.error('Error:', error.response ? error.response.data : error.message);
-        setServerMessage(error.response ? error.response.data.message : 'An error occurred');
-      }
-    } else {
-      alert('Please select when you are looking to buy before proceeding.');
+    try {
+      const userId = localStorage.getItem("user");
+      console.log('userID', userId); // Corrected console.log syntax
+      if (!userId)
+        throw new Error('User ID not found');
+        await setDoc(doc(db, "users", userId), {
+          buyingTimeframe: buyingTimeframe
+        }, { merge: true });
+      // Update buying timeframe in Firebase Firestore
+      // This part is missing in the provided code. You need to handle Firestore operations here.
+
+      // Navigate to the next page
+      navigate('/form4');
+    } catch (error) {
+      console.error('Error:', error.message);
+      dispatch(setErrorMessage('An error occurred while updating buying timeframe.'));
     }
   };
+  
+  const canProceed = buyingTimeframe.trim() !== '';
 
   return (
     <Container>

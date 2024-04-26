@@ -10,7 +10,7 @@
   letter-spacing: 0em;
   padding-bottom:20px;
 }
-.details h2{
+.details-interior-container h2{
   font-family: Raleway;
   font-size: 26px;
   font-weight: 700;
@@ -78,7 +78,7 @@
     margin-top:-25px; 
     left:300px;
   }
-.download, a{
+.download, .download-link{
   font-size: 20px;
   line-height: 24px;
   margin-left: 10px;
@@ -88,7 +88,7 @@
   font-size: 20px;
   font-weight: 400;
 }
-a{
+.download-link{
   font-weight: 700;
   color: black;
 }
@@ -107,7 +107,7 @@ a{
 .details-container h3{
   font-size: 22px;
 }
-.details h2{
+.details-interiot-container h2{
   font-size: 19px;
 }
 .rooms h5, .rooms3>h5{
@@ -144,7 +144,7 @@ a{
     text-align: center;
     
   }
-  .details h2{
+  .details-interior-container h2{
     font-size: 18px;
   }
   .rooms{
@@ -185,7 +185,7 @@ a{
     left:10px;
     text-align: right;
   }
-  .download, a{
+  .download, .download-link{
     font-size: 16px;
     line-height: 20px;
   }

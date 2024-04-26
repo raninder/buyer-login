@@ -1,9 +1,15 @@
 import React from 'react';
 import { AppBar, InputAdornment, Toolbar, TextField, IconButton, Menu, MenuItem, Avatar } from '@mui/material';
 import { Search, ArrowDropDown, Notifications } from '@mui/icons-material';
+import {auth} from '../firebase'
+import { useDispatch, useSelector } from 'react-redux';
+import { login,logout, selectUser } from '../features/userSlice'
+import { Link, useNavigate } from 'react-router-dom'
 
 function CustomAppBar() {
     const [anchorEl, setAnchorEl] = React.useState(null);
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     const handleMenuOpen = (event) => {
         setAnchorEl(event.currentTarget);
@@ -12,6 +18,17 @@ function CustomAppBar() {
     const handleMenuClose = () => {
         setAnchorEl(null);
     };
+    const handleLogout = () => {
+        auth.signOut()
+        .then(()=> {
+        //   setIsLogin(false);
+        //   setUser(null)
+            localStorage.clear();
+          dispatch(logout())
+          navigate('/')
+        })
+        .catch((err)=>alert(err.message))
+      }
 
     return (
         <AppBar position="sticky" style={{ backgroundColor: '#7731e4' }}>
@@ -46,8 +63,8 @@ function CustomAppBar() {
                     open={Boolean(anchorEl)}
                     onClose={handleMenuClose}
                 >
-                    <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-                    <MenuItem onClick={handleMenuClose}>Logout</MenuItem>
+                    <MenuItem onClick={()=>  navigate('/usersettings')}>Profile</MenuItem>
+                    <MenuItem onClick={handleLogout}>Logout</MenuItem>
                 </Menu>
             </Toolbar>
         </AppBar>

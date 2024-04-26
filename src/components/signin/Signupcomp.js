@@ -16,7 +16,6 @@ import {
 } from '../../firebase';
 import { collection, addDoc, doc, setDoc } from "firebase/firestore";
 import { useDispatch, useSelector } from 'react-redux';
-// import { login,logout, selectUserEmail, selectUserName } from '../../features/userSlice';
 import { login, selectUser, selectUserId} from '../../features/userSlice';
 
 const Signupcomp= () => {
@@ -31,10 +30,7 @@ const Signupcomp= () => {
   const [icon, setIcon] = useState(eyeOff);
   const [userID, setUserID] = useState("");
   const dispatch = useDispatch();
-  // const userName = useSelector(selectUserName)
-  // const userEmail = useSelector(selectUserEmail)
-  // const userName = useSelector(selectUser.displayName)
-  // const userEmail = useSelector(selectUser.email)
+
   const handleSignup = (e) =>{
     e.preventDefault();
     if (!uname||!email || !password) {
@@ -50,19 +46,27 @@ const Signupcomp= () => {
     createUserWithEmailAndPassword(auth, email, password)
       .then((userAuth) => {
        console.log("userauth", userAuth)
-       console.log("uuiidd", userAuth.user.uid)
+       console.log("uuiidd", userAuth.user.uid, uname)
        setUserID(userAuth.user.uid)
     
       const docRef = doc(db, 'users', userAuth.user.uid)
-      setDoc(docRef, { merge: true })
+      setDoc(docRef, {
+        name:auth.currentUser.displayName||uname||null,
+        mobile: phone||null,
+        email: email||auth.currentUser.email,
+        userImg: auth.currentUser.photoURL||null,
+      },{ merge: true })
+      alert("New user created")
      
       // Update the newly created user with a display name and a picture
         updateProfile(userAuth.user, {
           displayName: uname,
           photoURL: file,
         })
+      
+    
           .then(
-           
+        
             // Dispatch the user information for persistence in the redux state
             dispatch(
               login({
@@ -83,7 +87,7 @@ const Signupcomp= () => {
         alert(err);
       });
       console.log("uid", userID);
-      // navigate("/signin")
+      navigate("/signin")
       
   };
   

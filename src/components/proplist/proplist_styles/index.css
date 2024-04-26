@@ -1,13 +1,12 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
 }
+
 body {
   font-family:DM Sans;
-  background-color: lightgrey;
-
 }
+
 .overview-container, .highlights-container, .details-container, .similar, .nearby{
   margin-top: 10px;
   background-color: white;

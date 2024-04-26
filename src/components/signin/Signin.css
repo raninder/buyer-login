@@ -17,7 +17,7 @@
     margin-top:12px;
  }
  .login {
-    width: 50%;
+    width: 40%;
     padding:3rem 6rem;
 }
 
@@ -50,7 +50,7 @@
 }
 .eye-icon{
   position: absolute;
-  top: 54%;
+  top: 58%;
   right: 4%;
   opacity:50%;
 }
@@ -64,6 +64,7 @@
 .login > form > button {
   height: 48px;
   margin-top:20px;
+  margin-bottom:20px;
   padding: 10px 32px 46px 32px;
   border-radius: 8px;
   border:1px solid #7731E4;
@@ -165,11 +166,13 @@ width:100%;
     .login{
       position:absolute;
       top:4rem;
+      width:45%;
+      
     }
     .right-div{
       position:absolute;
-      left:55%;
-      width:44%;
+      left:58%;
+      width:42%;
       margin-right: 10px;
     }
     .login h1{
@@ -240,6 +243,7 @@ width:100%;
   .login {
     width: 55%;
     padding:2rem 2rem;
+    
   }
   .right-div{
     width:45%;

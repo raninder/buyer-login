@@ -1,18 +1,25 @@
 import React, { useState } from 'react';
-import { Container, InputAdornment, Typography, Box, Button, TextField, IconButton } from '@mui/material';
+import { Container, Typography, Box, Button, IconButton, TextField, InputAdornment } from '@mui/material';
 import { ArrowBack, ArrowForward } from '@mui/icons-material';
 import StyledLinearProgress from '../StyledLinearProgress';
-import '../../css/form2.css';
+import { doc, setDoc } from 'firebase/firestore';
+import { db } from '../../firebase';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios'; // Ensure Axios is installed
+import { useDispatch, useSelector } from 'react-redux';
+
+import { setFinancialData } from '../../featureForm/userSlice';
+import { setErrorMessage } from '../../featureForm/errorSlice';
 
 function Form4() {
+  const userData = useSelector(setFinancialData);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   const [income, setIncome] = useState('');
   const [debt, setDebt] = useState('');
   const [payableAmount, setPayableAmount] = useState('');
   const [perMonthSelected, setPerMonthSelected] = useState(true);
   const [serverMessage, setServerMessage] = useState('');
-  const navigate = useNavigate();
 
   const handleInputChange = (event, setStateFunction) => {
     const value = event.target.value;
@@ -21,9 +28,39 @@ function Form4() {
     }
   };
 
+  const handleNextClick = async () => {
+    try {
+      const userId = localStorage.getItem("user");
+      if (income !== undefined && debt !== undefined && payableAmount !== undefined && income.trim() !== '' && debt !== '' && payableAmount !== '') {
+        await setDoc(doc(db, "users", userId), {
+          income: parseFloat(income),
+          debt: parseFloat(debt),
+          payableAmount: parseFloat(payableAmount),
+          perMonthSelected,
+          unit: perMonthSelected ? 'Per Month' : 'Per Year',
+        }, { merge: true });
+
+        dispatch(setFinancialData({
+          income: parseFloat(income),
+          debt: parseFloat(debt),
+          payableAmount: parseFloat(payableAmount),
+          perMonthSelected
+        }));
+
+        navigate('/form5');
+      } else {
+        alert('Please fill in all fields before proceeding.');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      dispatch(setErrorMessage('An error occurred: ' + error.message));
+    }
+  };
+
+  const canProceed = income !== undefined && income.trim() !== '' && debt !== undefined && payableAmount !== undefined;
   const textFieldStyle = {
     marginBottom: 3,
-    width: '563px',
+    width: '100%',
     height: '48px',
     borderRadius: '6px',
   };
@@ -43,26 +80,6 @@ function Form4() {
     textTransform: 'none',
   };
 
-  const handleNextClick = async () => {
-    if (income.trim() !== '' && debt.trim() !== '' && payableAmount.trim() !== '') {
-      try {
-        const response = await axios.post('http://localhost:8080/api/pre/income', {
-          grossIncome: income,
-          debt,
-          monthlyPayableAmount: payableAmount,
-          unit: perMonthSelected ? 'Per Month' : 'Per Year',
-        });
-        setServerMessage(response.data.message);
-        navigate('/form5');
-      } catch (error) {
-        console.error('Error:', error.response ? error.response.data : error.message);
-        setServerMessage(error.response ? error.response.data.message : 'An error occurred');
-      }
-    } else {
-      alert('Please fill in all fields before proceeding.');
-    }
-  };
-
   return (
     <Container>
       <div style={{ margin: '10px auto', padding: '20px' }}>
@@ -74,7 +91,7 @@ function Form4() {
           <Typography variant="subtitle1" style={{ marginLeft: '10px', marginRight: '10px' }}>
             Financial Situation: Income
           </Typography>
-          <IconButton onClick={handleNextClick} disabled={!income.trim() || !debt.trim() || !payableAmount.trim()}>
+          <IconButton onClick={handleNextClick} disabled={!canProceed}>
             <ArrowForward />
           </IconButton>
         </Box>
@@ -88,7 +105,7 @@ function Form4() {
         </Typography>
 
         <Box display="flex" flexDirection="column" alignItems="center" mt={5}>
-          <Box width="563px" textAlign="left">
+          <Box width="100%" textAlign="left">
             <Typography variant="subtitle1">Gross Income (before taxes)</Typography>
             <TextField
               variant="outlined"
@@ -110,9 +127,11 @@ function Form4() {
                       Per Month
                     </Button>
                     <Button
-                      style={{...buttonStyle,
+                      style={{
+                        ...buttonStyle,
                         backgroundColor: !perMonthSelected ? '#7731E4' : '',
-                        color: !perMonthSelected ? 'white' : '#7731E4',}}
+                        color: !perMonthSelected ? 'white' : '#7731E4',
+                      }}
                       onClick={() => setPerMonthSelected(false)}
                       variant={!perMonthSelected ? 'contained' : 'outlined'}
                     >
@@ -125,7 +144,7 @@ function Form4() {
             />
           </Box>
 
-          <Box width="563px" textAlign="left">
+          <Box width="100%" textAlign="left">
             <Typography variant="subtitle1">What is your total amount of debt?</Typography>
             <TextField
               variant="outlined"
@@ -139,7 +158,7 @@ function Form4() {
             />
           </Box>
 
-          <Box width="563px" textAlign="left">
+          <Box width="100%" textAlign="left">
             <Typography variant="subtitle1">Monthly total payable amount?</Typography>
             <TextField
               variant="outlined"
@@ -160,11 +179,12 @@ function Form4() {
             style={{
               width: '305px',
               height: '56px',
-              borderRadius: '39px',
+              borderRadius: '8px',
               backgroundColor: '#7731E4',
+              color: 'white',
             }}
             onClick={handleNextClick}
-            disabled={!income.trim() || !debt.trim() || !payableAmount.trim()}
+            disabled={!canProceed}
           >
             Next
           </Button>
